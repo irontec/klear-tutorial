@@ -1,0 +1,88 @@
+version=1.5.4
+compile_mo=1
+show_summary=1
+manager_startup=0
+focus_to_text=0
+comment_window_editable=0
+keep_crlf=1
+enable_spellchecking=1
+custom_font_list_use=0
+custom_font_text_use=0
+custom_font_list_name=Sans 10
+custom_font_text_name=Sans 10
+crlf_format=unix
+use_tm_when_updating=1
+find_in_orig=1
+find_in_trans=1
+find_in_comments=1
+find_in_auto_comments=1
+find_case_sensitive=0
+find_from_first=1
+whole_words=0
+bottom_splitter=573
+splitter=330
+display_quotes=0
+display_lines=0
+display_comment_win=0
+display_auto_comments_win=1
+sort_by=file-order
+sort_untrans_first=1
+[Parsers]
+List=C/C++;C#;Java;Perl;PHP;Python;TCL;Javascript
+DefaultsVersion=1.5.4
+[Parsers/C_C\+\+]
+Extensions=*.c;*.cpp;*.h;*.hpp;*.cc;*.C;*.cxx;*.hxx
+Command=xgettext --language=C++ --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/C\#]
+Extensions=*.cs
+Command=xgettext --language=C# --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/Java]
+Extensions=*.java
+Command=xgettext --language=Java --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/Perl]
+Extensions=*.pl
+Command=xgettext --language=Perl --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/PHP]
+Extensions=*.php;*.phtml
+Command=xgettext --language=PHP --force-po -o %o %C %K %F -L php
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/Python]
+Extensions=*.py;*.yaml
+Command=xgettext --language=Python --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/TCL]
+Extensions=*.tcl
+Command=xgettext --language=TCL --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[Parsers/Javascript]
+Extensions=*.js;*.html
+Command=xgettext --language=Python --force-po -o %o %C %K %F
+KeywordItem=-k%k
+FileItem=%f
+CharsetItem=--from-code=%c
+[TM]
+search_paths=/usr/share/locale:/usr/local/share/locale
+languages=eu:es:en
+max_omitted=2
+max_delta=2
+[donate]
+dont_bug=1
+last_asked=1394708319
