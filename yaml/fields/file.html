@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>file &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../../index.html"/>
+        <link rel="up" title="Tipos de Campos" href="index.html"/>
+        <link rel="next" title="ghost" href="ghost.html"/>
+        <link rel="prev" title="checkbox" href="checkbox.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Yaml</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../../index.html">Docs</a> &raquo;</li>
+  <li><a href="">file</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../../_sources/yaml/fields/file.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="file">
+<h1>file<a class="headerlink" href="#file" title="Enlazar permanentemente con este título">¶</a></h1>
+<ul class="simple">
+<li>Volver a <a class="reference internal" href="index.html#tipos-de-campos"><em>Tipos de Campos</em></a></li>
+</ul>
+<img alt="../../_images/file1.png" src="../../_images/file1.png" />
+<p>Este sección es originado por el tag <a class="reference internal" href="../../databases/generator.html#generatordatabasefile"><em>[file]</em></a> que se encuentra en el comentario del campo de la tabla.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#configuracion" id="id5">Configuración</a><ul>
+<li><a class="reference internal" href="#size-limit" id="id6">size_limit</a></li>
+<li><a class="reference internal" href="#extensions" id="id7">extensions</a></li>
+<li><a class="reference internal" href="#options" id="id8">options</a><ul>
+<li><a class="reference internal" href="#download" id="id9">download</a></li>
+<li><a class="reference internal" href="#delete" id="id10">delete</a></li>
+<li><a class="reference internal" href="#upload" id="id11">upload</a></li>
+<li><a class="reference internal" href="#preview" id="id12">preview</a></li>
+<li><a class="reference internal" href="#previewlist" id="id13">previewList</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Ejemplo de un campo <strong>type: file</strong>:</p>
+<div class="highlight-yaml"><div class="highlight"><pre> <span class="l-Scalar-Plain">archivo</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&#39;Archivo&#39;)</span>
+<span class="hll">   <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">file</span>
+</span>   <span class="l-Scalar-Plain">required</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+<span class="hll">   <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">data</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">fso</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">size_limit</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">20M</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">extensions</span><span class="p-Indicator">:</span>
+</span><span class="hll">       <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">jpg</span>
+</span><span class="hll">       <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">png</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+</span><span class="hll">       <span class="l-Scalar-Plain">download</span><span class="p-Indicator">:</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">external</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">command</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">target</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ArchivoDownload_command</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">icon</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-bullet-disk</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Download file&quot;)</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">onNull</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">hide</span>
+</span><span class="hll">       <span class="l-Scalar-Plain">delete</span><span class="p-Indicator">:</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">dialog</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">target</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ArchivoDelete_command</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">icon</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-bin</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Delete file&quot;)</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">onNull</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">hide</span>
+</span><span class="hll">       <span class="l-Scalar-Plain">upload</span><span class="p-Indicator">:</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">command</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">target</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ArchivoUpload_command</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Upload file&quot;)</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">qq-uploader</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">onNull</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">show</span>
+</span><span class="hll">       <span class="l-Scalar-Plain">preview</span><span class="p-Indicator">:</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">target</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ArchivoPreview_command</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">command</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">filePreview</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">external</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">props</span><span class="p-Indicator">:</span>
+</span><span class="hll">           <span class="l-Scalar-Plain">width</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">150</span>
+</span><span class="hll">           <span class="l-Scalar-Plain">height</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">150</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">crop</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">onNull</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">hide</span>
+</span><span class="hll">       <span class="l-Scalar-Plain">previewList</span><span class="p-Indicator">:</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">target</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ArchivoPreview_command</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">command</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">filePreview</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">listController</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+</span>         <span class="l-Scalar-Plain">external</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+         <span class="l-Scalar-Plain">props</span><span class="p-Indicator">:</span>
+           <span class="l-Scalar-Plain">width</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">30</span>
+           <span class="l-Scalar-Plain">height</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">30</span>
+         <span class="l-Scalar-Plain">crop</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+         <span class="l-Scalar-Plain">onNull</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">hide</span>
+</pre></div>
+</div>
+<div class="section" id="configuracion">
+<h2><a class="toc-backref" href="#id5">Configuración</a><a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los parámetros que pueden ser configurados en este campo.</p>
+<div class="section" id="size-limit">
+<h3><a class="toc-backref" href="#id6">size_limit</a><a class="headerlink" href="#size-limit" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Límite máximo del archivo subido, en el ejemplo anterior es 20M <a class="footnote-reference" href="#unidamedida" id="id1">[1]</a> el peso máximo del archivo.</p>
+</div>
+<div class="section" id="extensions">
+<h3><a class="toc-backref" href="#id7">extensions</a><a class="headerlink" href="#extensions" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Listar los tipos de archivos que están permitidos para subir en nuestro servidor. En nuestro ejemplo, tenemos las exteniones de imágenes <a class="footnote-reference" href="#extensionimage" id="id2">[2]</a> <em>jpg</em> y <em>png</em>.</p>
+</div>
+<div class="section" id="options">
+<h3><a class="toc-backref" href="#id8">options</a><a class="headerlink" href="#options" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="download">
+<h4><a class="toc-backref" href="#id9">download</a><a class="headerlink" href="#download" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Permite la descarga del archivo en la interfaz.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Si se quiere emplear esta opción, asegurarse que el siguiente código también esté incorporado en el <strong>YAML LIST</strong> que llamará dicho campo.</p>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre>  <span class="l-Scalar-Plain">commands</span><span class="p-Indicator">:</span>
+<span class="hll">    <span class="l-Scalar-Plain">ArchivoDownload_command</span><span class="p-Indicator">:</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Model</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">File</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">action</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">force-download</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">mainColumn</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">archivo</span>
+</span></pre></div>
+</div>
+</div>
+<div class="section" id="delete">
+<h4><a class="toc-backref" href="#id10">delete</a><a class="headerlink" href="#delete" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Permite la eliminación del archivo en la interfaz.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Si se quiere emplear esta opción, asegurarse que el siguiente código también esté incorporado en el <strong>YAML LIST</strong> que llamará dicho campo.</p>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre>  <span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+<span class="hll">    <span class="l-Scalar-Plain">ArchivoDelete_command</span><span class="p-Indicator">:</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Model</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">File</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">action</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">delete</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">mainColumn</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">archivo</span>
+</span></pre></div>
+</div>
+</div>
+<div class="section" id="upload">
+<h4><a class="toc-backref" href="#id11">upload</a><a class="headerlink" href="#upload" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Permite la subida del archivo en la interfaz.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Si se quiere emplear esta opción, asegurarse que el siguiente código también esté incorporado en el <strong>YAML LIST</strong> que llamará dicho campo.</p>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre>  <span class="l-Scalar-Plain">commands</span><span class="p-Indicator">:</span>
+<span class="hll">    <span class="l-Scalar-Plain">ArchivoUpload_command</span><span class="p-Indicator">:</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Importadores</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">File</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">action</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">upload</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">mainColumn</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">archivo</span>
+</span></pre></div>
+</div>
+</div>
+<div class="section" id="preview">
+<h4><a class="toc-backref" href="#id12">preview</a><a class="headerlink" href="#preview" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Solo para los archivos del tipo imagen <a class="footnote-reference" href="#extensionimage" id="id3">[2]</a> para ver una visualización de dicha imagen en las ventanas <strong>NEW</strong> o <strong>EDIT</strong>.</p>
+</div>
+<div class="section" id="previewlist">
+<h4><a class="toc-backref" href="#id13">previewList</a><a class="headerlink" href="#previewlist" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Solo para los archivos del tipo imagen <a class="footnote-reference" href="#extensionimage" id="id4">[2]</a> para ver una visualización de dicha imagen en el <strong>LIST</strong>.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Si se quiere emplear esta opción, asegurarse que el siguiente código también esté incorporado en el <strong>YAML LIST</strong> que llamará dicho campo.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">Ver también</p>
+<p class="last">Esta opción puede ser usado tanto para el <strong>preview</strong> y <strong>previewList</strong></p>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre>  <span class="l-Scalar-Plain">commands</span><span class="p-Indicator">:</span>
+<span class="hll">    <span class="l-Scalar-Plain">ArchivoPreview_command</span><span class="p-Indicator">:</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Importadores</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">File</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">action</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">preview</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">mainColumn</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">archivo</span>
+</span></pre></div>
+</div>
+<table class="docutils footnote" frame="void" id="unidamedida" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>&#8220;M&#8221; es la unida de medida en Megabyte de un archivo.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="extensionimage" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id3">2</a>, <a class="fn-backref" href="#id4">3</a>)</em> Las extensiones más usadas y conocidas son jpg, jpeg, png y gif.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="ghost.html" class="btn btn-neutral float-right" title="ghost"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="checkbox.html" class="btn btn-neutral" title="checkbox"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

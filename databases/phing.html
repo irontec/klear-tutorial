@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Phing &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="Gestión de las Bases de Datos" href="index.html"/>
+        <link rel="next" title="Generador: Base de Datos" href="generator.html"/>
+        <link rel="prev" title="Gestión de las Bases de Datos" href="index.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Gestión de las Bases de Datos</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Phing</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/databases/phing.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="phing">
+<h1>Phing<a class="headerlink" href="#phing" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Phing permite definir un archivo XML con una serie de tareas que se ejecutarán (targets) para, por ejemplo, ejecutar comandos svn, creación-destrucción-cambio de directorios y archivos, permisos, o ejecución de las pruebas unitarias, y un largo etc. En este caso, aprovechamos las funcionalidades de Phing para gestionar los cambios en la Base de Datos.</p>
+<div class="section" id="tareas-definidas">
+<h2>Tareas definidas<a class="headerlink" href="#tareas-definidas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En la siguiente lista se muestra el listado de tareas ya definidas y se explica su funcionalidad:</p>
+<ul class="simple">
+<li><strong>init</strong>: Genera la tabla necesaria para almacenar las versiones de la <strong>BBDD</strong></li>
+<li><strong>migrate</strong>: Ejecuta todos los deltas necesarios para llegar a la versión actual del proyecto</li>
+<li><strong>generate-db</strong>: Ejecuta el generador de la Base de Datos</li>
+<li><strong>generate-models</strong>: Ejecuta el generador de modelos</li>
+<li><strong>generate-yaml</strong>: Ejecuta el generator de Yaml&#8217;s</li>
+<li><strong>run-generators</strong>: Ejecuta todos los generators anteriores</li>
+<li><strong>db-change</strong>: Ejecuta el migrate y el <strong>run-generators</strong></li>
+</ul>
+</div>
+<div class="section" id="dbdeploy">
+<h2>DbDeploy<a class="headerlink" href="#dbdeploy" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Es lo que <strong>Phing</strong> define como una <em>&#8220;Tarea Opcional&#8221;</em>.</p>
+<p>Nos permite tener una serie de deltas de la base de datos (en ficheros numerados) que <strong>dbDeploy</strong>
+se encargará de ejecutar en orden. <strong>DbDeploy</strong> guarda la versión de la BBDD (último delta ejecutado)
+en una tabla para saber cuales son los cambios que debe ejecutar.</p>
+<p>Los cambios realizados los va guardando en un fichero dentro del directorio <strong>deploy/scripts/</strong> (definido en el <a class="reference internal" href="../createProject/phing.html#build-xml"><em>build.xml</em></a>)</p>
+<p>Es lo que usan nuestras tareas <strong>&#8220;init&#8221;</strong> y <strong>&#8220;migrate&#8221;</strong></p>
+</div>
+<div class="section" id="estructura-del-directorio">
+<h2>Estructura del directorio<a class="headerlink" href="#estructura-del-directorio" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>phing
+|-- build.properties
+|-- build.xml
+|-- deltas                                   &lt;- Directorio con ficheros delta
+|   |-- 001-Initial-KlearInterval-Tables.sql
+|   <span class="sb">`</span>-- 002-Add-Body-To-Subsections.sql
+|-- deploy
+|   <span class="sb">`</span>-- scripts
+|       |-- deploy-201303141301.sql
+|       |-- undo-201303121235.sql
+|-- predeploy.sql                            &lt;- SQL con la estructura de la tabla del Changelog
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="generator.html" class="btn btn-neutral float-right" title="Generador: Base de Datos"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Gestión de las Bases de Datos"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dialogs &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="Yaml" href="index.html"/>
+        <link rel="next" title="Iconos" href="iconos.html"/>
+        <link rel="prev" title="video" href="fields/video.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Yaml</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Dialogs</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/yaml/dialogs.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="dialogs">
+<h1>Dialogs<a class="headerlink" href="#dialogs" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Los dialogs son las ventanas emergentes que aparece en nuestra interfaz del Klear. Estas ventanas las puede originar los iconos
+de la columna de opciones o botones en la misma pantalla. Klear traer trae tres tipos de dialogs que pueden ser configuradas
+desde los yaml para distintas funciones: <strong>Delete</strong> y <strong>Clone</strong>.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#delete" id="id6">Delete</a></li>
+<li><a class="reference internal" href="#clone" id="id7">Clone</a><ul>
+<li><a class="reference internal" href="#parametros-de-configuracion" id="id8">Parámetros de configuración</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#massupdate" id="id9">MassUpdate</a><ul>
+<li><a class="reference internal" href="#id4" id="id10">Parámetros de configuración</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#custom-dialog" id="id11">Custom dialog</a></li>
+</ul>
+</div>
+<div class="section" id="delete">
+<h2><a class="toc-backref" href="#id6">Delete</a><a class="headerlink" href="#delete" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Este dialog con el <strong>controller DELETE</strong> <a class="footnote-reference" href="#controller" id="id1">[1]</a> sirve para borrar un dato desde la interfaz del Klear. Esta opción
+viene por defecto en los yaml <strong>LIST</strong> cuando son creadas por el <a class="reference internal" href="index.html#generatoryaml"><em>Yaml</em></a>. Por defecto, se presenta de esta manera:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">main</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">module</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">klearMatrix</span>
+    <span class="l-Scalar-Plain">defaultScreen</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">sectionsList_screen</span>
+  <span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">sectionsList_screen</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">list</span>
+      <span class="l-Scalar-Plain">pagination</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">items</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">25</span>
+      <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Sections</span>
+      <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;List of %s&quot;, ngettext(&#39;Section&#39;, &#39;Sections&#39;, 0))</span>
+      <span class="l-Scalar-Plain">fields</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+          <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ngettext(&quot;Option&quot;, &quot;Options&quot;, 0)</span>
+          <span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">sectionsEdit_screen</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+            <span class="l-Scalar-Plain">subSectionsList_screen</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+          <span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+<span class="hll">            <span class="l-Scalar-Plain">sectionsDel_dialog</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span>          <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">sectionsEdit_screen</span>
+</pre></div>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre>  <span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+<span class="hll">    <span class="l-Scalar-Plain">sectionsDel_dialog</span><span class="p-Indicator">:</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Sections</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">delete</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-bin</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Delete %s&quot;, ngettext(&#39;Section&#39;, &#39;Sections&#39;, 1))</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;You want to delete this %s?&quot;, ngettext(&#39;Section&#39;, &#39;Sections&#39;, 1))</span>
+</span>      <span class="l-Scalar-Plain">labelOnList</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true // Indicará que si se debe mostrar un label, cuando se comporta como una opción de pantalla global List</span>
+      <span class="l-Scalar-Plain">multiItem</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true // Hace que el dialogo sea compatible con selección múltiple de filas (cuando delete es configurada como opcion global de listado)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clone">
+<h2><a class="toc-backref" href="#id7">Clone</a><a class="headerlink" href="#clone" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Este dialog con el <strong>controller CLONE</strong> <a class="footnote-reference" href="#controller" id="id2">[1]</a> sirve para clonar o copiar un dato desde la interfaz del Klear.
+Esta opción no viene por defecto en los yaml <strong>LIST</strong> por lo que se tendrá que incorporarse manualmente con el siguiente
+sencillo procedimiento:</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Los siguientes códigos no hacen falta añadir todo el código en nuestro <strong>YAML LIST</strong>, sino es una forma de ubicar el
+siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimiento es parecido como el <strong>dialog DELETE</strong>.</p>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">nuestraPantalla_screen</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">fields</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Options&quot;)</span>
+        <span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+<span class="hll">          <span class="l-Scalar-Plain">itemClone_dialog</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span></pre></div>
+</div>
+<div class="section" id="parametros-de-configuracion">
+<h3><a class="toc-backref" href="#id8">Parámetros de configuración</a><a class="headerlink" href="#parametros-de-configuracion" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><strong>controller</strong>: Hay que definir el controller CLONE</li>
+<li><strong>class</strong>: Para definir el icono que queremos que aparezca</li>
+<li><strong>title</strong>: Se mostrará como encabezado del dialog</li>
+<li><strong>description</strong>: Se muestra dentro del dialog en la primera pantalla</li>
+<li><strong>message</strong>: Se muestra cuando todo ha salido bien</li>
+</ul>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+<span class="hll">   <span class="l-Scalar-Plain">itemClone_dialog</span><span class="p-Indicator">:</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Item</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">clone</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-clone</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Clone %s&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;You want to clone this %s?&quot;, ngettext(&#39;Item&#39;, &#39;Item&#39;, 1))</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">message</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;%s successfully cloned&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="massupdate">
+<h2><a class="toc-backref" href="#id9">MassUpdate</a><a class="headerlink" href="#massupdate" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Este dialog con el <strong>controller MassUpdate</strong> <a class="footnote-reference" href="#controller" id="id3">[1]</a> sirve para actualizar un campo de tipo select, multiselect o checkbox desde la interfaz de listado de Klear.
+Esta opción no viene por defecto en los yaml <strong>LIST</strong> por lo que se tendrá que incorporarse manualmente con el siguiente
+sencillo (a la par que entretenido) procedimiento:</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Los siguientes códigos no hacen falta añadir todo el código en nuestro <strong>YAML LIST</strong>, sino es una forma de ubicar el
+siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimiento es parecido como el <strong>dialog DELETE</strong>.</p>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">nuestraPantalla_screen</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">fields</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Options&quot;)</span>
+        <span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+<span class="hll">          <span class="l-Scalar-Plain">itemMassUpdate_dialog</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span></pre></div>
+</div>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id10">Parámetros de configuración</a><a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><strong>controller</strong>: Hay que definir el controller MassUpdate</li>
+<li><strong>class</strong>: Para definir el icono que queremos que aparezca</li>
+<li><strong>title</strong>: Se mostrará como encabezado del dialog</li>
+<li><strong>description</strong>: Se muestra dentro del dialog en la primera pantalla</li>
+<li><strong>message</strong>: Se muestra cuando todo ha salido bien</li>
+</ul>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+<span class="hll">   <span class="l-Scalar-Plain">itemMassUpdate_dialog</span><span class="p-Indicator">:</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Item</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mass-update</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-pencil-go</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Actualizar campo en %s&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Do you want to update &quot;X&quot; on this %s?&quot;, ngettext(&#39;Item&#39;, &#39;Item&#39;, 1))</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">message</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;(%total%) %s successfully updated&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
+</span>     <span class="l-Scalar-Plain">labelOnList</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1"># Opcional, si se quiere que salga el label, cuando es una opción general de pantalla(con multiItem)</span>
+     <span class="l-Scalar-Plain">multiItem</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1"># Opcional, si se quiere que sea una opción multi-campo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="custom-dialog">
+<h2><a class="toc-backref" href="#id11">Custom dialog</a><a class="headerlink" href="#custom-dialog" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Por el momento, existe un determinado de dialogs configurados en nuestro Klear para uso estándar para los proyectos, pero también podemos
+crear nuestros propios dialogs para que hagan funciones distintas a lo que está programado con solo ubicar correctamente los siguientes códigos
+en estas rutas.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Tiene que incorporarse todos estos códigos, empezar y quedarse a medio camino, solo provocará un error en el Listado donde se incorporó el código.</p>
+</div>
+<p>En cualquiera de nuestros <strong>YAML LIST</strong>. Debemos incorporar los siguientes códigos, siendo lo marcado lo que se tiene que incorporar:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">nuestraPantalla_screen</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">fields</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Options&quot;)</span>
+        <span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+<span class="hll">          <span class="l-Scalar-Plain">nameaction_dialog</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span></pre></div>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+<span class="hll">    <span class="l-Scalar-Plain">nameaction_dialog</span><span class="p-Indicator">:</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;My Dialog&quot;)</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">module</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">default</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">klear-custom-nameaction</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">action</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">index</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-page-white-width</span>
+</span>      <span class="l-Scalar-Plain">labelOnEdit</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true|false|string // La opción se dibujará con &quot;label&quot; cuando es una opción general de Edit</span>
+      <span class="l-Scalar-Plain">labelOnList</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true|false|string // La opción se dibujará con &quot;label&quot; cuando es una opción general de List</span>
+      <span class="l-Scalar-Plain">labelOnEntityPostSave</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true|false|string // La opción se dibujará con &quot;label&quot; cuando es una opción general de EntityPostSave</span>
+      <span class="l-Scalar-Plain">multiItem</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true // Al invocarase la opción como general option desde List, el controlador será invocado con pk como un array de Ids.</span>
+</pre></div>
+</div>
+<p>Después de indicar el <strong>controller</strong> <a class="footnote-reference" href="#zendframework" id="id5">[2]</a> hay que crear dicho controlador en nuestra carpeta <strong>controllers</strong> <em>(application/controllers)</em>, en
+este caso sería el archivo <strong>KlearCustomNameActionController.php</strong> con el siguiente contenido, teniendo en cuenta que lo marcado es obligatorio:</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">KlearCustomNameActionController</span> <span class="k">extends</span> <span class="nx">Zend_Controller_Action</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$_mainRouter</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">init</span><span class="p">()</span>
+    <span class="p">{</span>
+<span class="hll">        <span class="c1">// Nos aseguramos que este controlador se ejecuta sólamente desde klear!</span>
+</span><span class="hll">        <span class="k">if</span> <span class="p">((</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getUserParam</span><span class="p">(</span><span class="s2">&quot;mainRouter&quot;</span><span class="p">))</span> <span class="o">||</span>
+</span><span class="hll">            <span class="p">(</span><span class="o">!</span><span class="nb">is_object</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="p">))</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">                <span class="k">throw</span> <span class="k">New</span> <span class="nx">Zend_Exception</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nx">Zend_Controller_Plugin_ErrorHandler</span><span class="o">::</span><span class="na">EXCEPTION_NO_ACTION</span><span class="p">);</span>
+</span><span class="hll">        <span class="p">}</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="c1">//Inicia el contenido en Json</span>
+</span><span class="hll">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">ContextSwitch</span><span class="p">()</span>
+</span><span class="hll">             <span class="o">-&gt;</span><span class="na">addActionContext</span><span class="p">(</span><span class="s1">&#39;NameAction&#39;</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">)</span>
+</span><span class="hll">             <span class="o">-&gt;</span><span class="na">initContext</span><span class="p">(</span><span class="s1">&#39;json&#39;</span><span class="p">);</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">layout</span><span class="o">-&gt;</span><span class="na">disableLayout</span><span class="p">();</span>
+</span>    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+    <span class="p">{</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s2">&quot;Parametro de verificación&quot;</span><span class="p">))</span> <span class="p">{</span>
+           <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">viewRenderer</span><span class="o">-&gt;</span><span class="na">setNoRender</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+           <span class="c1">//Las acciones que generara este Parametro</span>
+        <span class="p">}</span>
+
+
+        <span class="c1">// Si queremos coger la Id del dato donde es llamado nuestro dialog.</span>
+        <span class="c1">// Detectamos si hemos sido invocados desde un listado</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">is_array</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s1">&#39;pk&#39;</span><span class="p">))</span> <span class="p">{</span>
+
+            <span class="nv">$aIds</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s1">&#39;pk&#39;</span><span class="p">);</span>
+
+<span class="hll">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class="hll">
+</span><span class="hll">            <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s1">&#39;pk&#39;</span><span class="p">);</span>
+</span><span class="hll">            <span class="c1">// sería buena idea (compatible con multiItems: true)</span>
+</span><span class="hll">            <span class="c1">// $aIds = array($id);</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="p">}</span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll">        <span class="c1">//Por ultimo generamos las opciones del Custom Dialog</span>
+</span><span class="hll">        <span class="c1">//y las acciones de cada opción</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class="hll">          <span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="nx">_</span><span class="p">(</span><span class="s2">&quot;Mi Accion&quot;</span><span class="p">),</span>
+</span><span class="hll">                    <span class="s1">&#39;message&#39;</span><span class="o">=&gt;</span><span class="nx">_</span><span class="p">(</span><span class="s2">&quot;Estas seguro de ejecutar esta ación&quot;</span><span class="p">),</span>
+</span><span class="hll">                    <span class="s1">&#39;buttons&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
+</span>                               <span class="c1">// Este botón volverá a llamar el dialog enviando un parámetro y será reconocido por la línea 26</span>
+                               <span class="nx">_</span><span class="p">(</span><span class="s1">&#39;Aceptar&#39;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+<span class="hll">                                       <span class="s1">&#39;recall&#39;</span><span class="o">=&gt;</span><span class="k">true</span><span class="p">,</span>
+</span><span class="hll">                                       <span class="s1">&#39;params&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
+</span><span class="hll">                                               <span class="s2">&quot;Parametro de verificación&quot;</span> <span class="o">=&gt;</span> <span class="k">true</span>
+</span><span class="hll">                                   <span class="p">)</span>
+</span><span class="hll">                                 <span class="p">),</span>
+</span><span class="hll">                               <span class="nx">_</span><span class="p">(</span><span class="s1">&#39;Cancelar&#39;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+</span>                                             <span class="s1">&#39;recall&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+                                             <span class="p">)</span>
+                                      <span class="p">)</span>
+             <span class="p">);</span>
+
+        <span class="c1">//Inicia los plugins de KlearMatrix</span>
+        <span class="nv">$jsonResponse</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Klear_Model_DispatchResponse</span><span class="p">();</span>
+        <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">setModule</span><span class="p">(</span><span class="s1">&#39;klearMatrix&#39;</span><span class="p">);</span>
+        <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">setPlugin</span><span class="p">(</span><span class="s1">&#39;klearMatrixGenericDialog&#39;</span><span class="p">);</span>
+        <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">addJsFile</span><span class="p">(</span><span class="s2">&quot;/js/plugins/jquery.klearmatrix.genericdialog.js&quot;</span><span class="p">);</span>
+        <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">setData</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+        <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">attachView</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>El resto ya está a la imaginación del programador de lo que quiere crear o lograr con este sistema.</p>
+<table class="docutils footnote" frame="void" id="controller" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>, <a class="fn-backref" href="#id3">3</a>)</em> Clases ya definidas en el módulo del Klear para que cumplan una función determinada.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="zendframework" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[2]</a></td><td>En Zend Framework, el controller es una clase que tiene que ser llamada {Controller name}Controller.
+Tengan en cuenta que {Controller name} debe comenzar con la primer letra en mayúscula.
+Esta clase debe estar dentro de un archvo llamado {Controller name}Controller.php dentro de la carpeta application/controllers.
+Cada acción es una función pública dentro de la clase del controlador que debe llamarse {action name}Action.
+En este caso {action name} tiene que ser escrito en letra en minúscula.
+Los nombres con mayúsculas y minúsculas son permitidas en los controladores y las acciones, pero tiene algunas reglas especiales que tienes que comprender antes de que las utilices.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="iconos.html" class="btn btn-neutral float-right" title="Iconos"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="fields/video.html" class="btn btn-neutral" title="video"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

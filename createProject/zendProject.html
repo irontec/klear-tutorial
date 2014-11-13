@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Crear proyecto Zend Framework &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="Creación del Proyecto" href="index.html"/>
+        <link rel="next" title="Configuración Klear" href="klear.html"/>
+        <link rel="prev" title="Crear la estructura de directorios del proyecto" href="structure.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Creación del Proyecto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Crear proyecto Zend Framework</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/createProject/zendProject.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="crear-proyecto-zend-framework">
+<h1>Crear proyecto Zend Framework<a class="headerlink" href="#crear-proyecto-zend-framework" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Un proyecto con Zend Framework necesita un sistema de carpetas para que pueda funcionar correctamente, aunque también
+esta formalidad nos ayuda a ser ordenados a la hora de crear nuestros archivos y que así más adelante puedan ser leídos,
+modificados, interpretados y encontrados por otros programadores, por si se necesita arreglar o añadir algo. Ahora para
+incorporar este sistema abrimos un terminal:</p>
+<div class="section" id="creacion-de-un-proyecto-zend">
+<h2>Creación de un proyecto Zend<a class="headerlink" href="#creacion-de-un-proyecto-zend" title="Enlazar permanentemente con este título">¶</a></h2>
+<ol class="arabic simple">
+<li>Desde nuestro terminal y estando en nuestra carpeta workspace/NuevoProyecto escribimos el siguiente código.</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span class="hll"><span class="gp">$</span> zf create project web
+</span><span class="go">Creating project at /home/user/workspace/NuevoProyecto/web</span>
+<span class="go">Note: This command created a web project, for more information setting up your VHOST, please see docs/README</span>
+<span class="go">Testing Note: PHPUnit was not found in your include_path, therefore no testing actions will be created.</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">&#8220;web&#8221; es el nombre de la carpeta donde  estará nuestro proyecto.</p>
+</div>
+<p>Si todo ha salido bien, ahora nuestro proyecto debe tener la siguiente Estructura:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> tree web
+<span class="go">web</span>
+<span class="go">├── application</span>
+<span class="go">│   ├── Bootstrap.php</span>
+<span class="go">│   ├── configs</span>
+<span class="go">│   │   └── application.ini</span>
+<span class="go">│   ├── controllers</span>
+<span class="go">│   │   ├── ErrorController.php</span>
+<span class="go">│   │   └── IndexController.php</span>
+<span class="go">│   ├── models</span>
+<span class="go">│   └── views</span>
+<span class="go">│       ├── helpers</span>
+<span class="go">│       └── scripts</span>
+<span class="go">│           ├── error</span>
+<span class="go">│           │   └── error.phtml</span>
+<span class="go">│           └── index</span>
+<span class="go">│               └── index.phtml</span>
+<span class="go">├── docs</span>
+<span class="go">│   └── README.txt</span>
+<span class="go">├── library</span>
+<span class="go">├── public</span>
+<span class="go">│   └── index.php</span>
+<span class="go">└── tests</span>
+<span class="go">    ├── application</span>
+<span class="go">    │   └── controllers</span>
+<span class="go">    │       └── IndexControllerTest.php</span>
+<span class="go">    ├── bootstrap.php</span>
+<span class="go">    ├── library</span>
+<span class="go">    └── phpunit.xml</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Para poder ver nuestro proyecto en el explorador web tenemos que crear un enlace en el directorio /var/www/ que apunte a la carpeta web/public/ de nuestro proyecto.</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">#</span> ln -s /home/user/workspace/NuevoProyecto/web/public/ /var/www/nuevoproyecto
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Para comprobar que el Zend se ha incorporado correctamente. Abrimos desde el navegador nuestro proyecto: localhost/nuevoproyecto
+y debe salir la típica presentación de Zend:</li>
+</ol>
+<img alt="../_images/zend-framework.png" src="../_images/zend-framework.png" />
+<ol class="arabic simple" start="4">
+<li>(Opcional) Este no es obligatorio para el uso de Klear pero puede ser útil para un futuro proyecto. Añadir la carpeta
+layout a nuestro sistema. Esta carpeta nos ayuda para trabajar con una plantilla que queremos que se repita durante todo
+nuestro proyecto, gracias a ella podríamos mantener una apariencia fija en nuestra web: encabezados, footer, botones
+de navegación, etc. Para activarlo, solo nos ubicamos en nuestro proyecto y activamos el siguiente código:</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span class="hll"><span class="gp">$</span> zf <span class="nb">enable </span>layout
+</span><span class="go">A layout entry has been added to the application config file.</span>
+<span class="go">A default layout has been created at /home/user/workspace/NuevoProyecto/web/application/layouts/scripts/layout.phtml</span>
+<span class="go">Updating project profile &#39;/home/user/workspace/NuevoProyecto/web/.zfproject.xml&#39;</span>
+</pre></div>
+</div>
+<p>Entonces la estructura sería la siguiente:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> tree web
+<span class="go">web</span>
+<span class="go">├── application</span>
+<span class="go">│   ├── Bootstrap.php</span>
+<span class="go">│   ├── configs</span>
+<span class="go">│   │   └── application.ini</span>
+<span class="go">│   ├── controllers</span>
+<span class="go">│   │   ├── ErrorController.php</span>
+<span class="go">│   │   └── IndexController.php</span>
+<span class="hll"><span class="go">│   ├── layouts</span>
+</span><span class="hll"><span class="go">│   │   └── scripts</span>
+</span><span class="hll"><span class="go">│   │       └── layout.phtml</span>
+</span><span class="go">│   ├── models</span>
+<span class="go">│   └── views</span>
+<span class="go">│       ├── helpers</span>
+<span class="go">│       └── scripts</span>
+<span class="go">│           ├── error</span>
+<span class="go">│           │   └── error.phtml</span>
+<span class="go">│           └── index</span>
+<span class="go">│               └── index.phtml</span>
+<span class="go">├── docs</span>
+<span class="go">│   └── README.txt</span>
+<span class="go">├── library</span>
+<span class="go">├── public</span>
+<span class="go">│   └── index.php</span>
+<span class="go">└── tests</span>
+<span class="go">    ├── application</span>
+<span class="go">    │   └── controllers</span>
+<span class="go">    │       └── IndexControllerTest.php</span>
+<span class="go">    ├── bootstrap.php</span>
+<span class="go">    ├── library</span>
+<span class="go">    └── phpunit.xml</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="klear.html" class="btn btn-neutral float-right" title="Configuración Klear"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="structure.html" class="btn btn-neutral" title="Crear la estructura de directorios del proyecto"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

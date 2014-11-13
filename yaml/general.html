@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuración general &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="Yaml" href="index.html"/>
+        <link rel="next" title="Configuración lists" href="list.html"/>
+        <link rel="prev" title="Klear.yaml" href="klear-yaml.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Yaml</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Configuración general</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/yaml/general.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="configuracion-general">
+<span id="id1"></span><h1>Configuración general<a class="headerlink" href="#configuracion-general" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#configuracion" id="id6">Configuración</a></li>
+<li><a class="reference internal" href="#general" id="id7">general</a></li>
+<li><a class="reference internal" href="#fields" id="id8">fields</a></li>
+<li><a class="reference internal" href="#options" id="id9">options</a></li>
+<li><a class="reference internal" href="#info" id="id10">info</a></li>
+</ul>
+</div>
+<p>Los screen donde controller es de tipo <strong>list|new|edit</strong> tienen varias
+configuraciones compartidas, que se explican en esta sección.</p>
+<div class="section" id="configuracion">
+<h2><a class="toc-backref" href="#id6">Configuración</a><a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El siguiente fichero se muestra como ejemplo para explicar seguidamente
+cada uno de los componentes del mismo:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+ <span class="l-Scalar-Plain">Contacts</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">list</span>
+   <span class="l-Scalar-Plain">mapper</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">\Mappers\Sql\Contacts</span>
+   <span class="l-Scalar-Plain">modelFile</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Contactos</span>
+   <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Listado de contactos&quot;)</span>
+   <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-add</span>
+   <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+   <span class="l-Scalar-Plain">shortcutOption</span><span class="p-Indicator">:</span> <span class="s">&quot;L&quot;</span>
+   <span class="l-Scalar-Plain">filterField</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">companyId</span>
+   <span class="l-Scalar-Plain">forcedValues</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">companyId</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2</span>
+     <span class="l-Scalar-Plain">active</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+   <span class="l-Scalar-Plain">rawCondition</span><span class="p-Indicator">:</span> <span class="s">&#39;estado</span><span class="nv"> </span><span class="s">!=</span><span class="nv"> </span><span class="s">&quot;incompleto&quot;&#39;</span>
+   <span class="l-Scalar-Plain">fields</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">order</span><span class="p-Indicator">:</span>
+       <span class="l-Scalar-Plain">firstName</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+       <span class="l-Scalar-Plain">lastName</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+       <span class="l-Scalar-Plain">company</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+     <span class="l-Scalar-Plain">blacklist</span><span class="p-Indicator">:</span>
+       <span class="l-Scalar-Plain">active</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+       <span class="l-Scalar-Plain">phone</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+     <span class="l-Scalar-Plain">whitelist</span><span class="p-Indicator">:</span>
+       <span class="l-Scalar-Plain">contactId</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+     <span class="l-Scalar-Plain">readOnly</span><span class="p-Indicator">:</span>
+       <span class="l-Scalar-Plain">phone</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+       <span class="l-Scalar-Plain">dateFrom</span><span class="p-Indicator">:</span>
+         <span class="l-Scalar-Plain">conditions</span><span class="p-Indicator">:</span>
+           <span class="l-Scalar-Plain">defaultLanguageId</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+           <span class="l-Scalar-Plain">state</span><span class="p-Indicator">:</span>
+             <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ongoing</span>
+             <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">done</span>
+             <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">closed</span>
+             <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">rejected</span>
+   <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+       <span class="l-Scalar-Plain">NewContact</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+       <span class="l-Scalar-Plain">EditContact</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+     <span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+       <span class="l-Scalar-Plain">DeleteContact</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+     <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">EditContact</span>
+   <span class="l-Scalar-Plain">info</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">box</span>
+     <span class="l-Scalar-Plain">position</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">left</span>
+     <span class="l-Scalar-Plain">icon</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">help</span>
+     <span class="l-Scalar-Plain">text</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Esto es el texto mostrado al desplegar la ayuda.&quot;)</span>
+     <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;¿Necesitas ayuda?&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="general">
+<h2><a class="toc-backref" href="#id7">general</a><a class="headerlink" href="#general" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Opciones que se repiten para todo tipo de <strong>screen</strong>&#8216;s (list, edit y new) .</p>
+<ul class="simple">
+<li><strong>controller</strong>: tipo de controlador a usar, <strong>list</strong>, <strong>edit</strong> o <strong>new</strong>.</li>
+<li><strong>mapper</strong>: mapper que va a cargar los datos. <a class="footnote-reference" href="#mapper" id="id2">[1]</a></li>
+<li><strong>modelFile</strong>: archivo de modelo que se encuentra en <strong>APPLICATION_PATH</strong>/configs/klear/model/. <a class="footnote-reference" href="#mapper" id="id3">[1]</a></li>
+<li><strong>title</strong>: título de la pantalla.</li>
+<li><strong>class</strong>: icono a mostrar, se pueden ver en el siguiente <a class="reference external" href="https://klear-wiki.irontec.com/silk/">listado</a>.</li>
+<li><strong>label</strong>: mostrar u ocultar el texto al lado del icono. Por defecto es <strong>true</strong>.</li>
+<li><strong>labelOnEdit</strong>: habilitar la etiqueta siempre que se invoque desde un edit o sustituirla con un string.</li>
+<li><strong>labelOnList</strong>: habilitar la etiqueta siempre que se invoque desde un list o sustituirla con un string.</li>
+<li><strong>labelOnEntityPostSave</strong>: habilitar la etiqueta siempre que se invoque desde un EntityPostSave o sustituirla con un string.</li>
+<li><strong>filterField</strong>: campo por el cual se filtraría el <strong>screen</strong> actual, si tuvieramos <strong>pk</strong> proveniente de una pantalla padre.</li>
+<li><strong>forcedValues</strong>: valores forzados manualmente, al listar se filtra y al guardar se guarda el valor seteado. <a class="footnote-reference" href="#null" id="id4">[2]</a></li>
+<li><strong>rawCondition</strong>: se filtran los datos por la <strong>SQL</strong> definida.</li>
+<li><strong>shortcutOption</strong>: Siempre que el item sea invocado como option, se bindeará el shortcut Ctrl+Alt+[LETRA] como lanzador de la opción. (siempre que no sea uno de los shortcuts &#8220;oficiales&#8221;).</li>
+</ul>
+</div>
+<div class="section" id="fields">
+<h2><a class="toc-backref" href="#id8">fields</a><a class="headerlink" href="#fields" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Opciones que afectan a la visualización de los campos del modelo de datos.</p>
+<ul class="simple">
+<li><strong>order</strong>: indica el orden en que se van a mostrar los campos.
+Si no se pone <strong>order</strong>, los campos se muestran en el orden que estén generados en el modelo de datos.
+Si solo se ponen algunos campos en order, muestra esos campos en ese orden y
+el resto como esté ordenado en el modelo de datos. No se tiene en cuenta si el valor es <strong>true</strong> o <strong>false</strong>.</li>
+<li><strong>readOnly</strong>: marca los campos listados como <strong>de solo lectúra</strong>.
+Útil para los casos en los que queramos crear un campo en el <strong>New</strong> pero no
+queramos permitir editarlo en el <strong>Edit</strong>.</li>
+<li><strong>blacklist</strong>: campos que no queremos mostrar en la pantalla. Con valor <strong>true</strong> no se muestra, con valor <strong>false</strong> se muestra.</li>
+<li><strong>whitelist</strong>: esta configuración es únicamente para mostrar la clave primaria, ya que es el único campo oculto por defecto.
+No se tiene en cuenta si el valor es <strong>true</strong> o <strong>false</strong>.</li>
+</ul>
+</div>
+<div class="section" id="options">
+<h2><a class="toc-backref" href="#id9">options</a><a class="headerlink" href="#options" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Opciones que se muestran para cada línea de registro en el caso de las <strong>Listas</strong>,
+y en la parte inferior en el caso de las pantallas de <strong>Edit</strong> y <strong>New</strong>.</p>
+<ul class="simple">
+<li><strong>screen</strong>: pantallas a las que se podrá acceder desde la actual. Con valor <strong>true</strong> se muestra y a la inversa.</li>
+<li><strong>dialogs</strong>: dialogos que serán accesibles desde la pantalla actual. Con valor <strong>true</strong> se muestra y a la inversa.</li>
+<li><strong>default</strong>: pantalla que se abre por defecto al pinchar sobre un registro. <a class="footnote-reference" href="#sololista" id="id5">[3]</a></li>
+</ul>
+</div>
+<div class="section" id="info">
+<h2><a class="toc-backref" href="#id10">info</a><a class="headerlink" href="#info" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><strong>type</strong>: el tipo de ayuda que queremos mostrar. Los valores posibles son <strong>tooltip</strong> (por defecto), <strong>box</strong> y <strong>boxinfo</strong>.</li>
+<li><strong>position</strong>: la posición donde queremos mostrar la ayuda. <strong>Left</strong> o <strong>right</strong>.</li>
+<li><strong>icon</strong>: icono a mostrar, por defecto <em>help</em>. Icono del tipo <em>ui-silk-</em> + icon, de esta <a class="reference external" href="https://klear-wiki.irontec.com/silk/">lista</a>.</li>
+<li><strong>text</strong>: el texto que se muestra en la ayuda. Permite introducir <strong>HTML</strong>.</li>
+<li><strong>label</strong>: el título de la ayuda.</li>
+</ul>
+<hr class="docutils" />
+<table class="docutils footnote" frame="void" id="mapper" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> Estos dos atributos normalmente se setean con el alias del fichero mappers.yaml.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="null" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[2]</a></td><td>Para añadir <em>null</em>, utilizar mayúsculas (<strong>NULL</strong>) .</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="sololista" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[3]</a></td><td>Esta opción es válida únicamente en aquellas pantallas del tipo <strong>lista</strong>.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="list.html" class="btn btn-neutral float-right" title="Configuración lists"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="klear-yaml.html" class="btn btn-neutral" title="Klear.yaml"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

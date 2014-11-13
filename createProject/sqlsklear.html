@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SQLs Klear &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="Creación del Proyecto" href="index.html"/>
+        <link rel="next" title="Generadores" href="generadoresDB.html"/>
+        <link rel="prev" title="Phing" href="phing.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Creación del Proyecto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phing.html">Phing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">SQLs Klear</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/createProject/sqlsklear.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="sqls-klear">
+<h1>SQLs Klear<a class="headerlink" href="#sqls-klear" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Para crear las tablas necesarias para que funcione klear vamos a utilizar Phing.
+Para ello crearemos un archivo que llamaremos 001-createKlearUsers.sql en el directorio /home/user/workspace/NuevoProyecto/phing/deltas/</p>
+<p>El contenido del archivo variará en función de las necesidades de nuestro proyecto:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#tablaklearusersdefault"><em>Proyecto Simple</em></a></li>
+<li><a class="reference internal" href="#tablaklearuserspais"><em>Proyecto con Países y Timezones</em></a></li>
+</ul>
+<p>Si además se quieren configurar roles debemos añadir al archivo 001-createKlearUsers.sql las <a class="reference internal" href="#tablaroles"><em>tablas de Roles de KlearUsers</em></a></p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p>Una vez tengamos definido el fichero 001-createKlearUsers.sql, lo ejecutaremos mediante phing:</p>
+<div class="last highlight-console"><div class="highlight"><pre><span class="gp">$</span> phing migrate
+</pre></div>
+</div>
+</div>
+<div class="section" id="tabla-klearusers">
+<span id="tablaklearusers"></span><h2>Tabla KlearUsers<a class="headerlink" href="#tabla-klearusers" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="simple">
+<span id="tablaklearusersdefault"></span><h3>Simple<a class="headerlink" href="#simple" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Esta es la tabla sencilla para identificarse:</p>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="ss">`KlearUsers`</span> <span class="p">(</span>
+  <span class="ss">`userId`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="ss">`login`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`email`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`pass`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="n">COMMENT</span> <span class="s1">&#39;[password]&#39;</span><span class="p">,</span>
+  <span class="ss">`active`</span> <span class="kt">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+  <span class="ss">`createdOn`</span> <span class="kt">timestamp</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`userId`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="ss">`login`</span> <span class="p">(</span><span class="ss">`login`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="ss">`email`</span> <span class="p">(</span><span class="ss">`email`</span><span class="p">)</span>
+<span class="p">)</span> <span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span> <span class="n">COMMENT</span><span class="o">=</span><span class="s1">&#39;[entity]&#39;</span><span class="p">;</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="nf">KlearUsers</span> <span class="p">(</span><span class="n">login</span><span class="p">,</span> <span class="n">pass</span><span class="p">,</span> <span class="n">active</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span><span class="s1">&#39;$2a$08$0hHHBX8So9JhU0a0SNnRCeAZcMEdAfn7T/pl/u/pESzBwztldhRnO&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<div class="last line-block">
+<div class="line">La última sentencia crea el siguiente usuario:</div>
+<div class="line">Usuario: admin</div>
+<div class="line">Password: 1234</div>
+</div>
+</div>
+</div>
+<div class="section" id="pais-y-timezone">
+<span id="tablaklearuserspais"></span><h3>País y Timezone<a class="headerlink" href="#pais-y-timezone" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Agrega los campos countriId y timezoneId para determinar la procedencia de cada usuario a la hora de identificarse.</p>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="ss">`Countries`</span> <span class="p">(</span>
+   <span class="ss">`id`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="p">,</span>
+   <span class="ss">`name`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="no">NULL</span> <span class="n">COMMENT</span> <span class="s1">&#39;[ml]&#39;</span><span class="p">,</span>
+   <span class="ss">`code`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="no">NULL</span><span class="p">,</span>
+   <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">),</span>
+   <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="ss">`code`</span> <span class="p">(</span><span class="ss">`code`</span><span class="p">)</span>
+   <span class="p">)</span> <span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span> <span class="n">COMMENT</span><span class="o">=</span><span class="s1">&#39;[entity]&#39;</span><span class="p">;</span>
+
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="ss">`Timezones`</span> <span class="p">(</span>
+   <span class="ss">`id`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="p">,</span>
+   <span class="ss">`tz`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="no">NULL</span><span class="p">,</span>
+   <span class="ss">`comment`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+   <span class="ss">`countryId`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">DEFAULT</span> <span class="no">NULL</span><span class="p">,</span>
+   <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">),</span>
+   <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="ss">`tz`</span> <span class="p">(</span><span class="ss">`tz`</span><span class="p">),</span>
+   <span class="k">KEY</span> <span class="ss">`countryId`</span> <span class="p">(</span><span class="ss">`countryId`</span><span class="p">),</span>
+   <span class="k">CONSTRAINT</span> <span class="ss">`Timezones_ibfk_1`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`countryId`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="ss">`Countries`</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+<span class="p">)</span> <span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="kp">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">419</span> <span class="k">DEFAULT</span> <span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span> <span class="n">COMMENT</span><span class="o">=</span><span class="s1">&#39;[entity]&#39;</span><span class="p">;</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="ss">`KlearUsers`</span> <span class="p">(</span>
+  <span class="ss">`userId`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="ss">`login`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`email`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`pass`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="n">COMMENT</span> <span class="s1">&#39;[password]&#39;</span><span class="p">,</span>
+  <span class="ss">`active`</span> <span class="kt">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+  <span class="ss">`createdOn`</span> <span class="kt">timestamp</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+  <span class="ss">`countryId`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">DEFAULT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`timezoneId`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">DEFAULT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`userId`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="ss">`login`</span> <span class="p">(</span><span class="ss">`login`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="ss">`email`</span> <span class="p">(</span><span class="ss">`email`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="ss">`timezoneId`</span> <span class="p">(</span><span class="ss">`timezoneId`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="ss">`countryId`</span> <span class="p">(</span><span class="ss">`countryId`</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="ss">`KlearUsers_ibfk_2`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`countryId`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="ss">`Countries`</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="kt">SET</span> <span class="no">NULL</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+  <span class="k">CONSTRAINT</span> <span class="ss">`KlearUsers_ibfk_1`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`timezoneId`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="ss">`Timezones`</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="kt">SET</span> <span class="no">NULL</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+<span class="p">)</span> <span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="kp">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">3</span> <span class="k">DEFAULT</span> <span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span> <span class="n">COMMENT</span><span class="o">=</span><span class="s1">&#39;[entity]&#39;</span><span class="p">;</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="nf">KlearUsers</span> <span class="p">(</span><span class="n">login</span><span class="p">,</span> <span class="n">pass</span><span class="p">,</span> <span class="n">active</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span><span class="s1">&#39;$2a$08$0hHHBX8So9JhU0a0SNnRCeAZcMEdAfn7T/pl/u/pESzBwztldhRnO&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<div class="last line-block">
+<div class="line">La última sentencia crea el siguiente usuario:</div>
+<div class="line">Usuario: admin</div>
+<div class="line">Password: 1234</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="roles">
+<span id="tablaroles"></span><h2>Roles<a class="headerlink" href="#roles" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para crear las tablas correspondientes para relacionar los usuarios a Roles, este es el código mysql.</p>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="c1">-- Estructura de tabla para la tabla `KlearRoles`</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="ss">`KlearRoles`</span> <span class="p">(</span>
+  <span class="ss">`id`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="ss">`name`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`description`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">DEFAULT</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="ss">`identifier`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="ss">`identifier`</span> <span class="p">(</span><span class="ss">`identifier`</span><span class="p">)</span>
+<span class="p">)</span> <span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span>  <span class="k">DEFAULT</span> <span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span> <span class="n">COMMENT</span><span class="o">=</span><span class="s1">&#39;[entity]&#39;</span><span class="p">;</span>
+
+<span class="c1">-- --------------------------------------------------------</span>
+
+<span class="c1">-- Estructura de tabla para la tabla `KlearRolesSections`</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="ss">`KlearRolesSections`</span> <span class="p">(</span>
+  <span class="ss">`id`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="ss">`klearRoleId`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`klearSectionId`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="ss">`klearRoleId`</span> <span class="p">(</span><span class="ss">`klearRoleId`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="ss">`klearSectionId`</span> <span class="p">(</span><span class="ss">`klearSectionId`</span><span class="p">)</span>
+<span class="p">)</span> <span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span>  <span class="k">DEFAULT</span> <span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span> <span class="n">COMMENT</span><span class="o">=</span><span class="s1">&#39;[entity]&#39;</span><span class="p">;</span>
+
+<span class="c1">-- --------------------------------------------------------</span>
+
+<span class="c1">-- Estructura de tabla para la tabla `KlearSections`</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="ss">`KlearSections`</span> <span class="p">(</span>
+  <span class="ss">`id`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="ss">`name`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`description`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">DEFAULT</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="ss">`identifier`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="ss">`identifier`</span> <span class="p">(</span><span class="ss">`identifier`</span><span class="p">)</span>
+<span class="p">)</span> <span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span>  <span class="k">DEFAULT</span> <span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span> <span class="n">COMMENT</span><span class="o">=</span><span class="s1">&#39;[entity]&#39;</span><span class="p">;</span>
+
+<span class="c1">-- --------------------------------------------------------</span>
+
+<span class="c1">-- Estructura de tabla para la tabla `KlearUsersRoles`</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="ss">`KlearUsersRoles`</span> <span class="p">(</span>
+  <span class="ss">`id`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="ss">`klearUserId`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`klearRoleId`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="ss">`klearUserId`</span> <span class="p">(</span><span class="ss">`klearUserId`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="ss">`klearRoleId`</span> <span class="p">(</span><span class="ss">`klearRoleId`</span><span class="p">)</span>
+<span class="p">)</span> <span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span>  <span class="k">DEFAULT</span> <span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span> <span class="n">COMMENT</span><span class="o">=</span><span class="s1">&#39;[entity]&#39;</span><span class="p">;</span>
+
+<span class="c1">-- Restricciones para tablas volcadas</span>
+
+<span class="c1">-- Filtros para la tabla `KlearRolesSections`</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="ss">`KlearRolesSections`</span>
+  <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="ss">`KlearRolesSections_ibfk_1`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`klearRoleId`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="ss">`KlearRoles`</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">,</span>
+  <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="ss">`KlearRolesSections_ibfk_2`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`klearSectionId`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="ss">`KlearSections`</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">;</span>
+
+<span class="c1">-- Filtros para la tabla `KlearUsersRoles`</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="ss">`KlearUsersRoles`</span>
+  <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="ss">`KlearUsersRoles_ibfk_1`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`klearUserId`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="ss">`KlearUsers`</span> <span class="p">(</span><span class="ss">`userId`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">,</span>
+  <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="ss">`KlearUsersRoles_ibfk_2`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`klearRoleId`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="ss">`KlearRoles`</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">;</span>
+
+<span class="c1">-- El siguiente código añadirá los permisos de administrador a tu usuario (con la ID = “1”) que previamente has creado.</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="ss">`KlearRoles`</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">,</span> <span class="ss">`name`</span><span class="p">,</span> <span class="ss">`description`</span><span class="p">,</span> <span class="ss">`identifier`</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Administrador&#39;</span><span class="p">,</span> <span class="s1">&#39;Usuario con permisos de administrador&#39;</span><span class="p">,</span> <span class="s1">&#39;admin&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Usuario&#39;</span><span class="p">,</span> <span class="s1">&#39;Con roles para un usuario normal con restricciones.&#39;</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">);</span>
+
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="ss">`KlearUsersRoles`</span> <span class="p">(</span><span class="ss">`id`</span><span class="p">,</span> <span class="ss">`klearUserId`</span><span class="p">,</span> <span class="ss">`klearRoleId`</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="generadoresDB.html" class="btn btn-neutral float-right" title="Generadores"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="phing.html" class="btn btn-neutral" title="Phing"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

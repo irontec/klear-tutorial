@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Zona Pública &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="Auth Custom" href="index.html"/>
+        <link rel="next" title="Custom screen" href="../customScreen/index.html"/>
+        <link rel="prev" title="Zona Klear" href="klear.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Auth Custom</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="klear.html">Zona Klear</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Zona Pública</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/authCustom/public.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="zona-publica">
+<h1>Zona Pública<a class="headerlink" href="#zona-publica" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Podemos también incluir la autentificación de Klear para dar acceso a la zona pública. Se podría usar la tabla de
+KlearUsers o crear una nueva pero con la ventaja de usar la encriptación de las contraseñas del Klear y hacer uso de los datos
+del usuario durante una sessión activa.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Tener en cuenta el uso de la opción <strong>&#8220;disableChangeName&#8221;</strong> para evitar conflictos de sesiones entre la zona Klear y la zona pública.
+Si queremos que Klear comparta su session, la opción debería ser <strong>&#8220;disableChangeName = true&#8221;</strong>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">El <strong>PublicAdapter.php</strong> es parecido al Adapter.php</p>
+</div>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="k">use</span> <span class="nx">\MyApp\Mapper\Sql\Entity</span> <span class="k">as</span> <span class="nx">UsersMapper</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">MyApp_Auth_PublicAdapter</span> <span class="k">implements</span> <span class="nx">Zend_Auth_Adapter_Interface</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$_username</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nv">$_password</span><span class="p">;</span>
+
+    <span class="k">protected</span> <span class="nv">$_userMapper</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nv">$_user</span><span class="p">;</span>
+
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$user</span><span class="p">,</span> <span class="nv">$password</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_usersMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UsersMapper</span><span class="p">();</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_username</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_password</span> <span class="o">=</span> <span class="nv">$password</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">authenticate</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_usersMapper</span><span class="o">-&gt;</span><span class="na">findOneByField</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_username</span><span class="p">);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_userHasValidCredentials</span><span class="p">(</span><span class="nv">$user</span><span class="p">))</span> <span class="p">{</span>
+
+                <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_user</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">;</span>
+                <span class="nv">$authResult</span> <span class="o">=</span> <span class="nx">Zend_Auth_Result</span><span class="o">::</span><span class="na">SUCCESS</span><span class="p">;</span>
+
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+
+                <span class="nv">$authResult</span> <span class="o">=</span> <span class="nx">Zend_Auth_Result</span><span class="o">::</span><span class="na">FAILURE_CREDENTIAL_INVALID</span><span class="p">;</span>
+
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="k">new</span> <span class="nx">Zend_Auth_Result</span><span class="p">(</span><span class="nv">$authResult</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_username</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="nv">$authResult</span> <span class="o">=</span> <span class="nx">Zend_Auth_Result</span><span class="o">::</span><span class="na">FAILURE_UNCATEGORIZED</span><span class="p">;</span>
+            <span class="nv">$authMessage</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nx">Zend_Auth_Result</span><span class="p">(</span><span class="nv">$authResult</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_username</span><span class="p">,</span> <span class="nv">$authMessage</span><span class="p">);</span>
+        <span class="p">}</span>
+
+
+    <span class="p">}</span>
+
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">_userHasValidCredentials</span><span class="p">(</span><span class="nv">$user</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">is_null</span><span class="p">(</span><span class="nv">$user</span><span class="p">))</span> <span class="p">{</span>
+            <span class="nv">$hash</span> <span class="o">=</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">getPassword</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">getActive</span><span class="p">()</span><span class="o">==</span><span class="s1">&#39;1&#39;</span> <span class="o">&amp;&amp;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_checkPassword</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_password</span><span class="p">,</span> <span class="nv">$hash</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">_checkPassword</span><span class="p">(</span><span class="nv">$clearPass</span><span class="p">,</span> <span class="nv">$hash</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$hashParts</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="nx">trim</span><span class="p">(</span><span class="nv">$hash</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">),</span> <span class="mi">2</span><span class="p">);</span>
+
+        <span class="k">switch</span> <span class="p">(</span><span class="nv">$hashParts</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
+         <span class="k">case</span> <span class="s1">&#39;1&#39;</span><span class="o">:</span> <span class="c1">//md5</span>
+             <span class="k">list</span><span class="p">(,,</span><span class="nv">$salt</span><span class="p">,)</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">&quot;$&quot;</span><span class="p">,</span> <span class="nv">$hash</span><span class="p">);</span>
+             <span class="nv">$salt</span> <span class="o">=</span> <span class="s1">&#39;$1$&#39;</span> <span class="o">.</span> <span class="nv">$salt</span> <span class="o">.</span> <span class="s1">&#39;$&#39;</span><span class="p">;</span>
+             <span class="k">break</span><span class="p">;</span>
+
+         <span class="k">case</span> <span class="s1">&#39;5&#39;</span><span class="o">:</span> <span class="c1">//sha</span>
+             <span class="k">list</span><span class="p">(,,</span><span class="nv">$rounds</span><span class="p">,</span><span class="nv">$salt</span><span class="p">,)</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">&quot;$&quot;</span><span class="p">,</span> <span class="nv">$hash</span><span class="p">);</span>
+             <span class="nv">$salt</span> <span class="o">=</span> <span class="s1">&#39;$5$&#39;</span> <span class="o">.</span> <span class="nv">$rounds</span> <span class="o">.</span> <span class="s1">&#39;$&#39;</span> <span class="o">.</span> <span class="nv">$salt</span> <span class="o">.</span> <span class="s1">&#39;$&#39;</span><span class="p">;</span>
+             <span class="k">break</span><span class="p">;</span>
+
+         <span class="k">case</span> <span class="s1">&#39;2a&#39;</span><span class="o">:</span> <span class="c1">//blowfish</span>
+             <span class="nv">$salt</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$hash</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">29</span><span class="p">);</span>
+             <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="nv">$res</span> <span class="o">=</span> <span class="nb">crypt</span><span class="p">(</span><span class="nv">$clearPass</span><span class="p">,</span> <span class="nv">$salt</span> <span class="o">.</span> <span class="s1">&#39;$&#39;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nv">$res</span> <span class="o">==</span> <span class="nv">$hash</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">saveStorage</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$auth</span> <span class="o">=</span> <span class="nx">Zend_Auth</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+        <span class="nv">$authStorage</span> <span class="o">=</span> <span class="nv">$auth</span><span class="o">-&gt;</span><span class="na">getStorage</span><span class="p">();</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_user</span><span class="o">-&gt;</span><span class="na">readWrite</span>  <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_user</span><span class="o">-&gt;</span><span class="na">readOnly</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="nv">$authStorage</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_user</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Así que la manera recomendado de usarlo, sería con el siguiente código en nuestro Controller que nos ayuda a autenficarnos.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+    <span class="nv">$username</span> <span class="o">=</span> <span class="s1">&#39;admin&#39;</span><span class="p">;</span>
+    <span class="nv">$password</span> <span class="o">=</span> <span class="s1">&#39;pass&#39;</span><span class="p">;</span>
+
+    <span class="nv">$auth</span> <span class="o">=</span> <span class="nx">Zend_Auth</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+    <span class="nv">$authAdapter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyApp_Auth_PublicAdapter</span><span class="p">(</span><span class="nv">$username</span><span class="p">,</span><span class="nv">$password</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$authAdapter</span><span class="o">-&gt;</span><span class="na">authenticate</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="nv">$authAdapter</span><span class="o">-&gt;</span><span class="na">authenticate</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getCode</span><span class="p">()</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$authAdapter</span><span class="o">-&gt;</span><span class="na">saveStorage</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$auth</span><span class="o">-&gt;</span><span class="na">authenticate</span><span class="p">(</span><span class="nv">$authAdapter</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="nv">$result</span><span class="o">-&gt;</span><span class="na">isValid</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s1">&#39;Usted se identifico correctamente.&#39;</span><span class="p">;</span>
+        <span class="k">exit</span><span class="p">;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="../customScreen/index.html" class="btn btn-neutral float-right" title="Custom screen"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="klear.html" class="btn btn-neutral" title="Zona Klear"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

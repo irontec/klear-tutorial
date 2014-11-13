@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ghost &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../../index.html"/>
+        <link rel="up" title="Tipos de Campos" href="index.html"/>
+        <link rel="next" title="ghost concat" href="ghostconcat.html"/>
+        <link rel="prev" title="file" href="file.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Yaml</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../../index.html">Docs</a> &raquo;</li>
+  <li><a href="">ghost</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../../_sources/yaml/fields/ghost.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="ghost">
+<h1>ghost<a class="headerlink" href="#ghost" title="Enlazar permanentemente con este título">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="index.html#tipos-de-campos"><em>Volver a Tipos de Campos</em></a></li>
+</ul>
+<p>Los campos del tipo <strong>ghost</strong> son válidos, para mostrar algo más que el simple
+dato que ofrece el campo. Se pueden concatenar diversos campos, o diréctamente
+definir el <strong>HTML</strong> que se verá en el lugar del campo.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#configuracion" id="id1">Configuración</a></li>
+<li><a class="reference internal" href="#clase-de-ejemplo" id="id2">Clase de ejemplo</a></li>
+</ul>
+</div>
+<div class="section" id="configuracion">
+<h2><a class="toc-backref" href="#id1">Configuración</a><a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">fieldName</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ghost</span>
+  <span class="l-Scalar-Plain">dirty</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+  <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Application_klear_Ghost_Item</span>
+    <span class="l-Scalar-Plain">method</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">getData</span>
+    <span class="l-Scalar-Plain">orderMethod</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">getOrderBy</span>
+    <span class="l-Scalar-Plain">searchMethod</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">getSearchConditionsForItem</span>
+    <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">modelId</span>
+    <span class="l-Scalar-Plain">cache</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">campo</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">conditions</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">campo</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">valor</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first"><strong>dirty</strong>: para que interprete el código <strong>HTML</strong> devuelto. Por defecto el <strong>false</strong>.</p>
+</li>
+<li><p class="first"><strong>class</strong>: clase encargada de servir los datos.</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>method</strong>: método (función) que se encarga de servir el dato que deseamos mostrar.</dt>
+<dd><ul class="first last simple">
+<li>Se recibe el <strong>$model</strong> en la función y se puede devolver tanto texto plano como <strong>html</strong>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>orderMethod</strong>: función que se encarga de generar el <strong>Order by</strong>.</dt>
+<dd><ul class="first last">
+<li><p class="first">Se recibe el <strong>$model</strong> en la función.</p>
+</li>
+<li><p class="first">Para ordenar por un campo de una tabla relacionada, tendremos que calcular el orden deseado
+y devolver los valores del campo de la tabla principal de la siguiente manera:</p>
+<div class="highlight-guess"><div class="highlight"><pre><span class="k">return</span> <span class="s">&quot;FIELD(campo,&quot;</span><span class="p">.</span><span class="n">implode</span><span class="p">(</span><span class="sc">&#39;,&#39;</span><span class="p">,</span><span class="n">valoresOrdenados</span><span class="p">).</span><span class="s">&quot;)&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>searchMethod</strong>: Función que genera el <strong>WHERE</strong> para filtrar los resultados de la búsqueda.</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Parametros recibidos:</dt>
+<dd><ul class="first last simple">
+<li><strong>$values</strong>: Palabras claves del buscador del klear dentro de un <strong>array</strong>.</li>
+<li><strong>$model</strong>: El modelo vacío del <strong>YAML</strong> que lo origina.</li>
+<li><strong>$searchOps</strong>: Opciones para buscar que se implementará más adelante en <strong>Klear</strong>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>La función tiene que devolver un código mysql  para buscar; por ejemplo:</dt>
+<dd><ul class="first last simple">
+<li><em>return &#8220;(id = 3 AND name=&#8217;admin&#8217;)&#8221;;</em> si encuentra el registro</li>
+<li><em>return &#8220;false&#8221;;</em> si no se encuentra nada.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="clase-de-ejemplo">
+<h2><a class="toc-backref" href="#id2">Clase de ejemplo</a><a class="headerlink" href="#clase-de-ejemplo" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">Application_Klear_Ghost_Item</span> <span class="k">extends</span> <span class="nx">KlearMatrix_Model_Field_Ghost_Abstract</span>
+<span class="p">{</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getData</span><span class="p">(</span><span class="nv">$model</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="c1"># Tenemos el $model para trabajar</span>
+
+      <span class="c1"># Nuestro código para generar el resultado,</span>
+
+      <span class="c1"># Se puede devolver HTML si se ha definido dirty:true</span>
+      <span class="k">return</span> <span class="nv">$resultado</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getSearchConditionsForItem</span><span class="p">(</span><span class="nv">$values</span><span class="p">,</span> <span class="nv">$searchOps</span><span class="p">,</span> <span class="nv">$model</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1"># Tenemos un array de valores de búsqueda</span>
+        <span class="c1"># También tenemos el $model</span>
+        <span class="c1"># y las $searchOps</span>
+
+        <span class="c1"># Nuestro código para generar el WHERE que se requiera</span>
+
+        <span class="c1"># Devolvemos el WHERE que hemos generado</span>
+        <span class="k">return</span> <span class="nv">$where</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getOrderBy</span><span class="p">(</span><span class="nv">$model</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1"># En esta función también se recibe el $model</span>
+
+        <span class="c1"># Devolvemos el valor generado para el ORDER BY</span>
+        <span class="k">return</span> <span class="s2">&quot;FIELD(campo,&quot;</span><span class="o">.</span><span class="nb">implode</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="nx">valoresOrdenados</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;)&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p>Todas las clases que generemos del tipo <strong>Ghost</strong>, deberán implementar
+<strong>KlearMatrix_Model_Field_Ghost_Abstract</strong>.</p>
+<p class="last">Las funciones dentro de la clase no tienen porque llamarse igual, ya que se definen
+en el <strong>model.yaml</strong>.</p>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="ghostconcat.html" class="btn btn-neutral float-right" title="ghost concat"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="file.html" class="btn btn-neutral" title="file"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

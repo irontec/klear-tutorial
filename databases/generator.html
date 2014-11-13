@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Generador: Base de Datos &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="Gestión de las Bases de Datos" href="index.html"/>
+        <link rel="next" title="Models y Mappers" href="../modelsMappers/index.html"/>
+        <link rel="prev" title="Phing" href="phing.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Gestión de las Bases de Datos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="phing.html">Phing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Generador: Base de Datos</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/databases/generator.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="generador-base-de-datos">
+<h1>Generador: Base de Datos<a class="headerlink" href="#generador-base-de-datos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>El generador de la base de datos nos sirve para adaptar nuestras tablas de la Base de datos a la interfaz del Klear,
+según la función de los campos de la tabla.</p>
+<p>Para ello, empleamos <strong>TAGS</strong> que introducimos en los comentarios de los campos y así el Klear pueda identificarlos y adaptarlos a nuestra interfaz o viceversa.</p>
+<p>Una vez tengamos las bases de datos con sus correspondientes tags generadas mediante phing, podremos ejecutar el <a class="reference internal" href="../createProject/generadoresDB.html#dbgenerator"><em>Generador de BD</em></a>.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#listado-de-tags-para-los-campos" id="id2">Listado de tags para los campos</a><ul>
+<li><a class="reference internal" href="#file" id="id3">[file]</a></li>
+<li><a class="reference internal" href="#fso" id="id4">[fso]</a></li>
+<li><a class="reference internal" href="#ml" id="id5">[ml]</a></li>
+<li><a class="reference internal" href="#map" id="id6">[map]</a></li>
+<li><a class="reference internal" href="#enum-fieldvalue1-fieldvalue2-fieldvalue3-fieldvaluen" id="id7">[enum:fieldValue1|fieldValue2|fieldValue3|fieldValueN]</a></li>
+<li><a class="reference internal" href="#ignore" id="id8">[ignore]</a></li>
+<li><a class="reference internal" href="#html" id="id9">[html]</a></li>
+<li><a class="reference internal" href="#password" id="id10">[password]</a></li>
+<li><a class="reference internal" href="#urlidentifier-fieldname" id="id11">[urlIdentifier:fieldName]</a></li>
+<li><a class="reference internal" href="#video" id="id12">[video]</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#listado-de-tags-para-las-tablas" id="id13">Listado de tags para las tablas</a><ul>
+<li><a class="reference internal" href="#id1" id="id14">[ignore]</a></li>
+<li><a class="reference internal" href="#entity" id="id15">[entity]</a></li>
+<li><a class="reference internal" href="#csv" id="id16">[csv]</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#generador" id="id17">Generador</a></li>
+</ul>
+</div>
+<div class="section" id="listado-de-tags-para-los-campos">
+<h2><a class="toc-backref" href="#id2">Listado de tags para los campos</a><a class="headerlink" href="#listado-de-tags-para-los-campos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="file">
+<span id="generatordatabasefile"></span><h3><a class="toc-backref" href="#id3">[file]</a><a class="headerlink" href="#file" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: &#8220;db-generator&#8221;</strong></p>
+<p>Genera los campos necesarios para introducir los metadatos de los archivos que se guardan en la carpeta STORAGE (creada al mismo nivel de la carpeta Application con todos los permisos).</p>
+<p>Los campos que genera son:</p>
+<ul class="simple">
+<li>FileSize (Añadiendo el tag [FSO] para identificarlo como campo tipo FILE para el Generador <strong>YAML</strong> y <strong>MODEL-MAPPERS</strong>)</li>
+<li>BaseName</li>
+<li>MimeType</li>
+</ul>
+<img alt="../_images/file.png" src="../_images/file.png" />
+</div>
+<div class="section" id="fso">
+<h3><a class="toc-backref" href="#id4">[fso]</a><a class="headerlink" href="#fso" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="admonition caution">
+<p class="first admonition-title">Prudencia</p>
+<p class="last">Recomendamos no hacer uso de este tag de forma manual a menos que tengas experiencia creando los campos necesarios para su funcionamiento.</p>
+</div>
+<p>Campo creado con el <strong>&#8220;db-generator&#8221;</strong> por el tag <a class="reference internal" href="#generatordatabasefile"><em>[file]</em></a>. Campos que son requeridos con este tag:</p>
+<ul class="simple">
+<li>FileSize (Este campo contiene el tag <strong>[FSO]</strong>)</li>
+<li>BaseName</li>
+<li>Md5Sum (opcional)</li>
+<li>MimeType</li>
+</ul>
+</div>
+<div class="section" id="ml">
+<h3><a class="toc-backref" href="#id5">[ml]</a><a class="headerlink" href="#ml" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: &#8220;db-generator&#8221; y el &#8220;model-mappers-generator&#8221;</strong></p>
+<p>Multiplica el campo según la cantidad de idiomas que se ha configurado en el klear.ini, y listos para ser identificados
+por el generador MODEL-MAPPERS.</p>
+</div>
+<div class="section" id="map">
+<h3><a class="toc-backref" href="#id6">[map]</a><a class="headerlink" href="#map" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: &#8220;db-generator&#8221;</strong></p>
+<p>Genera los campos necesarios para hacer hacer uso de Mapas en nuestra interfaz.</p>
+<p>Los campos que genera son:</p>
+<ul class="simple">
+<li>Latitude</li>
+<li>Longitude</li>
+</ul>
+<img alt="../_images/map.png" src="../_images/map.png" />
+</div>
+<div class="section" id="enum-fieldvalue1-fieldvalue2-fieldvalue3-fieldvaluen">
+<h3><a class="toc-backref" href="#id7">[enum:fieldValue1|fieldValue2|fieldValue3|fieldValueN]</a><a class="headerlink" href="#enum-fieldvalue1-fieldvalue2-fieldvalue3-fieldvaluen" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Este tag funciona como elegir un campo del tipo ENUM, es una formato opcional por si se quiere evitar problemas a la hora de
+trabajar con valores del tipo null o false.</p>
+<p><strong>Usado por: &#8220;yaml-generator&#8221; y &#8220;model-mappers generator&#8221;</strong></p>
+</div>
+<div class="section" id="ignore">
+<h3><a class="toc-backref" href="#id8">[ignore]</a><a class="headerlink" href="#ignore" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: &#8220;model-mappers generator&#8221;y &#8220;yaml-generator&#8221;</strong></p>
+<p>Como su nombre lo dice, es un tag para ignorar un campo por completo, por si no queremos añadirlo en nuestra interfaz y no hace falta hacer uso de ello con Klear.</p>
+</div>
+<div class="section" id="html">
+<h3><a class="toc-backref" href="#id9">[html]</a><a class="headerlink" href="#html" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: &#8220;yaml-generator&#8221;</strong></p>
+<p>Convierte el campo, en la interfaz del Klear, un editor que incluirá códigos HTML en los textos.</p>
+<img alt="../_images/html.png" src="../_images/html.png" />
+</div>
+<div class="section" id="password">
+<h3><a class="toc-backref" href="#id10">[password]</a><a class="headerlink" href="#password" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: &#8220;yaml-generator&#8221;</strong></p>
+<p>Convierte el campo, en la interfaz del Klear, el típico input del type=pass para ocultar los textos que es escrita en ellas.</p>
+<img alt="../_images/password.png" src="../_images/password.png" />
+</div>
+<div class="section" id="urlidentifier-fieldname">
+<h3><a class="toc-backref" href="#id11">[urlIdentifier:fieldName]</a><a class="headerlink" href="#urlidentifier-fieldname" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: &#8220;yaml-generator&#8221; y &#8220;model-mappers generator&#8221;</strong></p>
+<p>Genera un nombre único en la tabla según el nombre del campo al que se relacione. Por ejemplo, si lo relacionamos con un campo que contiene el nombre
+&#8220;Este será mi primer comentario&#8221;, se guardará automáticamente el texto &#8220;este-sera-mi-primer-comentario&#8221; en el campo. Muy
+útil para trabajar con URLs con nombres amigables y así reemplazar las IDs.</p>
+</div>
+<div class="section" id="video">
+<h3><a class="toc-backref" href="#id12">[video]</a><a class="headerlink" href="#video" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: &#8220;model-mappers generator&#8221; y &#8220;yaml generator&#8221;</strong></p>
+<p>Al pasar el model-mappers generator por una columna con este tag, genera 3 nueva columnas con las siguientes nombres:</p>
+<ul class="simple">
+<li>video: Hash de identificación</li>
+<li>videoTitle: Título</li>
+<li>videoSource: Servidor en el que esta almacenado (Youtube/Vimeo/...)</li>
+<li>videoThumbnail: Guarda el thumbnail del video.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="listado-de-tags-para-las-tablas">
+<h2><a class="toc-backref" href="#id13">Listado de tags para las tablas</a><a class="headerlink" href="#listado-de-tags-para-las-tablas" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="id1">
+<h3><a class="toc-backref" href="#id14">[ignore]</a><a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: model-mappers generator</strong></p>
+<p>Ignora la tabla por completo. Por si su uso solo está relacionado con otra aplicación.</p>
+</div>
+<div class="section" id="entity">
+<h3><a class="toc-backref" href="#id15">[entity]</a><a class="headerlink" href="#entity" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: yaml-generator</strong></p>
+<p>Las tablas con este Tag se le generará su respectivo List yaml para ser uso de ellas en la interfaz del Klear.</p>
+</div>
+<div class="section" id="csv">
+<h3><a class="toc-backref" href="#id16">[csv]</a><a class="headerlink" href="#csv" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Usado por: yaml-generator</strong></p>
+<p>Si queremos que la tabla se piensa ser usado para guardar o registrar archivos del tipo CSV.</p>
+</div>
+</div>
+<div class="section" id="generador">
+<h2><a class="toc-backref" href="#id17">Generador</a><a class="headerlink" href="#generador" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En la carpeta del Generador, aplicar el siguiente código para aplicar los cambios necesarios a la base de datos.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> php klear-db-generator.php -a ../../myProyect/web/application/
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p>Normalmente no se utilizan los generadores de bases de datos directamente si no que se hace a través de Phing.
+Para modificar la base de datos hay que crear un archivo con las sentencias SQL necesarias en la carpeta phing/deltas y ejecutar el siguiente comando desde la carpeta phing:</p>
+<p>$ phing db-change</p>
+<p>Este comando se encargará de ejecutar los generadores de bases de datos.</p>
+<p>Si estamos descargando los cambios que alguien ha hecho y ha comiteado, en lugar del comando anterior ejecutar el siguiente, ya que no necesitamos que se vuelvan a generar los archivos yaml ni php que se generan con el comando anterior, ya que ya los hemos descargados:</p>
+<p class="last">$ phing migrate</p>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="../modelsMappers/index.html" class="btn btn-neutral float-right" title="Models y Mappers"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="phing.html" class="btn btn-neutral" title="Phing"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

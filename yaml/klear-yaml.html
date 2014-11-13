@@ -1,0 +1,709 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Klear.yaml &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="Yaml" href="index.html"/>
+        <link rel="next" title="Configuración general" href="general.html"/>
+        <link rel="prev" title="Generador: Yaml" href="generator.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Yaml</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Klear.yaml</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/yaml/klear-yaml.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="klear-yaml">
+<span id="id1"></span><h1>Klear.yaml<a class="headerlink" href="#klear-yaml" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Este archivo es creado por el generador yaml, así que solo nos basaremos en cómo configurar las opciones ya generadas
+para nuestro proyecto.
+El archivo de configuración de Klear está situado en <strong>application/configs/klear/klear.yaml</strong>.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">main</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">log</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">writerName</span><span class="p-Indicator">:</span> <span class="s">&quot;Null&quot;</span>
+      <span class="l-Scalar-Plain">writerParams</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">sitename</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">MyApp</span>
+    <span class="l-Scalar-Plain">logo</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">klear/images/klear.png</span>
+    <span class="l-Scalar-Plain">year</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2013</span>
+    <span class="l-Scalar-Plain">lang</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">es</span>
+    <span class="l-Scalar-Plain">langs</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">es</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Español</span>
+        <span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">es</span>
+        <span class="l-Scalar-Plain">locale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">es_ES</span>
+      <span class="l-Scalar-Plain">en</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">English</span>
+        <span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">en</span>
+        <span class="l-Scalar-Plain">locale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">en_US</span>
+      <span class="l-Scalar-Plain">eu</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Euskera</span>
+        <span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">eu</span>
+        <span class="l-Scalar-Plain">locale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">eu_ES</span>
+    <span class="l-Scalar-Plain">jqueryUI</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">theme</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">redmond</span>
+      <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/ui/themes/absolution-red/jquery-ui.css</span> <span class="c1">#ruta para temas externos: theme se utilizará como nombre de éste.</span>
+      <span class="l-Scalar-Plain">themeRoller</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">paths</span><span class="p-Indicator">:</span> <span class="c1">#para temas externos</span>
+          <span class="l-Scalar-Plain">verdecito</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/ui/themes/aristo-green/jquery-ui.css</span>
+        <span class="l-Scalar-Plain">themes</span><span class="p-Indicator">:</span> <span class="c1">#para temas predefinidos</span>
+          <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">pepper-grinder</span>
+          <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">redmond</span>
+          <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ui-darkness</span>
+          <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">aristo-red</span>
+    <span class="l-Scalar-Plain">raw</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">css</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="s">&quot;css/klear.css&quot;</span>
+    <span class="l-Scalar-Plain">cssExtended</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">actionHelpers</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">optionCollectionPlacement</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">both</span>
+    <span class="l-Scalar-Plain">auth</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Klear_Auth_Adapter_Basic</span>
+      <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Access denied&quot;)</span>
+      <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Insert your username&quot;)</span>
+    <span class="l-Scalar-Plain">timezone</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Europe/Madrid</span>
+  <span class="l-Scalar-Plain">menu</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">General</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Main management&quot;)</span>
+      <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Main management&quot;)</span>
+      <span class="l-Scalar-Plain">submenus</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">DevelopersList</span><span class="p-Indicator">:</span>
+          <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ngettext(&#39;Developer&#39;, &#39;Developers&#39;, 0)</span>
+          <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-text-list-bullets</span>
+          <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;List of %s&quot;, ngettext(&#39;Developer&#39;, &#39;Developers&#39;, 0))</span>
+        <span class="l-Scalar-Plain">KlearImageGalleriesList</span><span class="p-Indicator">:</span>
+          <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ngettext(&#39;Klear image gallery&#39;, &#39;Klear image galleries&#39;, 0)</span>
+          <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-text-list-bullets</span>
+          <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;List of %s&quot;, ngettext(&#39;Klear image gallery&#39;, &#39;Klear image galleries&#39;, 0))</span>
+<span class="l-Scalar-Plain">testing</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">_extends</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">production</span>
+<span class="l-Scalar-Plain">staging</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">_extends</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">production</span>
+<span class="l-Scalar-Plain">development</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">_extends</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">production</span>
+</pre></div>
+</div>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#main" id="id2">main</a><ul>
+<li><a class="reference internal" href="#log" id="id3">log</a></li>
+<li><a class="reference internal" href="#sitename" id="id4">sitename</a></li>
+<li><a class="reference internal" href="#logo" id="id5">logo</a></li>
+<li><a class="reference internal" href="#year" id="id6">year</a></li>
+<li><a class="reference internal" href="#lang" id="id7">lang</a></li>
+<li><a class="reference internal" href="#langs" id="id8">langs</a></li>
+<li><a class="reference internal" href="#jqueryui" id="id9">jqueryUI</a><ul>
+<li><a class="reference internal" href="#themeroller" id="id10">themeRoller</a></li>
+<li><a class="reference internal" href="#themes-oficiales" id="id11">Themes oficiales</a></li>
+<li><a class="reference internal" href="#themes-irontec" id="id12">Themes irontec</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cssextended" id="id13">cssExtended</a><ul>
+<li><a class="reference internal" href="#seleccionar-favicon" id="id14">Seleccionar favicon</a></li>
+<li><a class="reference internal" href="#generar-nuevos-iconos" id="id15">Generar nuevos iconos</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#raw" id="id16">raw</a></li>
+<li><a class="reference internal" href="#optioncollectionplacement" id="id17">optionCollectionPlacement</a></li>
+<li><a class="reference internal" href="#auth" id="id18">auth</a></li>
+<li><a class="reference internal" href="#disableminifier" id="id19">disableMinifier</a></li>
+<li><a class="reference internal" href="#disableassetscache" id="id20">disableAssetsCache</a></li>
+<li><a class="reference internal" href="#defaultcustomconfiguration" id="id21">defaultCustomConfiguration</a></li>
+<li><a class="reference internal" href="#timezone" id="id22">timezone</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#menu" id="id23">menu</a><ul>
+<li><a class="reference internal" href="#general" id="id24">General</a><ul>
+<li><a class="reference internal" href="#title" id="id25">title</a></li>
+<li><a class="reference internal" href="#description" id="id26">description</a></li>
+<li><a class="reference internal" href="#submenus" id="id27">submenus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#footermenu" id="id28">footerMenu</a></li>
+</ul>
+</div>
+<div class="section" id="main">
+<h2><a class="toc-backref" href="#id2">main</a><a class="headerlink" href="#main" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Configuración básica del Interfaz del Klear</p>
+<div class="section" id="log">
+<h3><a class="toc-backref" href="#id3">log</a><a class="headerlink" href="#log" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Nos sirve para especificar una ubicación para redireccionar los logs de nuestra aplicación.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">log</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">writerName</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">stream</span>
+   <span class="l-Scalar-Plain">writerParams</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">stream</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/tmp/klear.log</span>
+     <span class="l-Scalar-Plain">mode</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">a</span>
+</pre></div>
+</div>
+<p>Para syslog</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">log</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">writerName</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">syslog</span>
+   <span class="l-Scalar-Plain">writerParams</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">application</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">app-admin-portal</span>
+     <span class="l-Scalar-Plain">facility</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">LOG_USER</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sitename">
+<h3><a class="toc-backref" href="#id4">sitename</a><a class="headerlink" href="#sitename" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Define el nombre de la aplicación.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">sitename</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Mi aplicación de Klear</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="logo">
+<h3><a class="toc-backref" href="#id5">logo</a><a class="headerlink" href="#logo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Ruta hasta la imagen que queremos se use como logo. La ruta es relativa a la carpeta
+<strong>public</strong>.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">logo</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">img/logo.png</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="year">
+<h3><a class="toc-backref" href="#id6">year</a><a class="headerlink" href="#year" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Año de la aplicación, por defecto se pone el año en el que fue generado este yaml.</p>
+</div>
+<div class="section" id="lang">
+<h3><a class="toc-backref" href="#id7">lang</a><a class="headerlink" href="#lang" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Con esta opción se define el idioma por defecto de la aplicación.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">lang</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Euskera</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Advertencia</p>
+<p class="last">El idioma elegido deberá estar configurado dentro de la etiqueta de <strong>langs</strong>.</p>
+</div>
+</div>
+<div class="section" id="langs">
+<h3><a class="toc-backref" href="#id8">langs</a><a class="headerlink" href="#langs" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Lista con los idiomas soportados en la aplicación.</p>
+<p>Cada idioma debe definir:</p>
+<ul class="simple">
+<li><strong>title</strong>: Título del idioma</li>
+<li><strong>language</strong>: Nombre corto del idioma (ejem.: <strong>eu</strong>)</li>
+<li><strong>locale</strong>: El código locale del idioma (ejem.: <strong>eu_ES</strong>)</li>
+</ul>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">langs</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">Euskera</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Euskera</span>
+     <span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">eu</span>
+     <span class="l-Scalar-Plain">locale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">eu_ES</span>
+   <span class="l-Scalar-Plain">Espanol</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Español</span>
+     <span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">es</span>
+     <span class="l-Scalar-Plain">locale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">es_ES</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="jqueryui">
+<h3><a class="toc-backref" href="#id9">jqueryUI</a><a class="headerlink" href="#jqueryui" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Es el tema que adoptará la interfaz del Klear. Los css que optará podría estar en local o en la nube. Por ejemplo:</p>
+<p><strong>Formato local</strong>: los css deben ubicarse en la zona pública (carpeta <strong>public</strong>). Esta opción suele ser usada cuando
+algunas aplicaciones no tienen acceso al exterior. El formato sería el siguiente:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">jqueryUI</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/css/south-street/jquery-ui-1.8.22.custom.css</span>
+</pre></div>
+</div>
+<p><strong>CSS en la nube</strong>: Los estilos a elegir son limitados, pero son los más recomendados, serán seleccionados según la imagen
+que tiene que dar la aplicación. El formato sería el siguiente:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">jqueryUI</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">theme</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">redmond</span>
+</pre></div>
+</div>
+<div class="section" id="themeroller">
+<h4><a class="toc-backref" href="#id10">themeRoller</a><a class="headerlink" href="#themeroller" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Muestra una lista de temas a elegir.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">themeRoller</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">paths</span><span class="p-Indicator">:</span> <span class="c1">#para temas externos</span>
+      <span class="l-Scalar-Plain">verdecito</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/ui/themes/aristo-green/jquery-ui.css</span>
+   <span class="l-Scalar-Plain">themes</span><span class="p-Indicator">:</span> <span class="c1">#para temas predefinidos</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">pepper-grinder</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">redmond</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ui-darkness</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">aristo-red</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="themes-oficiales">
+<h4><a class="toc-backref" href="#id11">Themes oficiales</a><a class="headerlink" href="#themes-oficiales" title="Enlazar permanentemente con este título">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li>base</li>
+<li>black-tie</li>
+<li>blitzer</li>
+<li>cupertino</li>
+<li>dark-hive</li>
+<li>dot-luv</li>
+<li>eggplant</li>
+<li>excite-bike</li>
+<li>flick</li>
+<li>hot-sneaks</li>
+<li>humanity</li>
+<li>le-frog</li>
+<li>mint-choc</li>
+<li>overcast</li>
+<li>pepper-grinder</li>
+<li>redmond</li>
+<li>smoothness</li>
+<li>south-street</li>
+<li>start</li>
+<li>sunny</li>
+<li>swanky-purse</li>
+<li>trontastic</li>
+<li>ui-darkness</li>
+<li>ui-lightness</li>
+<li>vader</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="themes-irontec">
+<h4><a class="toc-backref" href="#id12">Themes irontec</a><a class="headerlink" href="#themes-irontec" title="Enlazar permanentemente con este título">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li>absolution</li>
+<li>absolution-green</li>
+<li>absolution-red</li>
+<li>aristo</li>
+<li>aristo-dark</li>
+<li>aristo-green</li>
+<li>aristo-red</li>
+<li>delta</li>
+<li>twitter</li>
+<li>redmond-red</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="cssextended">
+<h3><a class="toc-backref" href="#id13">cssExtended</a><a class="headerlink" href="#cssextended" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Esta configuración es opcional, normalmente es usada para que podamos elegir un favicon o ampliar nuestro listado de iconos en la interfaz. Ya sea porque
+los iconos por defecto no se adecuan al tema de la aplicación o porque se requiere nuevas imágenes para representar nuestras secciones.</p>
+<div class="section" id="seleccionar-favicon">
+<h4><a class="toc-backref" href="#id14">Seleccionar favicon</a><a class="headerlink" href="#seleccionar-favicon" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Solo se necesita poner la imagen en la carpeta <strong>public</strong> de nuestro proyecto y a partir de allí señalar su ubicación.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">cssExtended</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">silkExtendedIconPath</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/images/favicon.ico</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Los navegadores solo reconocen como un favicon, las imágenes con la extensión <strong>.ico</strong> que suele tener un tamaño de <strong>16x16</strong> o <strong>32x32</strong> (px).</p>
+</div>
+</div>
+<div class="section" id="generar-nuevos-iconos">
+<h4><a class="toc-backref" href="#id15">Generar nuevos iconos</a><a class="headerlink" href="#generar-nuevos-iconos" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Para empezar necesitamos crear la carpeta <strong>&#8220;css&#8221;</strong> o <strong>&#8220;style&#8221;</strong> en nuestra carpeta <strong>public</strong>. Luego en nuestra carpeta
+<strong>/public/css/</strong> crearemos la siguiente estructura de carpetas:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">.</span>
+<span class="go">└── ui-klear</span>
+<span class="go">    ├── cache</span>
+<span class="go">    └── icons</span>
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">Prudencia</p>
+<p class="last">Asegurarse que todas las carpetas tengan todos los permisos: <strong>chmod 777</strong></p>
+</div>
+<p>Especificar la ruta de la carpeta icons:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">cssExtended</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">silkExtendedIconPath</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/css/ui-klear/icons</span>
+</pre></div>
+</div>
+<p>Por último, agregar <strong>&#8220;/css-extended/silk-extended/silk-extended-sprite.css?generate&#8221;</strong> en nuestro ruta después de <strong>&#8220;/klear&#8221;</strong>,
+por ejemplo:</p>
+<div class="highlight-text"><div class="highlight"><pre>http:// ~ /klear/css-extended/silk-extended/silk-extended-sprite.css?generate
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Klear tiene disponible los iconos de la serie Silk Icon Sprite: <a class="reference external" href="https://klear-wiki.irontec.com/silk/">https://klear-wiki.irontec.com/silk/</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="raw">
+<h3><a class="toc-backref" href="#id16">raw</a><a class="headerlink" href="#raw" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Si no estamos satisfechos con los estilos que ya están definidos, podemos también incorporar algunos propios haciendo uso de esta opción.</p>
+<p>Para ello, debemos crear una carpeta con el nombre <strong>&#8220;assets&#8221;</strong> en nuestra carpeta <strong>&#8220;application&#8221;</strong>, dentro de ella ya decidimos donde
+ubicaremos nuestro estilo; por ejemplo, yo crearía la carpeta <strong>&#8220;css&#8221;</strong> y dentro de ella mi archivo de estilo (.css), quedando algo como esto:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">application</span>
+<span class="go">└── assets</span>
+<span class="go">    └── css</span>
+<span class="go">        └── style.css</span>
+</pre></div>
+</div>
+<p>En el yaml, debemos especificar la ruta de la siguiente manera:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">raw</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">css</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="s">&quot;./default/css/style.css&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="optioncollectionplacement">
+<h3><a class="toc-backref" href="#id17">optionCollectionPlacement</a><a class="headerlink" href="#optioncollectionplacement" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Configurar las posiciones de los botones dentro de los módulos de Klear.</p>
+<p>Los valores permitidos son: <strong>top</strong> | <strong>both</strong> | <strong>bottom</strong></p>
+<p>La configuración puede ser definida como <strong>string</strong> o como <strong>colección</strong>.</p>
+<ul class="simple">
+<li><strong>Configuración de string</strong>:</li>
+</ul>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">optionCollectionPlacement</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">both</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><strong>Configuración de colección</strong>:</li>
+</ul>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">optionCollectionPlacement</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span> <span class="s">&#39;both&#39;</span>
+  <span class="l-Scalar-Plain">list</span><span class="p-Indicator">:</span> <span class="s">&#39;top&#39;</span>
+  <span class="l-Scalar-Plain">edit</span><span class="p-Indicator">:</span> <span class="s">&#39;bottom&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="auth">
+<h3><a class="toc-backref" href="#id18">auth</a><a class="headerlink" href="#auth" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Configuración del adaptador de autenticación.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">El adaptador por defecto
+es <strong>Klear_Auth_Adapter_Basic</strong>, pero podemos modificarlo siempre y cuando
+el que utilicemos implemente <strong>Klear_Auth_Adapter_KlearAuthInterface</strong>.</p>
+</div>
+<p>Párametros configurables para el adaptador:</p>
+<ul>
+<li><p class="first"><strong>adapter</strong>: Nombre del adaptador.</p>
+</li>
+<li><p class="first"><strong>title</strong>: Título de la ventana emergente de login.</p>
+</li>
+<li><p class="first"><strong>description</strong>: Descripción que se muestra en la ventana de login.</p>
+</li>
+<li><p class="first"><strong>userMapper</strong>: Clase Mapper que implementa Klear_Auth_Adapter_Interfaces_BasicUserMapper. El valor predeterminado es Klear_Model_Mapper_Users.</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>session</strong>: Configuración de almacenamiento de sesión.</dt>
+<dd><ul class="first last simple">
+<li><strong>name</strong>: Nombre de sesión para la autenticación (por defecto <strong>klear_auth</strong>) , si queremos tener mas de una instancia en el mismo host, esto debe modificarse.</li>
+<li><strong>disableChangeName</strong>: Si queremos que Klear comparta el namespace con la zona pública pondremos a <strong>true</strong>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">auth</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Klear_Auth_Adapter_Basic</span>
+  <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Access denied&quot;)</span>
+  <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Insert your username&quot;)</span>
+  <span class="l-Scalar-Plain">userMapper</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">\MyApp\Mapper\Sql\KlearUsers</span>
+  <span class="l-Scalar-Plain">session</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">my_auth_session_name</span>
+    <span class="l-Scalar-Plain">disableChangeName</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+</pre></div>
+</div>
+<p>El siguiente código genera la tabla necesaria, con el usuario <strong>admin</strong> y contraseña <em>admin</em>:</p>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="ss">`KlearUsers`</span> <span class="p">(</span>
+  <span class="ss">`userId`</span> <span class="kt">mediumint</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">unsigned</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="ss">`login`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`email`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="ss">`pass`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="n">COMMENT</span> <span class="s1">&#39;[password]&#39;</span><span class="p">,</span>
+  <span class="ss">`active`</span> <span class="kt">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
+  <span class="ss">`createdOn`</span> <span class="kt">datetime</span> <span class="k">NOT</span> <span class="no">NULL</span> <span class="k">DEFAULT</span> <span class="s1">&#39;0000-00-00 00:00:00&#39;</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="ss">`userId`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="ss">`login`</span> <span class="p">(</span><span class="ss">`login`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="ss">`email`</span> <span class="p">(</span><span class="ss">`email`</span><span class="p">)</span>
+<span class="p">)</span> <span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span><span class="p">;</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="ss">`KlearUsers`</span><span class="p">(</span><span class="n">login</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">pass</span><span class="p">,</span> <span class="n">active</span><span class="p">)</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span><span class="s1">&#39;admin@example.com&#39;</span><span class="p">,</span><span class="s1">&#39;$2a$08$OBG.QrnbL0iJh3O0LlKxBOFWhZKc77NeHqn8vutpg5velSt0dwkeK&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="disableminifier">
+<h3><a class="toc-backref" href="#id19">disableMinifier</a><a class="headerlink" href="#disableminifier" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para activar o desactivar los minificadores dinámicos. Útil en entornos de desarrollo.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">disableMinifier</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="disableassetscache">
+<h3><a class="toc-backref" href="#id20">disableAssetsCache</a><a class="headerlink" href="#disableassetscache" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para activar o desactivar la cache de <strong>css</strong> y <strong>js</strong>. Útil para entornos de desarrollo.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">disableAssetsCache</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="defaultcustomconfiguration">
+<h3><a class="toc-backref" href="#id21">defaultCustomConfiguration</a><a class="headerlink" href="#defaultcustomconfiguration" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Posibilita la configuración de propiedades fácilmente accesibles desde cualquier parte de la aplicación.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">defaultCustomConfiguration</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">optionCollectionPlacement</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">both</span>
+     <span class="l-Scalar-Plain">autoClose</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+     <span class="l-Scalar-Plain">disableSave</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+     <span class="l-Scalar-Plain">disableAddAnother</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+     <span class="l-Scalar-Plain">autoShowSizeOnExpandableFields</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<p>Después en el código:</p>
+<div class="highlight-guess"><div class="highlight"><pre><span class="err">$</span><span class="n">bootstrap</span> <span class="o">=</span> <span class="n">Zend_Controller_Front</span><span class="o">::</span><span class="n">getInstance</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getParam</span><span class="p">(</span><span class="err">&#39;</span><span class="n">bootstrap</span><span class="err">&#39;</span><span class="p">);</span>
+<span class="err">$</span><span class="n">siteConfig</span> <span class="o">=</span> <span class="err">$</span><span class="n">bootstrap</span><span class="o">-&gt;</span><span class="n">getResource</span><span class="p">(</span><span class="err">&#39;</span><span class="n">modules</span><span class="err">&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">offsetGet</span><span class="p">(</span><span class="err">&#39;</span><span class="n">klear</span><span class="err">&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">getOption</span><span class="p">(</span><span class="err">&#39;</span><span class="n">siteConfig</span><span class="err">&#39;</span><span class="p">);</span>
+
+<span class="err">$</span><span class="n">property</span> <span class="o">=</span> <span class="err">$</span><span class="n">siteConfig</span><span class="o">-&gt;</span><span class="n">getDefaultCustomConfiguration</span><span class="p">(</span><span class="err">&#39;</span><span class="n">optionCollectionPlacement</span><span class="err">&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="timezone">
+<h3><a class="toc-backref" href="#id22">timezone</a><a class="headerlink" href="#timezone" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La base de datos, por defecto cuenta con la zona horaria UTC 0, pero para mostrar la fecha y hora, según a nuestra zona horaria, hay que
+modificar este apartado.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">timezone</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Europe/Madrid</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="menu">
+<h2><a class="toc-backref" href="#id23">menu</a><a class="headerlink" href="#menu" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="general">
+<h3><a class="toc-backref" href="#id24">General</a><a class="headerlink" href="#general" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El klear por defecto lista todas las tablas con el tag <strong>[entity]</strong>, pero si llega a generarse por segunda vez los yaml, las nuevas tablas
+no se verán listadas en el <strong>klear/klear.yaml</strong> sino en <strong>klearRaw/klear.yaml</strong>.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">menu</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">General</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Main management&quot;)</span>
+    <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Main management&quot;)</span>
+    <span class="l-Scalar-Plain">submenus</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">DevelopersList</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ngettext(&#39;Developer&#39;, &#39;Developers&#39;, 0)</span>
+        <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-text-list-bullets</span>
+        <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;List of %s&quot;, ngettext(&#39;Developer&#39;, &#39;Developers&#39;, 0))</span>
+</pre></div>
+</div>
+<p>Sus opciones correspondientes son las siguientes:</p>
+<div class="section" id="title">
+<h4><a class="toc-backref" href="#id25">title</a><a class="headerlink" href="#title" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Título de la sección</p>
+</div>
+<div class="section" id="description">
+<h4><a class="toc-backref" href="#id26">description</a><a class="headerlink" href="#description" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Descripción de la sección</p>
+</div>
+<div class="section" id="submenus">
+<h4><a class="toc-backref" href="#id27">submenus</a><a class="headerlink" href="#submenus" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Aquí listaremos todos los list que necesitamos para hacer nuestra interfaz (opciones <strong>title</strong> y <strong>description</strong>).</p>
+</div>
+</div>
+</div>
+<div class="section" id="footermenu">
+<h2><a class="toc-backref" href="#id28">footerMenu</a><a class="headerlink" href="#footermenu" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Este menu esta en la parte inferior centrada de la pantalla. Solo lista el icono y el título de la sección.
+El primer tab de configuración es el nombre del menu, el siguiente es el del &#8220;title&#8221; y el &#8220;submenus&#8221; en el cual se configura las vistas que se listaran.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">footerMenu</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">footer</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&#39;&#39;</span>
+    <span class="l-Scalar-Plain">submenus</span><span class="p-Indicator">:</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="general.html" class="btn btn-neutral float-right" title="Configuración general"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="generator.html" class="btn btn-neutral" title="Generador: Yaml"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

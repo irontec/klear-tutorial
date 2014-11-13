@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuración Googlecharts &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="Yaml" href="index.html"/>
+        <link rel="next" title="Tipos de Campos" href="fields/index.html"/>
+        <link rel="prev" title="Configuración Dashboard" href="dashboard.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Yaml</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Configuración Googlecharts</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/yaml/charts.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="configuracion-googlecharts">
+<h1>Configuración Googlecharts<a class="headerlink" href="#configuracion-googlecharts" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Googlecharts es un controlador de KlearMatrix que permite crear gráficos de
+Google Charts para usar como pantalla principal o para poner como opción en una
+list screen.</p>
+<div class="section" id="como-pantalla-principal">
+<h2>Como pantalla principal<a class="headerlink" href="#como-pantalla-principal" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>A configurar en klear.yaml:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">Statistics</span><span class="p-Indicator">:</span> <span class="c1">#se puede llamar como se quiera</span>
+  <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+  <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Statistics&quot;)</span>
+  <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-chart-bar</span>
+  <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="s">&quot;Resumen</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">llamadas&quot;</span>
+</pre></div>
+</div>
+<p>y se crea el fichero Statistics.yaml (o el nombre que hemos puesto en el klear.yaml):</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">main</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">module</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">klearMatrix</span>
+    <span class="l-Scalar-Plain">defaultScreen</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">charts_screen</span>
+  <span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">charts_screen</span><span class="p-Indicator">:</span> <span class="nl">&amp;statistics_Link</span>
+      <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-chart-bar-link</span>
+      <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">googlecharts</span>
+      <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Statistics&quot;)</span> <span class="c1">#opcional</span>
+      <span class="l-Scalar-Plain">chartGroups</span><span class="p-Indicator">:</span> <span class="c1">#Lista de grupos de gráficos</span>
+        <span class="l-Scalar-Plain">userInfo</span><span class="p-Indicator">:</span> <span class="c1"># Primer grupo. No tiene gráficos definidos dentro. Se puede utilizar como cabecera</span>
+          <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;User info&quot;)</span> <span class="c1">#opcional</span>
+          <span class="l-Scalar-Plain">comment</span><span class="p-Indicator">:</span> <span class="s">&quot;&lt;h1&gt;Esto</span><span class="nv"> </span><span class="s">es</span><span class="nv"> </span><span class="s">un</span><span class="nv"> </span><span class="s">comentario&lt;/h1&gt;&quot;</span> <span class="c1">#opcional. Aquí se puede usar HTML, variables de auth y gettext</span>
+          <span class="l-Scalar-Plain">show</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1">#Opcional. Default true. Se pueden usar variables de auth ${auth.showChart}</span>
+        <span class="l-Scalar-Plain">annualHistorical</span><span class="p-Indicator">:</span> <span class="c1">#Segundo grupo</span>
+          <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Historical annual&quot;)</span> <span class="c1">#opcional</span>
+          <span class="l-Scalar-Plain">comment</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">&lt;h1&gt;Hola que tal&lt;/h1&gt;</span> <span class="c1">#opcional. Aquí se puede usar HTML, variables de auth y gettext</span>
+          <span class="l-Scalar-Plain">show</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1">#opcional. Default true. Se pueden usar variables de auth ${auth.showChart}</span>
+          <span class="l-Scalar-Plain">charts</span><span class="p-Indicator">:</span> <span class="c1">#Opcional. Lista de gráficos</span>
+            <span class="l-Scalar-Plain">perPatterns</span><span class="p-Indicator">:</span> <span class="c1">#Primer gráfico. Con las opciones mínimas</span>
+              <span class="l-Scalar-Plain">sql</span><span class="p-Indicator">:</span> <span class="c1">#Obligatorio. Sentencia SQL. Se pueden utilizar variables de auth.</span>
+                <span class="s">&quot;SELECT</span><span class="nv"> </span><span class="s">column1</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">col1,</span>
+                <span class="s">count(column2)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">col2,</span>
+                <span class="s">sum(column3)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">col3</span>
+                <span class="s">FROM</span><span class="nv"> </span><span class="s">tablename</span>
+                <span class="s">WHERE</span><span class="nv"> </span><span class="s">${auth.chartFilterCondition}</span>
+                <span class="s">AND</span><span class="nv"> </span><span class="s">tablename.column4</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">{parent}</span>
+                <span class="s">AND</span><span class="nv"> </span><span class="s">column5=1</span>
+                <span class="s">AND</span><span class="nv"> </span><span class="s">columnDate1</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">DATE_SUB(now(),</span><span class="nv"> </span><span class="s">INTERVAL</span><span class="nv"> </span><span class="s">11</span><span class="nv"> </span><span class="s">MONTH)</span>
+                <span class="s">GROUP</span><span class="nv"> </span><span class="s">BY</span><span class="nv"> </span><span class="s">column1&quot;</span>
+            <span class="l-Scalar-Plain">Columnchart</span><span class="p-Indicator">:</span> <span class="c1">#Gráfico que no usa una sentencia SQL si no una tabla metida en el yaml.</span>
+              <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ColumChart</span>
+              <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ColumnChart</span>
+              <span class="l-Scalar-Plain">table</span><span class="p-Indicator">:</span> <span class="c1">#Tabla de datos. Si está la opción sql se mostrarán los datos de la sentencia SQL en vez de los de la tabla.</span>
+                <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Year | Sales | Expenses</span>
+                <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">2004 | 1000 | 400</span>
+                <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">2005 | 1170 | 460</span>
+                <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">2006 | 660 | 1120</span>
+                <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">2007 | 1030 | 540</span>
+              <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+                <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Company Performance</span>
+                <span class="l-Scalar-Plain">width</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">400</span>
+                <span class="l-Scalar-Plain">hAxis</span><span class="p-Indicator">:</span>
+                  <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Year</span>
+                  <span class="l-Scalar-Plain">titleTextStyle</span><span class="p-Indicator">:</span>
+                    <span class="l-Scalar-Plain">color</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">red</span>
+            <span class="l-Scalar-Plain">totalCalls</span><span class="p-Indicator">:</span> <span class="c1">#Otro gráfico</span>
+              <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Calls per month&quot;)</span> <span class="c1">#Opcional</span>
+              <span class="l-Scalar-Plain">comment</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Historical annual %s&quot;, &quot;${auth.chartCompanyName}&quot;)</span> <span class="c1">#Opcional. Aquí se puede usar HTML, variables de auth y gettext</span>
+              <span class="l-Scalar-Plain">legend</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;metered&quot;)</span> <span class="c1">#Aquí se puede usar HTML, variables de auth y gettext #Opcional</span>
+              <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ColumnChart</span> <span class="c1">#Opcional. Tipo de gráfico de Google Charts. Default ColumnChart</span>
+              <span class="l-Scalar-Plain">show</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1">#se pueden usar variables de auth ${auth.showChart} #Opcional. Default true</span>
+              <span class="l-Scalar-Plain">sql</span><span class="p-Indicator">:</span> <span class="c1">#Obligatorio. Sentencia SQL a utilizar. La primera columna es el eje X. El resto son las series de valores del eje Y.</span>
+                <span class="s">&quot;SELECT</span><span class="nv"> </span><span class="s">MONTHNAME(callStart)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">columna1,</span>
+                <span class="s">count(*)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">columna2,</span>
+                <span class="s">sum(price)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">columna3</span>
+                <span class="s">FROM</span><span class="nv"> </span><span class="s">calls</span>
+                <span class="s">WHERE</span><span class="nv"> </span><span class="s">${auth.chartFilterCondition}</span>
+                <span class="s">AND</span><span class="nv"> </span><span class="s">calls.user</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">{parent}</span>
+                <span class="s">AND</span><span class="nv"> </span><span class="s">answered=1</span>
+                <span class="s">AND</span><span class="nv"> </span><span class="s">callStart</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">DATE_SUB(now(),</span><span class="nv"> </span><span class="s">INTERVAL</span><span class="nv"> </span><span class="s">11</span><span class="nv"> </span><span class="s">MONTH)</span>
+                <span class="s">GROUP</span><span class="nv"> </span><span class="s">BY</span><span class="nv"> </span><span class="s">MONTH(callStart)&quot;</span>
+              <span class="l-Scalar-Plain">cols</span><span class="p-Indicator">:</span> <span class="c1">#Opcional. mapeo de las columnas para poder traducirlas</span>
+                <span class="l-Scalar-Plain">columna1</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Date&quot;)</span> <span class="c1">#La primera columna es el eje X</span>
+                <span class="l-Scalar-Plain">columna2</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Number of calls&quot;)</span> <span class="c1">#El resto de columnas son las series de valores del eje Y.</span>
+                <span class="l-Scalar-Plain">columna3</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Cost&quot;)</span>
+              <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span> <span class="c1">#Opcional Son opciones de Google Charts. Se pasan a la api tal cual.</span>
+                <span class="l-Scalar-Plain">legend</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">top</span>
+                <span class="l-Scalar-Plain">width</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">300</span>
+                <span class="l-Scalar-Plain">height</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">150</span>
+                <span class="l-Scalar-Plain">vAxis</span><span class="p-Indicator">:</span>
+                  <span class="l-Scalar-Plain">logScale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1">#Muy útil cuando comparamos dos series don rangos de datos muy distintos.</span>
+<span class="l-Scalar-Plain">testing</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">_extends</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">production</span>
+<span class="l-Scalar-Plain">development</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">_extends</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">production</span>
+</pre></div>
+</div>
+<p>Debido a que la mayoría de opciones se  pueden omitir, podríamos definir un par de gráficos simplemente con el siguiente código:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">main</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">module</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">klearMatrix</span>
+    <span class="l-Scalar-Plain">defaultScreen</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">googleCharts_screen</span>
+  <span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">googleCharts_screen</span><span class="p-Indicator">:</span> <span class="nl">&amp;statistics_Link</span>
+      <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-chart-bar-link</span>
+      <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">googlecharts</span>
+      <span class="l-Scalar-Plain">chartGroups</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">annualHistorical</span><span class="p-Indicator">:</span>
+          <span class="l-Scalar-Plain">charts</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">perPatterns</span><span class="p-Indicator">:</span>
+              <span class="l-Scalar-Plain">sql</span><span class="p-Indicator">:</span>
+                <span class="s">&quot;SELECT</span><span class="nv"> </span><span class="s">dest</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">col1,</span>
+                <span class="s">count(*)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">col2,</span>
+                <span class="s">sum(price)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">col3</span>
+                <span class="s">FROM</span><span class="nv"> </span><span class="s">Calls</span>
+                <span class="s">WHERE</span><span class="nv"> </span><span class="s">Calls.user</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">{parent}</span>
+                <span class="s">AND</span><span class="nv"> </span><span class="s">callStart</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">DATE_SUB(now(),</span><span class="nv"> </span><span class="s">INTERVAL</span><span class="nv"> </span><span class="s">11</span><span class="nv"> </span><span class="s">MONTH)</span>
+                <span class="s">GROUP</span><span class="nv"> </span><span class="s">BY</span><span class="nv"> </span><span class="s">dest&quot;</span>
+            <span class="l-Scalar-Plain">totalCalls</span><span class="p-Indicator">:</span>
+              <span class="l-Scalar-Plain">sql</span><span class="p-Indicator">:</span>
+                <span class="s">&quot;SELECT</span><span class="nv"> </span><span class="s">MONTHNAME(callStart)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">columna1,</span>
+                <span class="s">count(*)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">columna2,</span>
+                <span class="s">sum(price)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">columna3</span>
+                <span class="s">FROM</span><span class="nv"> </span><span class="s">Calls</span>
+                <span class="s">WHERE</span><span class="nv"> </span><span class="s">Calls.user</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">{parent}</span>
+                <span class="s">AND</span><span class="nv"> </span><span class="s">callStart</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">DATE_SUB(now(),</span><span class="nv"> </span><span class="s">INTERVAL</span><span class="nv"> </span><span class="s">11</span><span class="nv"> </span><span class="s">MONTH)</span>
+                <span class="s">GROUP</span><span class="nv"> </span><span class="s">BY</span><span class="nv"> </span><span class="s">MONTH(callStart)&quot;</span>
+<span class="l-Scalar-Plain">testing</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">_extends</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">production</span>
+<span class="l-Scalar-Plain">development</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">_extends</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">production</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-opcion-en-un-list-screen">
+<h2>Como opción en un List Screen<a class="headerlink" href="#como-opcion-en-un-list-screen" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Se hace igual que en una pantalla princial, pero hay que añadir el <strong>mapper</strong> del padre y podemos utilizar el
+<strong>[format| (%parent%)]</strong> para mostrar en el título el padre.</p>
+<p>Para poder filtrar por el el pk del padre hay que añadir en la sentencia SQL <strong>%parent%</strong> que se sustituirá
+por el pk del padre.</p>
+<div class="highlight-yaml"><div class="highlight"><pre> <span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">main</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">module</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">klearMatrix</span>
+     <span class="l-Scalar-Plain">defaultScreen</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">companiesList_screen</span>
+   <span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">companiesList_screen</span><span class="p-Indicator">:</span> <span class="nl">&amp;companiesList_screenLink</span>
+           <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">list</span>
+           <span class="l-Scalar-Plain">pagination</span><span class="p-Indicator">:</span>
+             <span class="l-Scalar-Plain">items</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">25</span>
+           <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Companies</span>
+           <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;List of %s %2s&quot;, ngettext(&#39;Company&#39;, &#39;Companies&#39;, 0), &quot;[format| (%parent%)]&quot;)</span>
+           <span class="l-Scalar-Plain">fields</span><span class="p-Indicator">:</span>
+             <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+               <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Options&quot;)</span>
+               <span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+                 <span class="l-Scalar-Plain">companiesEdit_screen</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+<span class="hll">                 <span class="l-Scalar-Plain">statistics_screen</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span>               <span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+                 <span class="l-Scalar-Plain">companiesDel_dialog</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+               <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">companiesEdit_screen</span>
+           <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+             <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Options&quot;)</span>
+             <span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+               <span class="l-Scalar-Plain">companiesNew_screen</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+             <span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+               <span class="l-Scalar-Plain">companiesDel_dialog</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+     <span class="l-Scalar-Plain">statistics_screen</span><span class="p-Indicator">:</span> <span class="nl">&amp;statistics_Link</span>
+<span class="hll">       <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Companies</span>
+</span>       <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-chart-bar-link</span>
+       <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">googlecharts</span>
+<span class="hll">       <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Statistics %s&quot;, &quot;[format| (%parent%)]&quot;)</span>
+</span>       <span class="l-Scalar-Plain">chartGroups</span><span class="p-Indicator">:</span>
+         <span class="l-Scalar-Plain">annualHistorical</span><span class="p-Indicator">:</span>
+           <span class="l-Scalar-Plain">charts</span><span class="p-Indicator">:</span>
+             <span class="l-Scalar-Plain">perPatterns</span><span class="p-Indicator">:</span>
+               <span class="l-Scalar-Plain">sql</span><span class="p-Indicator">:</span>
+                 <span class="s">&quot;SELECT</span><span class="nv"> </span><span class="s">dest</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">col1,</span>
+                 <span class="s">count(*)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">col2,</span>
+                 <span class="s">sum(price)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">col3</span>
+                 <span class="s">FROM</span><span class="nv"> </span><span class="s">Calls</span>
+<span class="hll">                 <span class="s">WHERE</span><span class="nv"> </span><span class="s">Calls.user</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">%parent%</span>
+</span>                 <span class="s">AND</span><span class="nv"> </span><span class="s">callStart</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">DATE_SUB(now(),</span><span class="nv"> </span><span class="s">INTERVAL</span><span class="nv"> </span><span class="s">11</span><span class="nv"> </span><span class="s">MONTH)</span>
+                 <span class="s">GROUP</span><span class="nv"> </span><span class="s">BY</span><span class="nv"> </span><span class="s">dest&quot;</span>
+             <span class="l-Scalar-Plain">totalCalls</span><span class="p-Indicator">:</span>
+               <span class="l-Scalar-Plain">sql</span><span class="p-Indicator">:</span>
+                 <span class="s">&quot;SELECT</span><span class="nv"> </span><span class="s">MONTHNAME(callStart)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">columna1,</span>
+                 <span class="s">count(*)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">columna2,</span>
+                 <span class="s">sum(price)</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">columna3</span>
+                 <span class="s">FROM</span><span class="nv"> </span><span class="s">Calls</span>
+<span class="hll">                 <span class="s">WHERE</span><span class="nv"> </span><span class="s">Calls.user</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">%parent%</span>
+</span>                 <span class="s">AND</span><span class="nv"> </span><span class="s">callStart</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">DATE_SUB(now(),</span><span class="nv"> </span><span class="s">INTERVAL</span><span class="nv"> </span><span class="s">11</span><span class="nv"> </span><span class="s">MONTH)</span>
+                 <span class="s">GROUP</span><span class="nv"> </span><span class="s">BY</span><span class="nv"> </span><span class="s">MONTH(callStart)&quot;</span>
+ <span class="l-Scalar-Plain">testing</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">_extends</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">production</span>
+ <span class="l-Scalar-Plain">development</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">_extends</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">production</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="fields/index.html" class="btn btn-neutral float-right" title="Tipos de Campos"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="dashboard.html" class="btn btn-neutral" title="Configuración Dashboard"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

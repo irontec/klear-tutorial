@@ -1,0 +1,377 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Custom screen &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="next" title="Klear Dinámico" href="../dynamicConfigClass/index.html"/>
+        <link rel="prev" title="Zona Pública" href="../authCustom/public.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Custom screen</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/customScreen/index.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="custom-screen">
+<h1>Custom screen<a class="headerlink" href="#custom-screen" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#configuracion" id="id1">Configuración</a><ul>
+<li><a class="reference internal" href="#list-yaml" id="id2">List yaml</a></li>
+<li><a class="reference internal" href="#controller" id="id3">Controller</a></li>
+<li><a class="reference internal" href="#fichero-js" id="id4">Fichero JS</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Si tenemos la necesidad de implementar algo que los tipos de pantalla de
+<strong>klear</strong> no nos permiten, siempre podemos crear un <strong>screen</strong> personalizado,
+el cual puede hacer lo que deseemos.</p>
+<div class="section" id="configuracion">
+<h2><a class="toc-backref" href="#id1">Configuración</a><a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="list-yaml">
+<h3><a class="toc-backref" href="#id2">List yaml</a><a class="headerlink" href="#list-yaml" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Lo primero será definir la configuración de la nueva <strong>screen</strong>, para ello hay que editar el
+archivo <strong>yaml</strong> del <strong>list</strong> en el cual queremos que aparezca.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">personalized_screen</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Modelo</span>
+   <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">klear-custom-screen</span>
+   <span class="l-Scalar-Plain">action</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">my-screen</span>
+   <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-pencil</span>
+   <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Mi pantalla personalizada&quot;)</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first"><strong>controller</strong>: será el campo que haga referencia al nuevo screen creado.</p>
+<p>El controller definido como <strong>klear-custom-screen</strong>, hace referencia
+a <strong>KlearCustomScreenController</strong>.</p>
+</li>
+<li><p class="first"><strong>action</strong>: la acción a la que llama el <strong>screen</strong>, en este caso sería
+<strong>MyScreenAction</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="controller">
+<h3><a class="toc-backref" href="#id3">Controller</a><a class="headerlink" href="#controller" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El archivo del <strong>controller</strong> mas simple posible quedaría así:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">KlearCustomScreenController</span> <span class="k">extends</span> <span class="nx">Zend_Controller_Action</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">init</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="cm">/* Initialize action controller here */</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">layout</span><span class="o">-&gt;</span><span class="na">disableLayout</span><span class="p">();</span>
+
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">ContextSwitch</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">addActionContext</span><span class="p">(</span><span class="s1">&#39;my-screen&#39;</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="na">initContext</span><span class="p">(</span><span class="s1">&#39;json&#39;</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">((</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s2">&quot;mainRouter&quot;</span><span class="p">))</span> <span class="o">||</span> <span class="p">(</span><span class="o">!</span><span class="nb">is_object</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="p">))</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">New</span> <span class="nx">Zend_Exception</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nx">Zend_Controller_Plugin_ErrorHandler</span><span class="o">::</span><span class="na">EXCEPTION_NO_ACTION</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">myScreenAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Tenemos el $this-&gt;_mainRouter para explotar</span>
+        <span class="c1">// los datos necesarios</span>
+
+        <span class="c1">// Do stuff</span>
+
+        <span class="c1">// Creamos un array con los datos que queremos devolver</span>
+        <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+
+        <span class="c1">// Hay que devolver un objeto Klear_Model_DispatchResponse()</span>
+        <span class="nv">$jsonResponse</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Klear_Model_DispatchResponse</span><span class="p">();</span>
+        <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">setModule</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">);</span>
+        <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">addJsFile</span><span class="p">(</span><span class="s2">&quot;../js/jquery.myScreen.js&quot;</span><span class="p">);</span>
+        <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">setData</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+        <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">attachView</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Este controlador estará en el mismo directorio que están los demás que componen la aplicación.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Un error muy común es denominar mal los archivos, ya que al final hay que añadir el
+<strong>Controller</strong>, quedando este fichero así: <strong>klearCustomScreenController.php</strong>.</p>
+</div>
+<p>Hay que tener en cuenta que en la acción <strong>init</strong> debemos añadir nuestra acción personalizada
+al <strong>contentSwitch</strong> para que pueda funcionar como <strong>Json</strong>.</p>
+<p>En ésta misma acción, recogemos el <strong>_mainRouter</strong> para poder explotar los datos de la aplicación
+( de que pantalla venimos, la configuración del list, etc...).</p>
+<p>Por último, en nuestra acción, depués de hacer lo que haga falta siempre debemos devolver un
+objeto <strong>Klear_Model_DispatchResponse()</strong>. A este objeto se le pueden añadir muchas cosas,
+lo mejor es entrar dentro de la
+<a class="reference external" href="http://dev2.irontec.com/websvn/filedetails.php?repname=klear&amp;path=%2Ftrunk%2Fmodules%2Fklear%2Fmodels%2FDispatchResponse.php">clase</a>
+y ver que posibilidades hay.</p>
+</div>
+<div class="section" id="fichero-js">
+<h3><a class="toc-backref" href="#id4">Fichero JS</a><a class="headerlink" href="#fichero-js" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En nuestro caso, hemos añadido los datos generados en la acción (que se recibirán en la parte
+del <strong>klear</strong>) y también el archivo <strong>jquery.myScreen.js</strong> para controlar el comportamiento
+personalizado de nuestro <strong>screen</strong>.</p>
+<p>Éste archivo hay que guardarlo en la ruta:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">APPLICATION_PATH/assets/js/custom/jquery.myScreen.js</span>
+</pre></div>
+</div>
+<p>Y el archivo con lo básico quedaría así:</p>
+<div class="highlight-js"><div class="highlight"><pre><span class="p">;(</span><span class="kd">function</span> <span class="nx">load</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">.</span><span class="nx">klear</span><span class="p">.</span><span class="nx">checkDeps</span><span class="p">([</span><span class="s1">&#39;$.klearmatrix.module&#39;</span><span class="p">,</span><span class="s1">&#39;$.ui.form&#39;</span><span class="p">],</span><span class="nx">load</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">var</span> <span class="nx">__namespace__</span> <span class="o">=</span> <span class="s2">&quot;custom.myScreen&quot;</span><span class="p">;</span>
+
+    <span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s2">&quot;custom.myScreen&quot;</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">klearmatrix</span><span class="p">.</span><span class="nx">module</span><span class="p">,</span>  <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">data</span> <span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nx">moduleName</span><span class="o">:</span> <span class="s1">&#39;myScreen&#39;</span>
+        <span class="p">},</span>
+        <span class="nx">_super</span><span class="o">:</span> <span class="nx">$</span><span class="p">.</span><span class="nx">klearmatrix</span><span class="p">.</span><span class="nx">module</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span>
+        <span class="nx">_create</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">_super</span><span class="p">.</span><span class="nx">_create</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="nx">_init</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">templateName</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">var</span> <span class="nx">$appliedTemplate</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_loadTemplate</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">templateName</span><span class="p">);</span>
+                <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">klearModule</span><span class="p">(</span><span class="s2">&quot;getPanel&quot;</span><span class="p">)).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$appliedTemplate</span><span class="p">);</span>
+
+                <span class="k">this</span>
+                   <span class="p">.</span><span class="nx">_applyDecorators</span><span class="p">()</span>
+                   <span class="p">.</span><span class="nx">_registerBaseEvents</span><span class="p">()</span>
+                   <span class="p">.</span><span class="nx">_registerFieldsEvents</span><span class="p">()</span>
+                   <span class="p">.</span><span class="nx">_registerEvents</span><span class="p">()</span>
+                   <span class="p">.</span><span class="nx">_doAction</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">_doAction</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">//Do stuff</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+
+    <span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">.</span><span class="nx">bridge</span><span class="p">(</span><span class="s2">&quot;myScreen&quot;</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">custom</span><span class="p">.</span><span class="nx">myScreen</span><span class="p">);</span>
+
+<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Como se vé, este <strong>Script</strong> extiende de <strong>$.klearmatrix.module</strong> y <strong>$.ui.form</strong>.
+En la función <strong>_init</strong> se lanzan las funciones básicas y la última sería nuestra función
+personalizada, en la cual podremos meter el kung-fu necesario.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Revisar bien el script internamente, los nombres de ficheros y demás. Deberá estar todo bien
+denominado para poder funcionar correctamente.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="../dynamicConfigClass/index.html" class="btn btn-neutral float-right" title="Klear Dinámico"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../authCustom/public.html" class="btn btn-neutral" title="Zona Pública"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

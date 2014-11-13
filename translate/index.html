@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Traducciones &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="next" title="Auth Custom" href="../authCustom/index.html"/>
+        <link rel="prev" title="Iconos" href="../yaml/iconos.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Traducciones</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/translate/index.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="traducciones">
+<h1>Traducciones<a class="headerlink" href="#traducciones" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#definicion-de-idiomas" id="id3">Definición de idiomas</a></li>
+<li><a class="reference internal" href="#estructura-de-los-directorios" id="id4">Estructura de los directórios</a><ul>
+<li><a class="reference internal" href="#klear-core" id="id5">Klear Core</a></li>
+<li><a class="reference internal" href="#proyecto" id="id6">Proyecto</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#traduccion" id="id7">Traducción</a><ul>
+<li><a class="reference internal" href="#php" id="id8">PHP</a><ul>
+<li><a class="reference internal" href="#translate" id="id9">translate()</a></li>
+<li><a class="reference internal" href="#plural" id="id10">plural()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#javascript" id="id11">Javascript</a></li>
+<li><a class="reference internal" href="#application-ini" id="id12">application.ini</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#poedit" id="id13">Poedit</a><ul>
+<li><a class="reference internal" href="#configuracion-general" id="id14">Configuración general</a><ul>
+<li><a class="reference internal" href="#id1" id="id15">PHP</a></li>
+<li><a class="reference internal" href="#id2" id="id16">Javascript</a></li>
+<li><a class="reference internal" href="#python" id="id17">Python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuracion-del-catalogo" id="id18">Configuración del catálogo</a><ul>
+<li><a class="reference internal" href="#plurales-y-datos-del-catalogo" id="id19">Plurales y datos del catálogo</a></li>
+<li><a class="reference internal" href="#carpetas-para-buscar" id="id20">Carpetas para buscar</a></li>
+<li><a class="reference internal" href="#palabras-clave" id="id21">Palabras clave</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="definicion-de-idiomas">
+<h2><a class="toc-backref" href="#id3">Definición de idiomas</a><a class="headerlink" href="#definicion-de-idiomas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En la sección <a class="reference internal" href="../yaml/klear-yaml.html#klear-yaml"><em>Klear.yaml</em></a> se explica la forma de configurar
+correctamente el archivo de configruación <strong>klear</strong>.</p>
+<p>A continuación se muestra un listado con los idiomas que <strong>Klear</strong> soporta en este momento:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">langs</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">es</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Español</span>
+    <span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">es</span>
+    <span class="l-Scalar-Plain">locale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">es_ES</span>
+  <span class="l-Scalar-Plain">eu</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Euskera</span>
+    <span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">eu</span>
+    <span class="l-Scalar-Plain">locale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">eu_ES</span>
+  <span class="l-Scalar-Plain">ca</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Català</span>
+    <span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ca</span>
+    <span class="l-Scalar-Plain">locale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">es_ES</span>
+  <span class="l-Scalar-Plain">gl</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Galego</span>
+    <span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">gl</span>
+    <span class="l-Scalar-Plain">locale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">es_ES</span>
+  <span class="l-Scalar-Plain">en</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">English</span>
+    <span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">en</span>
+    <span class="l-Scalar-Plain">locale</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">en_US</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="estructura-de-los-directorios">
+<h2><a class="toc-backref" href="#id4">Estructura de los directórios</a><a class="headerlink" href="#estructura-de-los-directorios" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="klear-core">
+<h3><a class="toc-backref" href="#id5">Klear Core</a><a class="headerlink" href="#klear-core" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los strings de traducción del <strong>core</strong> de <strong>Klear</strong> se agrupan dentro de su respectivo módulo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>.
+├── klear
+│ ├── <span class="o">(</span>...<span class="o">)</span>
+│ ├── languages
+│ │ ├── ca_ES
+│ │ │ ├── ca_ES.mo
+│ │ │ └── ca_ES.po
+│ │ ├── en_US
+│ │ │ ├── en_US.mo
+│ │ │ └── en_US.po
+│ │ ├── es_ES
+│ │ │ ├── es_ES.mo
+│ │ │ └── es_ES.po
+│ │ ├── eu_ES
+│ │ │ ├── eu_ES.mo
+│ │ │ └── eu_ES.po
+│ │ ├── gl_ES
+│ │ │ ├── gl_ES.mo
+│ │ │ └── gl_ES.po
+│ │ ├── js-translations.php
+│ │ └── pot
+│ │ ├── klear.mo
+│ │ └── klear.pot
+│ <span class="o">(</span>...<span class="o">)</span>
+└── klearMatrix
+├── <span class="o">(</span>...<span class="o">)</span>
+├── languages
+│ ├── ca_ES
+│ │ ├── ca_ES.mo
+│ │ └── ca_ES.po
+│ ├── en_US
+│ │ ├── en_US.mo
+│ │ └── en_US.po
+│ ├── es_ES
+│ │ ├── es_ES.mo
+│ │ └── es_ES.po
+│ ├── eu_ES
+│ │ ├── eu_ES.mo
+│ │ └── eu_ES.po
+│ ├── gl_ES
+│ │ ├── gl_ES.mo
+│ │ └── gl_ES.po
+│ ├── js-translations.php
+│ └── pot
+│ ├── klearMatrix.mo
+│ └── klearMatrix.pot
+└── <span class="o">(</span>...<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="proyecto">
+<h3><a class="toc-backref" href="#id6">Proyecto</a><a class="headerlink" href="#proyecto" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La estructura de los archivos de idioma del proyecto es la siguiente:</p>
+<div class="highlight-bash"><div class="highlight"><pre>.
+├── application
+│ ├── <span class="o">(</span>...<span class="o">)</span>
+│ ├── languages
+│ │ ├── ca_ES
+│ │ │ ├── ca_ES.mo
+│ │ │ └── ca_ES.po
+│ │ ├── en_US
+│ │ │ ├── en_US.mo
+│ │ │ └── en_US.po
+│ │ ├── es_ES
+│ │ │ ├── es_ES.mo
+│ │ │ └── es_ES.po
+│ │ ├── eu_ES
+│ │ │ ├── eu_ES.mo
+│ │ │ └── eu_ES.po
+│ │ ├── gl_ES
+│ │ │ ├── gl_ES.mo
+│ │ │ └── gl_ES.po
+│ │ ├── js-translations.php
+│ │ └── pot
+│ │ ├── project.mo
+│ │ └── project.pot
+<span class="o">(</span>...<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="traduccion">
+<h2><a class="toc-backref" href="#id7">Traducción</a><a class="headerlink" href="#traduccion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las traducciones dependiendo del lenguaje que se esté usando, se definen de diferente manera.</p>
+<p>A continuación se explica como abordarlo con cada uno de ellos:</p>
+<div class="section" id="php">
+<h3><a class="toc-backref" href="#id8">PHP</a><a class="headerlink" href="#php" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En <strong>PHP</strong> se utiliza el <strong>Zend_Translate</strong>, que tiene diferentes métodos definidos
+para traducir textos simples o plurales.</p>
+<div class="section" id="translate">
+<h4><a class="toc-backref" href="#id9">translate()</a><a class="headerlink" href="#translate" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">view</span><span class="o">-&gt;</span><span class="na">translate</span><span class="p">(</span>
+ <span class="s1">&#39;car&#39;</span>
+<span class="p">);</span>
+
+<span class="nv">$color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">;</span>
+
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">view</span><span class="o">-&gt;</span><span class="na">translate</span><span class="p">(</span>
+    <span class="s2">&quot;%1</span><span class="se">\$</span><span class="s2">s car&quot;</span><span class="p">,</span>
+    <span class="nv">$color</span>
+<span class="p">);</span>
+
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">view</span><span class="o">-&gt;</span><span class="na">translate</span><span class="p">(</span>
+    <span class="s2">&quot;Today is %1</span><span class="se">\$</span><span class="s2">s in %2</span><span class="se">\$</span><span class="s2">s. Actual time: %3</span><span class="se">\$</span><span class="s2">s&quot;</span><span class="p">,</span>
+    <span class="nv">$date</span><span class="p">,</span>
+    <span class="nv">$month</span><span class="p">,</span>
+    <span class="nv">$time</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plural">
+<h4><a class="toc-backref" href="#id10">plural()</a><a class="headerlink" href="#plural" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">view</span><span class="o">-&gt;</span><span class="na">plural</span><span class="p">(</span>
+    <span class="s1">&#39;Car&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Cars&#39;</span><span class="p">,</span>
+    <span class="nv">$number</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p>El código utilizado se implementa desde el <strong>controller</strong>, para hacerlo desde la vista
+(*.phtml) habría que quitar el <strong>-&gt;view</strong> de todos los <strong>$this-&gt;view</strong>,
+quedando <strong>$this</strong>. Ya que al estar en el <em>view</em>, <strong>$this</strong> sería igual a <strong>$this-&gt;view</strong>.</p>
+<p>Por ejemplo el <strong>plural</strong> quedaría así desde la vista:</p>
+<div class="last highlight-php"><div class="highlight"><pre><span class="cp">&lt;?</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">plural</span><span class="p">(</span>
+    <span class="s1">&#39;Car&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Cars&#39;</span><span class="p">,</span>
+    <span class="nv">$number</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="javascript">
+<h3><a class="toc-backref" href="#id11">Javascript</a><a class="headerlink" href="#javascript" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En el lenguaje de <strong>javascript</strong> se utiliza el plugin de traducciones <strong>jQuery Translate</strong>.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="s1">&#39;car&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="s1">&#39;This %s is so beautiful&#39;</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Al contrario que en la parte de <strong>php</strong>, en <strong>javascript</strong> solo está implementado el reemplazo
+de un único parametro. Tampoco se implementan los plurales.</p>
+</div>
+</div>
+<div class="section" id="application-ini">
+<h3><a class="toc-backref" href="#id12">application.ini</a><a class="headerlink" href="#application-ini" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para poder utilizar los mismos archivos <strong>.mo</strong> y <strong>.po</strong> definidos anteriormente
+en la zona pública, hay que configurar el fichero <strong>application.ini</strong> de la siguiente manera:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">resources.frontController.plugins[]</span> <span class="o">=</span> <span class="s">&#39;Iron_Controller_Plugin_PublicTranslator&#39;</span>
+<span class="na">translate.language.es.title</span> <span class="o">=</span> <span class="s">&#39;Euskara&#39;</span>
+<span class="na">translate.language.es.language</span> <span class="o">=</span> <span class="s">&#39;eu&#39;</span>
+<span class="na">translate.language.es.locale</span> <span class="o">=</span> <span class="s">&#39;eu_ES&#39;</span>
+<span class="na">translate.language.es.title</span> <span class="o">=</span> <span class="s">&#39;Español&#39;</span>
+<span class="na">translate.language.es.language</span> <span class="o">=</span> <span class="s">&#39;es&#39;</span>
+<span class="na">translate.language.es.locale</span> <span class="o">=</span> <span class="s">&#39;es_ES&#39;</span>
+<span class="na">translate.language.en.title</span> <span class="o">=</span> <span class="s">&#39;English&#39;</span>
+<span class="na">translate.language.en.language</span> <span class="o">=</span> <span class="s">&#39;en&#39;</span>
+<span class="na">translate.language.en.locale</span> <span class="o">=</span> <span class="s">&#39;en_US&#39;</span>
+<span class="na">translate.language.fr.title</span> <span class="o">=</span> <span class="s">&#39;Francés&#39;</span>
+<span class="na">translate.language.fr.language</span> <span class="o">=</span> <span class="s">&#39;fr&#39;</span>
+<span class="na">translate.language.fr.locale</span> <span class="o">=</span> <span class="s">&#39;fr_FR&#39;</span>
+<span class="na">translate.language.pt.title</span> <span class="o">=</span> <span class="s">&#39;Portugués&#39;</span>
+<span class="na">translate.language.pt.language</span> <span class="o">=</span> <span class="s">&#39;pt&#39;</span>
+<span class="na">translate.language.pt.locale</span> <span class="o">=</span> <span class="s">&#39;pt_PT&#39;</span>
+
+<span class="na">translate.requestParam</span> <span class="o">=</span> <span class="s">&#39;lang&#39;</span>
+<span class="na">translate.defaultLanguage</span> <span class="o">=</span> <span class="s">&#39;eu&#39;</span>
+<span class="na">translate.cookies.enabled</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">translate.cookies.lifetime</span> <span class="o">=</span> <span class="s">2592000 ; 1 month</span>
+
+<span class="na">defaultLanguageZendRegistryKey</span> <span class="o">=</span> <span class="s">&#39;defaultLang&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="poedit">
+<h2><a class="toc-backref" href="#id13">Poedit</a><a class="headerlink" href="#poedit" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para traducir los textos se utiliza el editor <strong>Poedit</strong>.</p>
+<p>La instalación en entornos <strong>Ubuntu</strong> es bastante sencilla, basta con:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> apt-get install poedit
+</pre></div>
+</div>
+<div class="section" id="configuracion-general">
+<h3><a class="toc-backref" href="#id14">Configuración general</a><a class="headerlink" href="#configuracion-general" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La manera más sencilla de configurar poedit es descargar el fichero <a class="reference download internal" href="../_downloads/config"><tt class="xref download docutils literal"><span class="pre">config</span></tt></a> y almacenarlo en el directorio ~/.poedit/
+Si se ha copiado el fichero en su destino podemos pasar a la <a class="reference internal" href="#configuracion-del-catalogo">Configuración del catálogo</a>
+Si se prefiere realizar a mano la configuración, habrá que seguir los pasos siguientes.</p>
+<p>En el menú <strong>Edición</strong> -&gt; <strong>Preferencias</strong>, en la pestaña de <strong>Procesadores</strong>, se elige
+el lenguaje a editar y se clicka en <strong>Editar</strong>.</p>
+<img alt="../_images/editor.png" src="../_images/editor.png" />
+<div class="section" id="id1">
+<h4><a class="toc-backref" href="#id15">PHP</a><a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>La configuración del lenguaje <strong>php</strong> tiene que quedar así:</p>
+<img alt="../_images/php.png" src="../_images/php.png" />
+</div>
+<div class="section" id="id2">
+<h4><a class="toc-backref" href="#id16">Javascript</a><a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Puede que ésta configuración no exista anteriormente, por lo que en lugar de <strong>editar</strong>
+deberemos crear una nueva.</p>
+<p>La configuración debe quedar así:</p>
+<img alt="../_images/javascript.png" src="../_images/javascript.png" />
+</div>
+<div class="section" id="python">
+<h4><a class="toc-backref" href="#id17">Python</a><a class="headerlink" href="#python" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Hay que editar la configuración de <strong>Python</strong> también, para añadir los fichero <strong>.yaml</strong>.</p>
+<img alt="../_images/python.png" src="../_images/python.png" />
+</div>
+</div>
+<div class="section" id="configuracion-del-catalogo">
+<h3><a class="toc-backref" href="#id18">Configuración del catálogo</a><a class="headerlink" href="#configuracion-del-catalogo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Tendremos que configurar cada catálogo, para que acepte plurales, para setear el <strong>path</strong>, etc.</p>
+<p>Para ello en el menú <strong>Catálogo</strong> -&gt; <strong>Opciones</strong>:</p>
+<div class="section" id="plurales-y-datos-del-catalogo">
+<h4><a class="toc-backref" href="#id19">Plurales y datos del catálogo</a><a class="headerlink" href="#plurales-y-datos-del-catalogo" title="Enlazar permanentemente con este título">¶</a></h4>
+<img alt="../_images/catalogo.png" src="../_images/catalogo.png" />
+</div>
+<div class="section" id="carpetas-para-buscar">
+<h4><a class="toc-backref" href="#id20">Carpetas para buscar</a><a class="headerlink" href="#carpetas-para-buscar" title="Enlazar permanentemente con este título">¶</a></h4>
+<img alt="../_images/path.png" src="../_images/path.png" />
+</div>
+<div class="section" id="palabras-clave">
+<h4><a class="toc-backref" href="#id21">Palabras clave</a><a class="headerlink" href="#palabras-clave" title="Enlazar permanentemente con este título">¶</a></h4>
+<img alt="../_images/palabras.png" src="../_images/palabras.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="../authCustom/index.html" class="btn btn-neutral float-right" title="Auth Custom"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../yaml/iconos.html" class="btn btn-neutral" title="Iconos"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

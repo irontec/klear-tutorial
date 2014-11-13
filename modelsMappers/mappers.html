@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mappers &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="Models y Mappers" href="index.html"/>
+        <link rel="next" title="Yaml" href="../yaml/index.html"/>
+        <link rel="prev" title="Models" href="models.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Models y Mappers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Mappers</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/modelsMappers/mappers.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="mappers">
+<h1>Mappers<a class="headerlink" href="#mappers" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Vamos a usar las funciones ya definidas por defecto por el Generador, aunque se pueden crear aún más según el objetivo deseado.</p>
+<div class="section" id="buscar-y-coger-datos-find-o-fetch">
+<h2>Buscar y Coger datos (find o fetch)<a class="headerlink" href="#buscar-y-coger-datos-find-o-fetch" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Klear cuenta cuenta con muchas opciones para coger datos, ya sea única, varias que tengan un valor en común o todas que tengamos
+en una tabla. Esto depende de lo que queramos hacer, así que listaré las que Klear tiene disponible con un ejemplo (archivo MapperAbstract.php).</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">IndexController</span> <span class="k">extends</span> <span class="nx">Zend_Controller_Action</span>
+<span class="p">{</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">init</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="cm">/* Initialize action controller here */</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\KlearInterval\Mapper\Sql\Categories</span><span class="p">();</span>
+
+        <span class="c1">// SE PUEDE ELEGIR CUALQUIER DE ESTAS OPCIONES SEGÚN SU FINALIDAD</span>
+        <span class="c1">// FUNCIONES DEL MapperAbstract.php</span>
+
+        <span class="c1">// ******************************************************************</span>
+
+        <span class="c1">// $primaryKey = La ID del dato de la Tabla, en este caso la de Categorías</span>
+<span class="hll">        <span class="nv">$dato</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nv">$primaryKey</span><span class="p">);</span>
+</span>
+        <span class="c1">// Obtiene todos los datos de la tabla</span>
+        <span class="c1">// Para listar, se necesita FOREACH</span>
+<span class="hll">        <span class="nv">$datos</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">();</span>
+</span>
+        <span class="c1">// Obtiene todos los datos de la tabla en formato array</span>
+        <span class="c1">// Para listar, se necesita FOREACH</span>
+<span class="hll">        <span class="nv">$datos</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">fetchAllToArray</span><span class="p">();</span>
+</span>
+        <span class="c1">// Obtiene todos los datos y las divide en paginadores</span>
+        <span class="c1">// Para listar, se necesita FOREACH</span>
+<span class="hll">        <span class="nv">$datos</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">fetchAllToPaginator</span><span class="p">();</span>
+</span>
+        <span class="c1">// Obtiene todos los datos en modo listado</span>
+        <span class="c1">// Para listar, se necesita FOREACH</span>
+<span class="hll">        <span class="nv">$datos</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">fetchList</span><span class="p">();</span>
+</span>
+        <span class="c1">// Obtiene los datos en modo listado array</span>
+        <span class="c1">// Para listar, se necesita FOREACH</span>
+<span class="hll">        <span class="nv">$datos</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">fetchListToArray</span><span class="p">();</span>
+</span>
+        <span class="c1">// Obtiene los datos en modo listado y las divide en paginadores</span>
+        <span class="c1">// Para listar, se necesita FOREACH</span>
+<span class="hll">        <span class="nv">$datos</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">fetchListToPaginator</span><span class="p">();</span>
+</span>
+        <span class="c1">// $where = &quot;name = test6&quot;, y obtiene el primer dato que encaje con la comparativa</span>
+<span class="hll">        <span class="nv">$dato</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">fetchOne</span><span class="p">(</span><span class="nv">$where</span><span class="p">);</span>
+</span>
+        <span class="c1">// $primaryKey = La ID del dato de la Tabla, en este caso la de Categories</span>
+<span class="hll">        <span class="nv">$dato</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="nv">$primaryKey</span><span class="p">);</span>
+</span>
+        <span class="c1">// $field = &#39;name&#39;;</span>
+        <span class="c1">// $field = array(&#39;name&#39;); si se quiere comparar con más campos</span>
+        <span class="c1">// $value = &#39;test6&#39;;</span>
+        <span class="c1">// $value = array(&#39;test6&#39;); tiene que tener el mismo que field</span>
+        <span class="c1">// Listará todos los datos que cumplan con la condición</span>
+        <span class="c1">// Para listar, se necesita FOREACH</span>
+<span class="hll">        <span class="nv">$datos</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">findByField</span><span class="p">(</span><span class="nv">$field</span><span class="p">,</span><span class="nv">$value</span><span class="p">);</span>
+</span>
+        <span class="c1">// $field = &#39;name&#39;;</span>
+        <span class="c1">// $field = array(&#39;name&#39;); si se quiere comparar con más campos</span>
+        <span class="c1">// $value = &#39;test6&#39;;</span>
+        <span class="c1">// $value = array(&#39;test6&#39;); tiene que tener el mismo que field</span>
+        <span class="c1">// Listará el primer dato que cumpla con la coindición</span>
+<span class="hll">        <span class="nv">$dato</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">findOneByField</span><span class="p">(</span><span class="nv">$field</span><span class="p">,</span><span class="nv">$value</span><span class="p">);</span>
+</span>
+        <span class="c1">// ******************************************************************</span>
+
+
+        <span class="c1">// Los $dato solo requieren de un</span>
+        <span class="nv">$dato</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">();</span>
+
+        <span class="c1">// Los $datos require de un foreach</span>
+        <span class="k">foreach</span><span class="p">(</span><span class="nv">$datos</span> <span class="k">as</span> <span class="nv">$dato</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$dato</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="actualizar-datos-find-o-fetch-set-save">
+<h2>Actualizar datos (find o fetch, set, save)<a class="headerlink" href="#actualizar-datos-find-o-fetch-set-save" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">IndexController</span> <span class="k">extends</span> <span class="nx">Zend_Controller_Action</span>
+<span class="p">{</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">init</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="cm">/* Initialize action controller here */</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\KlearInterval\Mapper\Sql\Categories</span><span class="p">();</span>
+
+        <span class="c1">// SE PUEDE ELEGIR CUALQUIER DE ESTAS OPCIONES SEGÚN SU FINALIDAD</span>
+        <span class="c1">// FUNCIONES DEL MapperAbstract.php</span>
+
+        <span class="c1">// ******************************************************************</span>
+
+
+        <span class="c1">// $field = &#39;name&#39;;</span>
+        <span class="c1">// $field = array(&#39;name&#39;); si se quiere comparar con más campos</span>
+        <span class="c1">// $value = &#39;test6&#39;;</span>
+        <span class="c1">// $value = array(&#39;test6&#39;); tiene que tener el mismo que field</span>
+        <span class="c1">// Listará todos los datos que cumplan con la condición</span>
+        <span class="c1">// Para listar, se necesita FOREACH</span>
+        <span class="nv">$datos</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">findByField</span><span class="p">(</span><span class="nv">$field</span><span class="p">,</span><span class="nv">$value</span><span class="p">);</span>
+
+        <span class="c1">// $field = &#39;name&#39;;</span>
+        <span class="c1">// $field = array(&#39;name&#39;); si se quiere comparar con más campos</span>
+        <span class="c1">// $value = &#39;test6&#39;;</span>
+        <span class="c1">// $value = array(&#39;test6&#39;); tiene que tener el mismo que field</span>
+        <span class="c1">// Listará el primer dato que cumpla con la coindición</span>
+        <span class="nv">$dato</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">findOneByField</span><span class="p">(</span><span class="nv">$field</span><span class="p">,</span><span class="nv">$value</span><span class="p">);</span>
+
+        <span class="c1">// ******************************************************************</span>
+
+
+<span class="hll">        <span class="c1">// Después de que se haya encontrado un dato individual, se puede hacer uso del código SET y SAVE</span>
+</span><span class="hll">        <span class="nv">$dato</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s1">&#39;Dato para cambiar&#39;</span><span class="p">);</span>
+</span><span class="hll">        <span class="nv">$dato</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+</span>
+
+<span class="hll">        <span class="c1">// Si son datos agrupados, hace falta el foreach</span>
+</span><span class="hll">        <span class="k">foreach</span><span class="p">(</span><span class="nv">$datos</span> <span class="k">as</span> <span class="nv">$dato</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">            <span class="nv">$dato</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s1">&#39;Dato para cambiar&#39;</span><span class="p">);</span>
+</span><span class="hll">            <span class="nv">$dato</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+</span><span class="hll">        <span class="p">}</span>
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="borrar-datos-find-o-fetch-delete">
+<h2>Borrar datos (find o fetch, delete)<a class="headerlink" href="#borrar-datos-find-o-fetch-delete" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">IndexController</span> <span class="k">extends</span> <span class="nx">Zend_Controller_Action</span>
+<span class="p">{</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">init</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="cm">/* Initialize action controller here */</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\KlearInterval\Mapper\Sql\Categories</span><span class="p">();</span>
+
+        <span class="c1">// SE PUEDE ELEGIR CUALQUIER DE ESTAS OPCIONES SEGÚN SU FINALIDAD</span>
+        <span class="c1">// FUNCIONES DEL MapperAbstract.php</span>
+
+        <span class="c1">// ******************************************************************</span>
+
+
+        <span class="c1">// $field = &#39;name&#39;;</span>
+        <span class="c1">// $field = array(&#39;name&#39;); si se quiere comparar con más campos</span>
+        <span class="c1">// $value = &#39;test6&#39;;</span>
+        <span class="c1">// $value = array(&#39;test6&#39;); tiene que tener el mismo que field</span>
+        <span class="c1">// Listará todos los datos que cumplan con la condición</span>
+        <span class="c1">// Para listar, se necesita FOREACH</span>
+        <span class="nv">$datos</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">findByField</span><span class="p">(</span><span class="nv">$field</span><span class="p">,</span><span class="nv">$value</span><span class="p">);</span>
+
+        <span class="c1">// $field = &#39;name&#39;;</span>
+        <span class="c1">// $field = array(&#39;name&#39;); si se quiere comparar con más campos</span>
+        <span class="c1">// $value = &#39;test6&#39;;</span>
+        <span class="c1">// $value = array(&#39;test6&#39;); tiene que tener el mismo que field</span>
+        <span class="c1">// Listará el primer dato que cumpla con la coindición</span>
+        <span class="nv">$dato</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">findOneByField</span><span class="p">(</span><span class="nv">$field</span><span class="p">,</span><span class="nv">$value</span><span class="p">);</span>
+
+        <span class="c1">// ******************************************************************</span>
+
+
+<span class="hll">        <span class="c1">// Después de que se haya encontrado un dato individual, se puede hacer uso del delete()</span>
+</span><span class="hll">        <span class="nv">$dato</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span>
+</span><span class="hll">
+</span>
+<span class="hll">        <span class="c1">// Si son datos agrupados, hace falta el foreach</span>
+</span><span class="hll">        <span class="k">foreach</span><span class="p">(</span><span class="nv">$datos</span> <span class="k">as</span> <span class="nv">$dato</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">            <span class="nv">$dato</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span>
+</span><span class="hll">        <span class="p">}</span>
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="crear-nuestros-propios-mappers">
+<h2>Crear nuestros propios Mappers<a class="headerlink" href="#crear-nuestros-propios-mappers" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Este tutorial es parecido al <a class="reference internal" href="models.html#modelscreate"><em>Crear nuestros propios models</em></a>, pero por formalidad hay que saber diferenciarlos para poder
+organizarnos con las nuevas funciones. Los Mappers normalmente son usadas para recoger o modificar la información
+ya guardada, así que lo que nos interesa es saber cuánta información necesitamos y cómo la queremos.</p>
+<p>La carpeta <strong>Mapper</strong>, que se encuentran en nuestra carpeta <strong>library</strong>, tiene la carpeta <strong>Sql</strong> que contiene
+la carpeta Raw que se regenera cada vez que se usa el <a class="reference internal" href="generator.html#generatormodelsmappers"><em>Generador</em></a> pero aparte de ella, esta a su
+vez contiene la carpeta <strong>DbTable</strong> que también se vuelve a generar por lo que que solo podrémos editar cualquier
+archivo que se encuentren fuera de ellas. Un ejemplo del proyecto Klear Interval:</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Solo podemos editar las que tenemos resaltadas en el siguiente código, el resto se podrá sobreescribir.</p>
+</div>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> tree library/KlearInterval/Mapper/
+<span class="go">library/KlearInterval/Mapper/</span>
+<span class="go">└── Sql</span>
+<span class="hll"><span class="go">    ├── Categories.php</span>
+</span><span class="go">    ├── DbTable</span>
+<span class="go">    │   ├── Categories.php</span>
+<span class="go">    │   ├── Developers.php</span>
+<span class="go">    │   ├── generator.log</span>
+<span class="go">    │   ├── KlearImageGalleries.php</span>
+<span class="go">    │   ├── KlearImageGalleriesPictures.php</span>
+<span class="go">    │   ├── KlearImageGalleriesSizes.php</span>
+<span class="go">    │   ├── KlearRoles.php</span>
+<span class="go">    │   ├── KlearRolesSections.php</span>
+<span class="go">    │   ├── KlearSections.php</span>
+<span class="go">    │   ├── KlearUsers.php</span>
+<span class="go">    │   ├── KlearUsersRoles.php</span>
+<span class="go">    │   ├── Marcas.php</span>
+<span class="go">    │   ├── Multifields.php</span>
+<span class="go">    │   ├── News.php</span>
+<span class="go">    │   ├── Projects.php</span>
+<span class="go">    │   ├── RelNewsCategories.php</span>
+<span class="go">    │   ├── Rowset.php</span>
+<span class="go">    │   ├── Sections.php</span>
+<span class="go">    │   ├── SubSections.php</span>
+<span class="go">    │   ├── Tablacosas.php</span>
+<span class="go">    │   └── TableAbstract.php</span>
+<span class="hll"><span class="go">    ├── Developers.php</span>
+</span><span class="hll"><span class="go">    ├── KlearImageGalleries.php</span>
+</span><span class="hll"><span class="go">    ├── KlearImageGalleriesPictures.php</span>
+</span><span class="hll"><span class="go">    ├── KlearImageGalleriesSizes.php</span>
+</span><span class="hll"><span class="go">    ├── KlearRoles.php</span>
+</span><span class="hll"><span class="go">    ├── KlearRolesSections.php</span>
+</span><span class="hll"><span class="go">    ├── KlearSections.php</span>
+</span><span class="hll"><span class="go">    ├── KlearUsers.php</span>
+</span><span class="hll"><span class="go">    ├── KlearUsersRoles.php</span>
+</span><span class="hll"><span class="go">    ├── Marcas.php</span>
+</span><span class="hll"><span class="go">    ├── Multifields.php</span>
+</span><span class="hll"><span class="go">    ├── News.php</span>
+</span><span class="hll"><span class="go">    ├── Projects.php</span>
+</span><span class="go">    ├── Raw</span>
+<span class="go">    │   ├── Categories.php</span>
+<span class="go">    │   ├── Developers.php</span>
+<span class="go">    │   ├── generator.log</span>
+<span class="go">    │   ├── KlearImageGalleries.php</span>
+<span class="go">    │   ├── KlearImageGalleriesPictures.php</span>
+<span class="go">    │   ├── KlearImageGalleriesSizes.php</span>
+<span class="go">    │   ├── KlearRoles.php</span>
+<span class="go">    │   ├── KlearRolesSections.php</span>
+<span class="go">    │   ├── KlearSections.php</span>
+<span class="go">    │   ├── KlearUsers.php</span>
+<span class="go">    │   ├── KlearUsersRoles.php</span>
+<span class="go">    │   ├── MapperAbstract.php</span>
+<span class="go">    │   ├── Marcas.php</span>
+<span class="go">    │   ├── Multifields.php</span>
+<span class="go">    │   ├── News.php</span>
+<span class="go">    │   ├── Projects.php</span>
+<span class="go">    │   ├── RelNewsCategories.php</span>
+<span class="go">    │   ├── Sections.php</span>
+<span class="go">    │   ├── SubSections.php</span>
+<span class="go">    │   └── Tablacosas.php</span>
+<span class="hll"><span class="go">    ├── RelNewsCategories.php</span>
+</span><span class="hll"><span class="go">    ├── Sections.php</span>
+</span><span class="hll"><span class="go">    ├── SubSections.php</span>
+</span><span class="hll"><span class="go">    └── Tablacosas.php</span>
+</span></pre></div>
+</div>
+<div class="section" id="ejemplo-simple">
+<h3>Ejemplo simple<a class="headerlink" href="#ejemplo-simple" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Modificaremos el archivo <strong>Categories.php</strong> de la carpeta <strong>Mapper/Sql</strong>. Agregando la función <strong>getDateData()</strong>, es una
+sencilla función para coger el campo <strong>cleanName</strong> de la tabla <strong>Categories</strong> con solo dar la <strong>ID</strong> y a parte quiero que se me
+devuelva la <strong>fecha y hora</strong> de la consulta.</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Application Model Mapper</span>
+<span class="sd"> *</span>
+<span class="sd"> * @package Mapper</span>
+<span class="sd"> * @subpackage Sql</span>
+<span class="sd"> * @author User Name</span>
+<span class="sd"> * @copyright ZF model generator</span>
+<span class="sd"> * @license http://framework.zend.com/license/new-bsd     New BSD License</span>
+<span class="sd"> */</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Data Mapper implementation for KlearInterval\Model\Categories</span>
+<span class="sd"> *</span>
+<span class="sd"> * @package Mapper</span>
+<span class="sd"> * @subpackage Sql</span>
+<span class="sd"> * @author Lander Ontoria Gardeazabal</span>
+<span class="sd"> */</span>
+<span class="k">namespace</span> <span class="nx">KlearInterval\Mapper\Sql</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">Categories</span> <span class="k">extends</span> <span class="nx">Raw\Categories</span>
+<span class="p">{</span>
+<span class="hll">    <span class="k">public</span> <span class="k">function</span> <span class="nf">getDateData</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="nv">$mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\KlearInterval\Mapper\Sql\Categories</span><span class="p">();</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="nv">$data</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="nv">$data</span><span class="o">-&gt;</span><span class="na">getCleanName</span><span class="p">(),</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;d-M-Y H:i:s&#39;</span><span class="p">));</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>La manera de acceder a tal controlador sería de la siguiente manera:</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">IndexController</span> <span class="k">extends</span> <span class="nx">Zend_Controller_Action</span>
+<span class="p">{</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">init</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="cm">/* Initialize action controller here */</span>
+    <span class="p">}</span>
+
+<span class="hll">    <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+</span><span class="hll">    <span class="p">{</span>
+</span><span class="hll">        <span class="nv">$mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\KlearInterval\Mapper\Sql\Categories</span><span class="p">();</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="nv">$id</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="nv">$data</span> <span class="o">=</span> <span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">getDateData</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span> <span class="c1">// Devolvería array(&#39;test4&#39;, &#39;26-02-2014 09:56:55&#39;);</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="k">exit</span><span class="p">;</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="../yaml/index.html" class="btn btn-neutral float-right" title="Yaml"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="models.html" class="btn btn-neutral" title="Models"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>
