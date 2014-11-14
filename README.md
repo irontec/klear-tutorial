@@ -1,6 +1,6 @@
 Para poder contribuir a esta documentación hay que seguir los siguientes pasos:
 
-* Crear una carpeta comun para alojar los branches master y gh-pages.
+* Crear una carpeta común para alojar los branches master y gh-pages.
  
 * Desde esta carpeta ejecutar los siguiente:
 
