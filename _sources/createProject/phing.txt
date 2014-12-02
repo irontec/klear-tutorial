@@ -1,10 +1,9 @@
 Phing
 =====
 
-Phing requiere de dos archivos que deberemos crear en el directorio **phing**:
+Phing requiere de **un único** archivo que deberemos crear en el directorio **phing**:
 
  * **build.xml**, en el cual se definen las tareas a realizar
- * **build.properties** para la configuración.
 
 .. _build_xml:
 
@@ -22,28 +21,63 @@ El link de descarga es este:
    revisando que no haya cambiado la implementación de **Klear** y con ello el **build.xml**
    . De ser así hay que actualizar el fichero.
 
-build.properties
-----------------
 
-Este archivo tendrá la siguiente estructura:
 
-.. code-block:: ini
+La última versión de build.xml, tiene soporte para parámetros
 
-   # This dir must contain the local application
-   build.dir=./
+* -De >> Setea el entorno de ejecución [default "production"]
+.. code-block:: console
 
-   # Credentials for the database migrations
-   db.host=localhost
-   db.user=root
-   db.pass=pass
-   db.name=nuevoproyecto
+  $ phing db-change -De=development
 
-   # paths to programs
-   progs.mysql=/usr/bin/mysql
 
-   # paths needed for generators
-   modelGenerator.path=/opt/klear-development/generator
-   application.path=../web/application
+* -Dk >> Setea la ruta a la carpeta base de klear [default "/opt/klear"]
+.. code-block:: console
+  
+  $ phing db-change -Dk=/remoteKlear
+
+* -Da >> Setea la ruta a la carpeta de la aplicación ZF1 [default "../web/application"]
+.. code-block:: console
+  
+  $ phing db-change -Da=../admin/application
+
+
+
+Es buena idea editar la copia local de build.xml en cada proyecto con los valores en producción:
+
+.. code-block:: xml
+
+    <!-- command line switch >> -Dk=/remoteKlear -->
+    <property name="klear.base" refid="k" fallback="/opt/klear" />
+    <!-- command line switch >> -Da=../web/application -->
+    <property name="application.path" refid="a" fallback="../web/application" />
+    <!-- command line switch >> -De=development -->
+    <property name="application.env" refid="e" fallback="production" />
+
+
+Así ejecutaremos en producción tranquilamente:
+
+.. code-block:: console
+
+  $ phing migrate
+
+
+
+Para no tener que acordarse se los argumentos de consola cada vez que ejecutamos phing en desarrollo, se puede crear un pequeño script:
+
+
+.. code-block:: console
+
+  $ echo "phing \$1 -De=development -Dk=/remoteKlear -Da=../admin/application" > dev-phing; chmod a+x dev-phing
+
+
+Luego, en desarrollo simplement ejecutaríamos:
+
+
+.. code-block:: console
+
+  $ ./dev-phing db-change
+
 
 Inicialización de Phing
 -----------------------

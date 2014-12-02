@@ -188,11 +188,10 @@
           
   <div class="section" id="phing">
 <h1>Phing<a class="headerlink" href="#phing" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Phing requiere de dos archivos que deberemos crear en el directorio <strong>phing</strong>:</p>
+<p>Phing requiere de <strong>un único</strong> archivo que deberemos crear en el directorio <strong>phing</strong>:</p>
 <blockquote>
 <div><ul class="simple">
 <li><strong>build.xml</strong>, en el cual se definen las tareas a realizar</li>
-<li><strong>build.properties</strong> para la configuración.</li>
 </ul>
 </div></blockquote>
 <div class="section" id="build-xml">
@@ -207,25 +206,44 @@ El link de descarga es este:
 revisando que no haya cambiado la implementación de <strong>Klear</strong> y con ello el <strong>build.xml</strong>
 . De ser así hay que actualizar el fichero.</p>
 </div>
+<p>La última versión de build.xml, tiene soporte para parámetros</p>
+<ul class="simple">
+<li>-De &gt;&gt; Setea el entorno de ejecución [default &#8220;production&#8221;]</li>
+</ul>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> phing db-change -De<span class="o">=</span>development
+</pre></div>
 </div>
-<div class="section" id="build-properties">
-<h2>build.properties<a class="headerlink" href="#build-properties" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Este archivo tendrá la siguiente estructura:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span class="c1"># This dir must contain the local application</span>
-<span class="na">build.dir</span><span class="o">=</span><span class="s">./</span>
-
-<span class="c1"># Credentials for the database migrations</span>
-<span class="na">db.host</span><span class="o">=</span><span class="s">localhost</span>
-<span class="na">db.user</span><span class="o">=</span><span class="s">root</span>
-<span class="na">db.pass</span><span class="o">=</span><span class="s">pass</span>
-<span class="na">db.name</span><span class="o">=</span><span class="s">nuevoproyecto</span>
-
-<span class="c1"># paths to programs</span>
-<span class="na">progs.mysql</span><span class="o">=</span><span class="s">/usr/bin/mysql</span>
-
-<span class="c1"># paths needed for generators</span>
-<span class="na">modelGenerator.path</span><span class="o">=</span><span class="s">/opt/klear-development/generator</span>
-<span class="na">application.path</span><span class="o">=</span><span class="s">../web/application</span>
+<ul class="simple">
+<li>-Dk &gt;&gt; Setea la ruta a la carpeta base de klear [default &#8220;/opt/klear&#8221;]</li>
+</ul>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> phing db-change -Dk<span class="o">=</span>/remoteKlear
+</pre></div>
+</div>
+<ul class="simple">
+<li>-Da &gt;&gt; Setea la ruta a la carpeta de la aplicación ZF1 [default &#8221;../web/application&#8221;]</li>
+</ul>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> phing db-change -Da<span class="o">=</span>../admin/application
+</pre></div>
+</div>
+<p>Es buena idea editar la copia local de build.xml en cada proyecto con los valores en producción:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- command line switch &gt;&gt; -Dk=/remoteKlear --&gt;</span>
+<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;klear.base&quot;</span> <span class="na">refid=</span><span class="s">&quot;k&quot;</span> <span class="na">fallback=</span><span class="s">&quot;/opt/klear&quot;</span> <span class="nt">/&gt;</span>
+<span class="c">&lt;!-- command line switch &gt;&gt; -Da=../web/application --&gt;</span>
+<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;application.path&quot;</span> <span class="na">refid=</span><span class="s">&quot;a&quot;</span> <span class="na">fallback=</span><span class="s">&quot;../web/application&quot;</span> <span class="nt">/&gt;</span>
+<span class="c">&lt;!-- command line switch &gt;&gt; -De=development --&gt;</span>
+<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;application.env&quot;</span> <span class="na">refid=</span><span class="s">&quot;e&quot;</span> <span class="na">fallback=</span><span class="s">&quot;production&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>Así ejecutaremos en producción tranquilamente:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> phing migrate
+</pre></div>
+</div>
+<p>Para no tener que acordarse se los argumentos de consola cada vez que ejecutamos phing en desarrollo, se puede crear un pequeño script:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">echo</span> <span class="s2">&quot;phing \$1 -De=development -Dk=/remoteKlear -Da=../admin/application&quot;</span> &gt; dev-phing; chmod a+x dev-phing
+</pre></div>
+</div>
+<p>Luego, en desarrollo simplement ejecutaríamos:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ./dev-phing db-change
 </pre></div>
 </div>
 </div>
