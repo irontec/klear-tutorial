@@ -16,6 +16,20 @@ En la siguiente lista se muestra el listado de tareas ya definidas y se explica 
 * **run-generators**: Ejecuta todos los generators anteriores
 * **db-change**: Ejecuta el migrate y el **run-generators**
 
+Argumentos soportados
+*********************
+
+El fichero build.xml tiene predefinidas 3 valores variables necesarios para su correcto funcionamiento:
+
+* **-De**: Setea el entorno de ejecución [default "production"]
+* **-Dk**: Setea la ruta a la carpeta base de klear [default "/opt/klear"]
+* **-Da**: Setea la ruta a la carpeta de la aplicación ZF1 [default "../web/application"]
+
+.. code-block:: console
+
+   $ phing db-change -De=development -Dk=/remoteKlear -Da=../admin/application
+
+
 DbDeploy
 ********
 
@@ -35,7 +49,6 @@ Estructura del directorio
 .. code-block:: bash
 
    phing
-   |-- build.properties
    |-- build.xml
    |-- deltas                                   <- Directorio con ficheros delta
    |   |-- 001-Initial-KlearInterval-Tables.sql

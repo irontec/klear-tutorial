@@ -202,6 +202,18 @@
 <li><strong>db-change</strong>: Ejecuta el migrate y el <strong>run-generators</strong></li>
 </ul>
 </div>
+<div class="section" id="argumentos-soportados">
+<h2>Argumentos soportados<a class="headerlink" href="#argumentos-soportados" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El fichero build.xml tiene predefinidas 3 valores variables necesarios para su correcto funcionamiento:</p>
+<ul class="simple">
+<li><strong>-De</strong>: Setea el entorno de ejecución [default &#8220;production&#8221;]</li>
+<li><strong>-Dk</strong>: Setea la ruta a la carpeta base de klear [default &#8220;/opt/klear&#8221;]</li>
+<li><strong>-Da</strong>: Setea la ruta a la carpeta de la aplicación ZF1 [default &#8221;../web/application&#8221;]</li>
+</ul>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> phing db-change -De<span class="o">=</span>development -Dk<span class="o">=</span>/remoteKlear -Da<span class="o">=</span>../admin/application
+</pre></div>
+</div>
+</div>
 <div class="section" id="dbdeploy">
 <h2>DbDeploy<a class="headerlink" href="#dbdeploy" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Es lo que <strong>Phing</strong> define como una <em>&#8220;Tarea Opcional&#8221;</em>.</p>
@@ -214,7 +226,6 @@ en una tabla para saber cuales son los cambios que debe ejecutar.</p>
 <div class="section" id="estructura-del-directorio">
 <h2>Estructura del directorio<a class="headerlink" href="#estructura-del-directorio" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="highlight-bash"><div class="highlight"><pre>phing
-|-- build.properties
 |-- build.xml
 |-- deltas                                   &lt;- Directorio con ficheros delta
 |   |-- 001-Initial-KlearInterval-Tables.sql
