@@ -19,12 +19,14 @@ Listado de tags para los campos
 
 [uuid]
 ******
+
 Este tag de usa en Primary Keys **'binary(36)'** con el cual se MySQL genera identificadores unicos en formato:
 
 **'00000000-0000-0000-0000-000000000000'**
 
-[uuid:php]
+[uuid\:php]
 **********
+
 Tiene la misma funcionalidad que el tag **[uuid]** con la diferencia que el Primary Key se genera desde la clase UUID en la libreria **'Iron\\Utils'**
 
 [file]
