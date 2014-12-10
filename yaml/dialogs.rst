@@ -87,9 +87,16 @@ Parámetros de configuración
 * **description**: Se muestra dentro del dialog en la primera pantalla
 
 * **message**: Se muestra cuando todo ha salido bien
-         
+
+*  **cloneDependents**: Se usa para indicar que se quiere clonar las relaciones.
+
+*  **postCloneMethods**: Se usa para indicar un método del modelo a ejecutar.
+ 
+   * **clonned**: Se ejecuta el método del modelo clonado (éste recibe el modelo original como parámetro).
+   * **original**: Se ejecuta el método del modelo original (éste recibe el modelo clonado como parámetro).
+   
 .. code-block:: yaml
-   :emphasize-lines: 2-8
+   :emphasize-lines: 2-
    
    dialogs:
       itemClone_dialog: 
@@ -99,6 +106,10 @@ Parámetros de configuración
         title: _("Clone %s", ngettext('Item', 'Items', 1))
         description: _("You want to clone this %s?", ngettext('Item', 'Item', 1))
         message: _("%s successfully cloned", ngettext('Item', 'Items', 1))
+        cloneDependents: true
+        postCloneMethods:
+          clonned: isAClone
+          original: setAsClonned
 
 
 MassUpdate
@@ -187,6 +198,7 @@ En cualquiera de nuestros **YAML LIST**. Debemos incorporar los siguientes códi
          labelOnList: true|false|string // La opción se dibujará con "label" cuando es una opción general de List
          labelOnEntityPostSave: true|false|string // La opción se dibujará con "label" cuando es una opción general de EntityPostSave
          multiItem: true // Al invocarase la opción como general option desde List, el controlador será invocado con pk como un array de Ids.
+         alwaysEnabled: true //Sólo se usa cuando multiItem = true. En este caso se usa para permitir que el botón del diálogo esté habilitado aunque no se seleccione ningún registro.
          
 Después de indicar el **controller** [#zendFramework]_ hay que crear dicho controlador en nuestra carpeta **controllers** *(application/controllers)*, en
 este caso sería el archivo **KlearCustomNameActionController.php** con el siguiente contenido, teniendo en cuenta que lo marcado es obligatorio:

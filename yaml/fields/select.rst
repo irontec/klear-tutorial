@@ -297,7 +297,7 @@ Ejemplo autocomplete
 En el **YAML LIST** que usará el campo select autocomplete, la sección **"commands"** debe contener lo siguiente:
          
 .. code-block:: yaml
-   :emphasize-lines: 2-16
+   :emphasize-lines: 2-
 
    commands:
      autocomplete_command:
@@ -315,6 +315,7 @@ En el **YAML LIST** que usará el campo select autocomplete, la sección **"comm
            template: '%name%'
          limit: 8 
          order: name
+         matchAt: start
          
 Propiedades Comandos
 ^^^^^^^^^^^^^^^^^^^^
@@ -332,5 +333,10 @@ Propiedades Comandos
 * **limit**: Número máximo de elementos que salen en el autocompletado (sale un campito al lado diciendo cuántos elementos hay en total).
 
 * **order**: Campo por le cual se ordena el listado. Se puede añadir mas de un campo separado por **”,”**.
+
+* **matchAt**: Indica en qué parte del campo buscar para mostrar los resultados del autocomplete. Si se omite la búsqueda se hace como **"like '%búsqueda%'"**. Las opciones posibles son:
+
+   * **start**: La búsqueda se hace como **"like 'busqueda%'"**.
+   * **end**: La búsqueda se hace como **"like '%busqueda'"**.
 
 .. image:: img/select-autocomplete.png

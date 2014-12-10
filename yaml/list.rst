@@ -22,8 +22,17 @@ Configuración
       <<: *Contactos
       title: _("Listado de contactos")
       filterClass: Filter_Class_Name
+      rawSelect:
+        "FROM Table t INNER JOIN
+        (SELECT column1, column2, column3, column4
+        FROM Table GROUP BY column1, column2, column3, column4 HAVING count(id) > 1) dup
+        ON t.column1 = dup.column1 and t.column2 = dup.column2 and t.column3 = dup.column3 and t.column4 = dup.column4"
+      searchAlias: t
+      rawCondition: "category in ('category1', 'category2')"
       order:
-        field: firstName
+        field:
+          - firstName
+          - t.column1
         type: desc
       pagination:
         items: 40
@@ -49,6 +58,45 @@ Configuración
             deleteContact: true
             customDialogContact: true
           default: editContact
+
+rawSelect
+---------
+
+Permite que un ListScreen muestre los resultados de una SELECT escrita a mano.
+
+  .. code-block:: yaml
+
+     screens:
+      Contacts:
+        controller: list
+        <<: *Contactos
+        title: _("Listado de contactos")
+        filterClass: Filter_Class_Name
+        rawSelect:
+          "FROM Table t INNER JOIN
+          (SELECT column1, column2, column3, column4
+          FROM Table GROUP BY column1, column2, column3, column4 HAVING count(id) > 1) dup
+          ON t.column1 = dup.column1 and t.column2 = dup.column2 and t.column3 = dup.column3 and t.column4 = dup.column4"
+        searchAlias: t
+        order:
+          field:
+            - t.column1
+            - t.column2
+            - t.column3
+          type: desc
+          
+En este ejemplo se muestra una SELECT que busca registros duplicados en la tabla Table comparando los campos column1, column2, column3 y column4.
+
+La select se debe introducir desde la palabra FROM, es decir, no se debe usar el SELECT columName ni SELECT *.
+Tampoco se debe usar WHERE ni LIMIT ni OFFSET, ya que LIMIT Y OFFSET los controla Klear en el ListScreen y el WHERE se puede meter como siempre en un 'rawCondition'.
+
+La opción searchAlias es opcional y se usa solo en casos como este ejemplo en los que a la tabla se le da un alias (t). 
+En este caso si no se pone searchAlias: t no funcionarán los filtros ni las búsquedas de klear.
+
+rawCondition
+------------
+
+Permite escribir una condición directamente.
 
 order
 -----
