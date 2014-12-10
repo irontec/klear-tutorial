@@ -190,31 +190,42 @@
 <h1>Configuración lists<a class="headerlink" href="#configuracion-lists" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#configuracion" id="id1">Configuración</a></li>
-<li><a class="reference internal" href="#order" id="id2">order</a></li>
-<li><a class="reference internal" href="#pagination" id="id3">pagination</a></li>
-<li><a class="reference internal" href="#csv" id="id4">csv</a></li>
-<li><a class="reference internal" href="#autorefresh" id="id5">autoRefresh</a></li>
-<li><a class="reference internal" href="#preconfigured-filters" id="id6">preconfigured filters</a></li>
-<li><a class="reference internal" href="#presetted-filters" id="id7">presetted filters</a></li>
-<li><a class="reference internal" href="#filterclass" id="id8">filterClass</a></li>
-<li><a class="reference internal" href="#parentoptioncustomizer" id="id9">parentOptionCustomizer</a></li>
-<li><a class="reference internal" href="#mostrar-ocultar-opciones" id="id10">Mostrar/ocultar opciones</a></li>
+<li><a class="reference internal" href="#configuracion" id="id3">Configuración</a></li>
+<li><a class="reference internal" href="#rawselect" id="id4">rawSelect</a></li>
+<li><a class="reference internal" href="#rawcondition" id="id5">rawCondition</a></li>
+<li><a class="reference internal" href="#order" id="id6">order</a></li>
+<li><a class="reference internal" href="#pagination" id="id7">pagination</a></li>
+<li><a class="reference internal" href="#csv" id="id8">csv</a></li>
+<li><a class="reference internal" href="#autorefresh" id="id9">autoRefresh</a></li>
+<li><a class="reference internal" href="#preconfigured-filters" id="id10">preconfigured filters</a></li>
+<li><a class="reference internal" href="#presetted-filters" id="id11">presetted filters</a></li>
+<li><a class="reference internal" href="#filterclass" id="id12">filterClass</a></li>
+<li><a class="reference internal" href="#parentoptioncustomizer" id="id13">parentOptionCustomizer</a></li>
+<li><a class="reference internal" href="#mostrar-ocultar-opciones" id="id14">Mostrar/ocultar opciones</a></li>
 </ul>
 </div>
 <p>A parte de las configuraciones descritas en <a class="reference internal" href="general.html#configuracion-general"><em>Configuración general</em></a>, el controller
 del tipo <strong>list</strong> tiene otras configuraciones propias que se definen a continuación:</p>
 <hr class="docutils" />
 <div class="section" id="configuracion">
-<h2><a class="toc-backref" href="#id1">Configuración</a><a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Configuración</a><a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
  <span class="l-Scalar-Plain">Contacts</span><span class="p-Indicator">:</span>
    <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">list</span>
    <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Contactos</span>
    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Listado de contactos&quot;)</span>
    <span class="l-Scalar-Plain">filterClass</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Filter_Class_Name</span>
+   <span class="l-Scalar-Plain">rawSelect</span><span class="p-Indicator">:</span>
+     <span class="s">&quot;FROM</span><span class="nv"> </span><span class="s">Table</span><span class="nv"> </span><span class="s">t</span><span class="nv"> </span><span class="s">INNER</span><span class="nv"> </span><span class="s">JOIN</span>
+     <span class="s">(SELECT</span><span class="nv"> </span><span class="s">column1,</span><span class="nv"> </span><span class="s">column2,</span><span class="nv"> </span><span class="s">column3,</span><span class="nv"> </span><span class="s">column4</span>
+     <span class="s">FROM</span><span class="nv"> </span><span class="s">Table</span><span class="nv"> </span><span class="s">GROUP</span><span class="nv"> </span><span class="s">BY</span><span class="nv"> </span><span class="s">column1,</span><span class="nv"> </span><span class="s">column2,</span><span class="nv"> </span><span class="s">column3,</span><span class="nv"> </span><span class="s">column4</span><span class="nv"> </span><span class="s">HAVING</span><span class="nv"> </span><span class="s">count(id)</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">1)</span><span class="nv"> </span><span class="s">dup</span>
+     <span class="s">ON</span><span class="nv"> </span><span class="s">t.column1</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">dup.column1</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t.column2</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">dup.column2</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t.column3</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">dup.column3</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t.column4</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">dup.column4&quot;</span>
+   <span class="l-Scalar-Plain">searchAlias</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">t</span>
+   <span class="l-Scalar-Plain">rawCondition</span><span class="p-Indicator">:</span> <span class="s">&quot;category</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">(&#39;category1&#39;,</span><span class="nv"> </span><span class="s">&#39;category2&#39;)&quot;</span>
    <span class="l-Scalar-Plain">order</span><span class="p-Indicator">:</span>
-     <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">firstName</span>
+     <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span>
+       <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">firstName</span>
+       <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">t.column1</span>
      <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">desc</span>
    <span class="l-Scalar-Plain">pagination</span><span class="p-Indicator">:</span>
      <span class="l-Scalar-Plain">items</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">40</span>
@@ -243,8 +254,43 @@ del tipo <strong>list</strong> tiene otras configuraciones propias que se define
 </pre></div>
 </div>
 </div>
+<div class="section" id="rawselect">
+<h2><a class="toc-backref" href="#id4">rawSelect</a><a class="headerlink" href="#rawselect" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Permite que un ListScreen muestre los resultados de una SELECT escrita a mano.</p>
+<blockquote>
+<div><div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+ <span class="l-Scalar-Plain">Contacts</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">list</span>
+   <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Contactos</span>
+   <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Listado de contactos&quot;)</span>
+   <span class="l-Scalar-Plain">filterClass</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Filter_Class_Name</span>
+   <span class="l-Scalar-Plain">rawSelect</span><span class="p-Indicator">:</span>
+     <span class="s">&quot;FROM</span><span class="nv"> </span><span class="s">Table</span><span class="nv"> </span><span class="s">t</span><span class="nv"> </span><span class="s">INNER</span><span class="nv"> </span><span class="s">JOIN</span>
+     <span class="s">(SELECT</span><span class="nv"> </span><span class="s">column1,</span><span class="nv"> </span><span class="s">column2,</span><span class="nv"> </span><span class="s">column3,</span><span class="nv"> </span><span class="s">column4</span>
+     <span class="s">FROM</span><span class="nv"> </span><span class="s">Table</span><span class="nv"> </span><span class="s">GROUP</span><span class="nv"> </span><span class="s">BY</span><span class="nv"> </span><span class="s">column1,</span><span class="nv"> </span><span class="s">column2,</span><span class="nv"> </span><span class="s">column3,</span><span class="nv"> </span><span class="s">column4</span><span class="nv"> </span><span class="s">HAVING</span><span class="nv"> </span><span class="s">count(id)</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">1)</span><span class="nv"> </span><span class="s">dup</span>
+     <span class="s">ON</span><span class="nv"> </span><span class="s">t.column1</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">dup.column1</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t.column2</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">dup.column2</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t.column3</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">dup.column3</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t.column4</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">dup.column4&quot;</span>
+   <span class="l-Scalar-Plain">searchAlias</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">t</span>
+   <span class="l-Scalar-Plain">order</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span>
+       <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">t.column1</span>
+       <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">t.column2</span>
+       <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">t.column3</span>
+     <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">desc</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>En este ejemplo se muestra una SELECT que busca registros duplicados en la tabla Table comparando los campos column1, column2, column3 y column4.</p>
+<p>La select se debe introducir desde la palabra FROM, es decir, no se debe usar el SELECT columName ni SELECT <a href="#id1"><span class="problematic" id="id2">*</span></a>.
+Tampoco se debe usar WHERE ni LIMIT ni OFFSET, ya que LIMIT Y OFFSET los controla Klear en el ListScreen y el WHERE se puede meter como siempre en un &#8216;rawCondition&#8217;.</p>
+<p>La opción searchAlias es opcional y se usa solo en casos como este ejemplo en los que a la tabla se le da un alias (t).
+En este caso si no se pone searchAlias: t no funcionarán los filtros ni las búsquedas de klear.</p>
+</div>
+<div class="section" id="rawcondition">
+<h2><a class="toc-backref" href="#id5">rawCondition</a><a class="headerlink" href="#rawcondition" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Permite escribir una condición directamente.</p>
+</div>
 <div class="section" id="order">
-<h2><a class="toc-backref" href="#id2">order</a><a class="headerlink" href="#order" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">order</a><a class="headerlink" href="#order" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Indica el campo o campos por los que se ordena el listado, también el orden.
 Hay dos formas posibles de ordenación.</p>
 <ol class="arabic simple">
@@ -280,14 +326,14 @@ Puede ser <em>asc</em> o <em>desc</em>. No es obligatorio y por defecto es lo qu
 </ul>
 </div>
 <div class="section" id="pagination">
-<h2><a class="toc-backref" href="#id3">pagination</a><a class="headerlink" href="#pagination" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">pagination</a><a class="headerlink" href="#pagination" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Se puede definir el límite de items por página.</p>
 <ul class="simple">
 <li><strong>items</strong>: número de elementos que se muestran por página.</li>
 </ul>
 </div>
 <div class="section" id="csv">
-<h2><a class="toc-backref" href="#id4">csv</a><a class="headerlink" href="#csv" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">csv</a><a class="headerlink" href="#csv" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Activar la opción de <strong>CSV</strong> genera un botón, el cual nos devuelve un <em>csv</em> para descarga
 con el listado actual.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">csv</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
@@ -313,7 +359,7 @@ ejemplo se muestran todas:</p>
 </ul>
 </div>
 <div class="section" id="autorefresh">
-<h2><a class="toc-backref" href="#id5">autoRefresh</a><a class="headerlink" href="#autorefresh" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">autoRefresh</a><a class="headerlink" href="#autorefresh" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La opción <strong>autoRefresh</strong> nos permite refrescar el listado cada 30 segundos. Aunque 15 segundos antes de refrescar, nos mostrará un botón para posponer el refrescado del listado por si estamos trabajando en el listado.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">autoRefresh</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
 </pre></div>
@@ -324,7 +370,7 @@ ejemplo se muestran todas:</p>
 </div>
 </div>
 <div class="section" id="preconfigured-filters">
-<h2><a class="toc-backref" href="#id6">preconfigured filters</a><a class="headerlink" href="#preconfigured-filters" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">preconfigured filters</a><a class="headerlink" href="#preconfigured-filters" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Podemos definir filtros pre-configurados, los cuales generan botones en la parte superior
 de los listados. Se define en el primer nivel del <strong>screen</strong>.</p>
 <p>En el ejemplo superior, se ha pre-configurado un filtro para aquellas personas que se llamen <em>Ana</em>.
@@ -345,7 +391,7 @@ Se pueden configurar tantos como se requieran.</p>
 </ul>
 </div>
 <div class="section" id="presetted-filters">
-<h2><a class="toc-backref" href="#id7">presetted filters</a><a class="headerlink" href="#presetted-filters" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id11">presetted filters</a><a class="headerlink" href="#presetted-filters" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Básicamente tiene la misma funcionalidad que la de los filtros preconfigurados, con la diferencia de que estos
 se aplican por defecto. Se define en el primer nivel del <strong>screen</strong>.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">presettedFilters</span><span class="p-Indicator">:</span>
@@ -375,7 +421,7 @@ se aplican por defecto. Se define en el primer nivel del <strong>screen</strong>
 </ul>
 </div>
 <div class="section" id="filterclass">
-<h2><a class="toc-backref" href="#id8">filterClass</a><a class="headerlink" href="#filterclass" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id12">filterClass</a><a class="headerlink" href="#filterclass" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Un ejemplo de como se estructura un <strong>filterClass</strong> personalizado:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
    <span class="k">class</span> <span class="nc">Filter_Class_Name</span> <span class="k">implements</span> <span class="nx">KlearMatrix_Model_Interfaces_FilterList</span>
@@ -412,7 +458,7 @@ se aplican por defecto. Se define en el primer nivel del <strong>screen</strong>
 </div>
 </div>
 <div class="section" id="parentoptioncustomizer">
-<h2><a class="toc-backref" href="#id9">parentOptionCustomizer</a><a class="headerlink" href="#parentoptioncustomizer" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id13">parentOptionCustomizer</a><a class="headerlink" href="#parentoptioncustomizer" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Esta propiedad permite aplicar modificaciones sobre las opciones de los listados.
 Se define en el primer nivel del <strong>screen</strong>.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">tiendasList_screen</span><span class="p-Indicator">:</span>
@@ -436,7 +482,7 @@ Se puede definir una clase e implantar lo que se desee siempre y cuando extienda
 <strong>KlearMatrix_Model_Interfaces_ParentOptionCustomizer</strong>.</p>
 </div>
 <div class="section" id="mostrar-ocultar-opciones">
-<h2><a class="toc-backref" href="#id10">Mostrar/ocultar opciones</a><a class="headerlink" href="#mostrar-ocultar-opciones" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">Mostrar/ocultar opciones</a><a class="headerlink" href="#mostrar-ocultar-opciones" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Dentro del <strong>parentOptionCustomizer</strong>, podemos definir cualquier clase que queramos.
 Dentro de esta clase podemos jugar a mostrar/ocultar los botones de opciones de
 la vista de lista.</p>
