@@ -80,7 +80,7 @@ intentar organizarlo de esta manera.:
 
    resources.view[] = ""
    resources.modules[] = ""
-   resources.frontController.moduleDirectory = "/opt/klear-libs/modules"
+   resources.frontController.moduleDirectory.klear = "/opt/klear-libs/modules"
    includePaths.klearLibrary = /opt/klear-libs/library
 
    autoloaderNamespaces[] = "KlearInterval"
@@ -113,7 +113,7 @@ intentar organizarlo de esta manera.:
 
    resources.cachemanager.klearconfig.backend.name = Black_Hole
 
-   resources.frontController.moduleDirectory = "/opt/klear-development/modules"
+   resources.frontController.moduleDirectory.klear = "/opt/klear-development/modules"
    includePaths.klearLibrary = /opt/klear-development/library
 
 Para poder trabajar en el entorno de desarrollo debemos indicarlo en el archivo
