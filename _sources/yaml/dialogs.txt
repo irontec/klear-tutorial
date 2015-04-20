@@ -90,6 +90,8 @@ Parámetros de configuración
 
 *  **cloneDependents**: Se usa para indicar que se quiere clonar las relaciones.
 
+*  **cloneForceValues**: Se usa para indicar parametros por defecto en el elemento clon.
+
 *  **postCloneMethods**: Se usa para indicar un método del modelo a ejecutar.
  
    * **clonned**: Se ejecuta el método del modelo clonado (éste recibe el modelo original como parámetro).
@@ -107,6 +109,8 @@ Parámetros de configuración
         description: _("You want to clone this %s?", ngettext('Item', 'Item', 1))
         message: _("%s successfully cloned", ngettext('Item', 'Items', 1))
         cloneDependents: true
+        cloneForceValues:
+          status: 'draft'
         postCloneMethods:
           clonned: isAClone
           original: setAsClonned

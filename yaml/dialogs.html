@@ -271,6 +271,7 @@ siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimi
 <li><strong>description</strong>: Se muestra dentro del dialog en la primera pantalla</li>
 <li><strong>message</strong>: Se muestra cuando todo ha salido bien</li>
 <li><strong>cloneDependents</strong>: Se usa para indicar que se quiere clonar las relaciones.</li>
+<li><strong>cloneForceValues</strong>: Se usa para indicar parametros por defecto en el elemento clon.</li>
 <li><strong>postCloneMethods</strong>: Se usa para indicar un método del modelo a ejecutar.<ul>
 <li><strong>clonned</strong>: Se ejecuta el método del modelo clonado (éste recibe el modelo original como parámetro).</li>
 <li><strong>original</strong>: Se ejecuta el método del modelo original (éste recibe el modelo clonado como parámetro).</li>
@@ -286,6 +287,8 @@ siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimi
 </span><span class="hll">     <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;You want to clone this %s?&quot;, ngettext(&#39;Item&#39;, &#39;Item&#39;, 1))</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">message</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;%s successfully cloned&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">cloneDependents</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">cloneForceValues</span><span class="p-Indicator">:</span>
+</span><span class="hll">       <span class="l-Scalar-Plain">status</span><span class="p-Indicator">:</span> <span class="s">&#39;draft&#39;</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">postCloneMethods</span><span class="p-Indicator">:</span>
 </span><span class="hll">       <span class="l-Scalar-Plain">clonned</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">isAClone</span>
 </span><span class="hll">       <span class="l-Scalar-Plain">original</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">setAsClonned</span>
