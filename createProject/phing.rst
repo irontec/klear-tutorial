@@ -87,6 +87,14 @@ Antes de inicializar Phing hay que crear la base de datos con la que vamos a tra
 .. code-block:: console
 
    $ mysql -uroot -ppass -e "CREATE DATABASE nuevoproyecto"
+   
+Luego en /web/application/configs/application.ini añadimos los datos de la base de datos para development.
+.. code-block:: console
+   resources.db.adapter = "MYSQLI"
+   resources.db.params.dbname = "nuevoproyecto"
+   resources.db.params.username = "root"
+   resources.db.params.password = "farsa"
+   resources.db.params.host = "localhost" 
 
 Después creamos el archivo predeploy.sql con las órdenes iniciales en el directorio phing.
 

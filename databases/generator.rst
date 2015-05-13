@@ -158,7 +158,7 @@ Si queremos que la tabla se piensa ser usado para guardar o registrar archivos d
 Generador
 ---------
 
-En la carpeta del Generador, aplicar el siguiente código para aplicar los cambios necesarios a la base de datos.
+En la carpeta del Generador (/opt/klear-development/generator), aplicar el siguiente código para aplicar los cambios necesarios a la base de datos.
 
 .. code-block:: console
 

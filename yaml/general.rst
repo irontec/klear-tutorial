@@ -9,7 +9,8 @@ Configuración general
    
 
 Los screen donde controller es de tipo **list|new|edit** tienen varias
-configuraciones compartidas, que se explican en esta sección.
+configuraciones compartidas, que se explican en esta sección. 
+Estos archivos están en **APPLICATION_PATH**/configs/klear. 
 
 Configuración
 -------------
