@@ -168,3 +168,8 @@ Esta configuración muestra un editor de código.
           autofocus: true
           dragDrop: false
   
+  Al realizar una cambio en el contenido del textarea por código, hay que lanzar el trigger "contentUpdate" para que se actualice el valor en pantalla. Si no se hace esto, el valor queda modificao pero no se refleja el cambio.
+
+.. code-block:: javascript
+
+   $textarea.val($text).trigger("contentUpdate");
