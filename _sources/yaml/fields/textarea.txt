@@ -133,3 +133,43 @@ Variables comunes
   campo multi-idioma obviamente.
 
 .. image:: img/tinyML.png
+
+CodeMirror
+----------
+
+Esta configuración muestra un editor de código.
+
+.. image:: img/codemirror.png
+
+* **mode**: define el lenguaje que se va a usar en el editor.
+* **lineNumbers**: booleano que especifica si se muestra la numeración de las filas. Por defecto false.
+* **matchBrackets**: cuando es true, resalta las parejas de paréntesis cuando el cursor está cerca de ellos. Por defecto true.
+* **theme**: el tema del editor. Si no se pone se usa el tema por defecto.
+* **tabSize**: El tamaño de los tabuñadores. Por defecto 4.
+* **readOnly**: se muestra el campo no editable. Por defecto false.
+* **autofocus**: Al cargar la página, el cursor aparece en este textarea. Por defecto false.
+* **dragDrop**: Permite cargar un fichero en el campo arrastrándolo al mismo. Por defecto true.
+
+.. code-block:: yaml
+
+   fieldName:
+     text: 
+       title: ngettext('Text', 'Texts', 1)
+       type: textarea
+       source:
+        control: Codemirror
+        settings:
+          mode: php
+          lineNumbers: true  
+          matchBrackets: true
+          theme: twilight
+          tabSize: 2
+          readOnly : true
+          autofocus: true
+          dragDrop: false
+  
+  Al realizar una cambio en el contenido del textarea por código, hay que lanzar el trigger "contentUpdate" para que se actualice el valor en pantalla. Si no se hace esto, el valor queda modificao pero no se refleja el cambio.
+
+.. code-block:: javascript
+
+   $textarea.val($text).trigger("contentUpdate");

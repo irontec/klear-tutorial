@@ -270,6 +270,13 @@ siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimi
 <li><strong>title</strong>: Se mostrará como encabezado del dialog</li>
 <li><strong>description</strong>: Se muestra dentro del dialog en la primera pantalla</li>
 <li><strong>message</strong>: Se muestra cuando todo ha salido bien</li>
+<li><strong>cloneDependents</strong>: Se usa para indicar que se quiere clonar las relaciones.</li>
+<li><strong>cloneForceValues</strong>: Se usa para indicar parametros por defecto en el elemento clon.</li>
+<li><strong>postCloneMethods</strong>: Se usa para indicar un método del modelo a ejecutar.<ul>
+<li><strong>clonned</strong>: Se ejecuta el método del modelo clonado (éste recibe el modelo original como parámetro).</li>
+<li><strong>original</strong>: Se ejecuta el método del modelo original (éste recibe el modelo clonado como parámetro).</li>
+</ul>
+</li>
 </ul>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
 <span class="hll">   <span class="l-Scalar-Plain">itemClone_dialog</span><span class="p-Indicator">:</span>
@@ -279,6 +286,12 @@ siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimi
 </span><span class="hll">     <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Clone %s&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;You want to clone this %s?&quot;, ngettext(&#39;Item&#39;, &#39;Item&#39;, 1))</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">message</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;%s successfully cloned&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">cloneDependents</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">cloneForceValues</span><span class="p-Indicator">:</span>
+</span><span class="hll">       <span class="l-Scalar-Plain">status</span><span class="p-Indicator">:</span> <span class="s">&#39;draft&#39;</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">postCloneMethods</span><span class="p-Indicator">:</span>
+</span><span class="hll">       <span class="l-Scalar-Plain">clonned</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">isAClone</span>
+</span><span class="hll">       <span class="l-Scalar-Plain">original</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">setAsClonned</span>
 </span></pre></div>
 </div>
 </div>
@@ -305,6 +318,7 @@ siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimi
 <h3><a class="toc-backref" href="#id10">Parámetros de configuración</a><a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
 <li><strong>controller</strong>: Hay que definir el controller MassUpdate</li>
+<li><strong>field</strong>: Es el campo que se va a editar</li>
 <li><strong>class</strong>: Para definir el icono que queremos que aparezca</li>
 <li><strong>title</strong>: Se mostrará como encabezado del dialog</li>
 <li><strong>description</strong>: Se muestra dentro del dialog en la primera pantalla</li>
@@ -314,11 +328,12 @@ siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimi
 <span class="hll">   <span class="l-Scalar-Plain">itemMassUpdate_dialog</span><span class="p-Indicator">:</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Item</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mass-update</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">name</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-pencil-go</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Actualizar campo en %s&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Do you want to update &quot;X&quot; on this %s?&quot;, ngettext(&#39;Item&#39;, &#39;Item&#39;, 1))</span>
-</span><span class="hll">     <span class="l-Scalar-Plain">message</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;(%total%) %s successfully updated&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
-</span>     <span class="l-Scalar-Plain">labelOnList</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1"># Opcional, si se quiere que salga el label, cuando es una opción general de pantalla(con multiItem)</span>
+</span>     <span class="l-Scalar-Plain">message</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;(%total%) %s successfully updated&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
+     <span class="l-Scalar-Plain">labelOnList</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1"># Opcional, si se quiere que salga el label, cuando es una opción general de pantalla(con multiItem)</span>
      <span class="l-Scalar-Plain">multiItem</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1"># Opcional, si se quiere que sea una opción multi-campo</span>
 </pre></div>
 </div>
@@ -354,6 +369,7 @@ en estas rutas.</p>
       <span class="l-Scalar-Plain">labelOnList</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true|false|string // La opción se dibujará con &quot;label&quot; cuando es una opción general de List</span>
       <span class="l-Scalar-Plain">labelOnEntityPostSave</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true|false|string // La opción se dibujará con &quot;label&quot; cuando es una opción general de EntityPostSave</span>
       <span class="l-Scalar-Plain">multiItem</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true // Al invocarase la opción como general option desde List, el controlador será invocado con pk como un array de Ids.</span>
+      <span class="l-Scalar-Plain">alwaysEnabled</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true //Sólo se usa cuando multiItem = true. En este caso se usa para permitir que el botón del diálogo esté habilitado aunque no se seleccione ningún registro.</span>
 </pre></div>
 </div>
 <p>Después de indicar el <strong>controller</strong> <a class="footnote-reference" href="#zendframework" id="id5">[2]</a> hay que crear dicho controlador en nuestra carpeta <strong>controllers</strong> <em>(application/controllers)</em>, en

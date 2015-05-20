@@ -7,6 +7,10 @@ Este archivo es creado por el generador yaml, así que solo nos basaremos en có
 para nuestro proyecto. 
 El archivo de configuración de Klear está situado en **application/configs/klear/klear.yaml**.
 
+.. note::
+   Recordar, en el tag oasis, se puede tirar de ${auth.*} para este fichero.
+
+
 .. code-block:: yaml
 
    production: 
@@ -62,6 +66,8 @@ El archivo de configuración de Klear está situado en **application/configs/kle
              title: ngettext('Developer', 'Developers', 0)
              class: ui-silk-text-list-bullets
              description: _("List of %s", ngettext('Developer', 'Developers', 0))
+             showOnlyIf: true|false
+             meta: "literal que viajará hasta el atributo data-meta del elemento de menú."
            KlearImageGalleriesList: 
              title: ngettext('Klear image gallery', 'Klear image galleries', 0)
              class: ui-silk-text-list-bullets
@@ -456,11 +462,15 @@ no se verán listadas en el **klear/klear.yaml** sino en **klearRaw/klear.yaml**
        General: 
          title: _("Main management")
          description: _("Main management")
+         showOnlyIf: true|false
+         meta: "literal que viajará hasta el atributo data-meta del elemento de menú."
          submenus: 
            DevelopersList: 
              title: ngettext('Developer', 'Developers', 0)
              class: ui-silk-text-list-bullets
              description: _("List of %s", ngettext('Developer', 'Developers', 0))
+             showOnlyIf: true|false
+             meta: "literal que viajará hasta el atributo data-meta del elemento de menú."
 
 Sus opciones correspondientes son las siguientes:
 
@@ -471,6 +481,17 @@ Título de la sección
 description
 ***********
 Descripción de la sección
+
+showOnlyIf
+**********
+Valor booleano que deterinará si la sección/subsección se muestra o no
+(A combinar con ${auth.*} para un disfrute máximo.
+
+meta
+****
+LLevará hasta el marcado "data-meta", un literal concreto.
+(a combinar con un script custom)
+
 
 submenus
 ********

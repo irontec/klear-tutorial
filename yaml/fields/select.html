@@ -514,18 +514,34 @@ horarias según al país que elija antes.</p>
 </span><span class="hll">        <span class="l-Scalar-Plain">template</span><span class="p-Indicator">:</span> <span class="s">&#39;%name%&#39;</span>
 </span><span class="hll">      <span class="l-Scalar-Plain">limit</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">8</span>
 </span><span class="hll">      <span class="l-Scalar-Plain">order</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">name</span>
+</span><span class="hll">      <span class="l-Scalar-Plain">matchAt</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">start</span>
 </span></pre></div>
 </div>
 <div class="section" id="propiedades-comandos">
 <h3><a class="toc-backref" href="#id8">Propiedades Comandos</a><a class="headerlink" href="#propiedades-comandos" title="Enlazar permanentemente con este título">¶</a></h3>
-<ul class="simple">
-<li><strong>mapperName</strong>: El mismo del relatedMapperName, la entidad donde se buscará los valores.</li>
-<li><strong>filterClass</strong>: Clase por la cual se filtra el resultado, <strong>no vale con ponerlo en el model</strong>, hay que definirlo dentro del command del autocomplete también. <a class="reference internal" href="#ejemplofilterclassselect"><em>Ejemplo rawCondition</em></a></li>
-<li><strong>condition</strong>: Condición que se mete “en caliente”. Si filterClass está también definido saltará una excepción. Únicamente debe definirse uno de los dos.</li>
-<li><strong>label</strong>: El mismo de “relatedFieldName”, listará los valores de dicho campo.</li>
-<li><strong>fieldName</strong>: Si queremos mostrar más de un campo como label, se pueden definir varios y un template, igual que en la configuración de un select.</li>
-<li><strong>limit</strong>: Número máximo de elementos que salen en el autocompletado (sale un campito al lado diciendo cuántos elementos hay en total).</li>
-<li><strong>order</strong>: Campo por le cual se ordena el listado. Se puede añadir mas de un campo separado por <strong>”,”</strong>.</li>
+<ul>
+<li><p class="first"><strong>mapperName</strong>: El mismo del relatedMapperName, la entidad donde se buscará los valores.</p>
+</li>
+<li><p class="first"><strong>filterClass</strong>: Clase por la cual se filtra el resultado, <strong>no vale con ponerlo en el model</strong>, hay que definirlo dentro del command del autocomplete también. <a class="reference internal" href="#ejemplofilterclassselect"><em>Ejemplo rawCondition</em></a></p>
+</li>
+<li><p class="first"><strong>condition</strong>: Condición que se mete “en caliente”. Si filterClass está también definido saltará una excepción. Únicamente debe definirse uno de los dos.</p>
+</li>
+<li><p class="first"><strong>label</strong>: El mismo de “relatedFieldName”, listará los valores de dicho campo.</p>
+</li>
+<li><p class="first"><strong>fieldName</strong>: Si queremos mostrar más de un campo como label, se pueden definir varios y un template, igual que en la configuración de un select.</p>
+</li>
+<li><p class="first"><strong>limit</strong>: Número máximo de elementos que salen en el autocompletado (sale un campito al lado diciendo cuántos elementos hay en total).</p>
+</li>
+<li><p class="first"><strong>order</strong>: Campo por le cual se ordena el listado. Se puede añadir mas de un campo separado por <strong>”,”</strong>.</p>
+</li>
+<li><p class="first"><strong>matchAt</strong>: Indica en qué parte del campo buscar para mostrar los resultados del autocomplete. Si se omite la búsqueda se hace como <strong>&#8220;like &#8216;%búsqueda%&#8217;&#8221;</strong>. Las opciones posibles son:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>start</strong>: La búsqueda se hace como <strong>&#8220;like &#8216;busqueda%&#8217;&#8221;</strong>.</li>
+<li><strong>end</strong>: La búsqueda se hace como <strong>&#8220;like &#8216;%busqueda&#8217;&#8221;</strong>.</li>
+</ul>
+</div></blockquote>
+</li>
 </ul>
 <img alt="../../_images/select-autocomplete.png" src="../../_images/select-autocomplete.png" />
 </div>

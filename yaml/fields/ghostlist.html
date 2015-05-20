@@ -225,6 +225,66 @@
 <li><strong>options</strong>: (opcional) se requiere que entityDel_dialog y entityEdit_screen estén declarados en el yaml list.</li>
 </ul>
 </div>
+<div class="section" id="ghost-list-as-table">
+<h2>ghost list as table<a class="headerlink" href="#ghost-list-as-table" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Permite la funcionalidad de un ghost list pero mostrando los datos en formato tabla.</p>
+<p>Se puede seguir usando la forma anterior y simplemente añadiendo lo siguiente ya se muestra como una tabla.</p>
+<div class="highlight-yaml"><div class="highlight"><pre> <span class="l-Scalar-Plain">nombreAleatorio</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;title&quot;)</span>
+   <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ghost</span>
+   <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">predefined</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">list</span>
+   <span class="l-Scalar-Plain">data</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mapper</span>
+   <span class="l-Scalar-Plain">config</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">mapperName</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">\Application\Mapper\Sql\Entity</span>
+     <span class="l-Scalar-Plain">filterField</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">fieldId</span>
+<span class="hll">     <span class="l-Scalar-Plain">showAsTable</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span>     <span class="l-Scalar-Plain">fieldName</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">name</span>
+     <span class="l-Scalar-Plain">order</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">name_${lang}</span>
+     <span class="l-Scalar-Plain">forcedValues</span><span class="p-Indicator">:</span>
+       <span class="l-Scalar-Plain">active</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+     <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+       <span class="l-Scalar-Plain">dialogs</span><span class="p-Indicator">:</span>
+         <span class="l-Scalar-Plain">entityDel_dialog</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+       <span class="l-Scalar-Plain">screens</span><span class="p-Indicator">:</span>
+         <span class="l-Scalar-Plain">entityEdit_screen</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+       <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entityEdit_screen</span>
+</pre></div>
+</div>
+<p>Pero así usa los nombres de los campos como encabezados de columnas y sin poder cambiar el nombre.
+Si se quiere usar como tabla se recomienda usar la siguiente configuración que permite más cosas:</p>
+<div class="highlight-yaml"><div class="highlight"><pre> <span class="l-Scalar-Plain">nombreAleatorio</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;title&quot;)</span>
+   <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ghost</span>
+   <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span>
+     <span class="l-Scalar-Plain">predefined</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">list</span>
+   <span class="l-Scalar-Plain">data</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mapper</span>
+<span class="hll">   <span class="l-Scalar-Plain">order</span><span class="p-Indicator">:</span>
+</span><span class="hll">     <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">campoOrdenar1</span>
+</span><span class="hll">     <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">campoOrdenar2</span>
+</span><span class="hll">   <span class="l-Scalar-Plain">config</span><span class="p-Indicator">:</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">mapperName</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">\proyect\Mapper\Sql\Fields</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">filterField</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">fieldId</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">showAsTable</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">fieldName</span><span class="p-Indicator">:</span>
+</span><span class="hll">       <span class="l-Scalar-Plain">fields</span><span class="p-Indicator">:</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">field1</span><span class="p-Indicator">:</span>
+</span><span class="hll">           <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Field 1&quot;)</span>
+</span><span class="hll">         <span class="l-Scalar-Plain">otherTableFieldId</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">//Foreign key que hace referencia al campo id de la tabla otherTable</span>
+</span><span class="hll">           <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Other Field&quot;)</span>
+</span><span class="hll">           <span class="l-Scalar-Plain">mapperName</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">\labayru\Mapper\Sql\OtherTable</span>
+</span><span class="hll">           <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span>
+</span><span class="hll">             <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">otherField1</span>
+</span><span class="hll">             <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">otherField2</span>
+</span>         <span class="-Error">  </span><span class="l-Scalar-Plain">pattern</span><span class="p-Indicator">:</span> <span class="s">&quot;%otherField1%</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">%otherField2%&quot;</span>
+         <span class="l-Scalar-Plain">field3</span><span class="p-Indicator">:</span>
+           <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Field 3&quot;)</span>
+</pre></div>
+</div>
+<p>De esta manera podemos incluir el valor de el campo que elijamos de una tabla referenciada.
+En el caso de campos ML, se muestra el valor del campo del idioma actual.
+El resto de opciones se puede seguir usando de la misma manera.</p>
+</div>
 </div>
 
 

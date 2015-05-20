@@ -17,6 +17,16 @@ Listado de tags para los campos
 
 .. _generatorDataBaseFile:
 
+[uuid]
+******
+Este tag de usa en Primary Keys **'binary(36)'** con el cual se MySQL genera identificadores unicos en formato:
+
+**'00000000-0000-0000-0000-000000000000'**
+
+[uuid:php]
+**********
+Tiene la misma funcionalidad que el tag **[uuid]** con la diferencia que el Primary Key se genera desde la clase UUID en la libreria **'Iron\\Utils'**
+
 [file]
 ******
 
@@ -148,7 +158,7 @@ Si queremos que la tabla se piensa ser usado para guardar o registrar archivos d
 Generador
 ---------
 
-En la carpeta del Generador, aplicar el siguiente código para aplicar los cambios necesarios a la base de datos.
+En la carpeta del Generador (/opt/klear-development/generator), aplicar el siguiente código para aplicar los cambios necesarios a la base de datos.
 
 .. code-block:: console
 

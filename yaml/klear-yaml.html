@@ -191,6 +191,10 @@
 <p>Este archivo es creado por el generador yaml, así que solo nos basaremos en cómo configurar las opciones ya generadas
 para nuestro proyecto.
 El archivo de configuración de Klear está situado en <strong>application/configs/klear/klear.yaml</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Recordar, en el tag oasis, se puede tirar de ${auth.*} para este fichero.</p>
+</div>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
   <span class="l-Scalar-Plain">main</span><span class="p-Indicator">:</span>
     <span class="l-Scalar-Plain">log</span><span class="p-Indicator">:</span>
@@ -244,6 +248,8 @@ El archivo de configuración de Klear está situado en <strong>application/confi
           <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ngettext(&#39;Developer&#39;, &#39;Developers&#39;, 0)</span>
           <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-text-list-bullets</span>
           <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;List of %s&quot;, ngettext(&#39;Developer&#39;, &#39;Developers&#39;, 0))</span>
+          <span class="l-Scalar-Plain">showOnlyIf</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true|false</span>
+          <span class="l-Scalar-Plain">meta</span><span class="p-Indicator">:</span> <span class="s">&quot;literal</span><span class="nv"> </span><span class="s">que</span><span class="nv"> </span><span class="s">viajará</span><span class="nv"> </span><span class="s">hasta</span><span class="nv"> </span><span class="s">el</span><span class="nv"> </span><span class="s">atributo</span><span class="nv"> </span><span class="s">data-meta</span><span class="nv"> </span><span class="s">del</span><span class="nv"> </span><span class="s">elemento</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">menú.&quot;</span>
         <span class="l-Scalar-Plain">KlearImageGalleriesList</span><span class="p-Indicator">:</span>
           <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ngettext(&#39;Klear image gallery&#39;, &#39;Klear image galleries&#39;, 0)</span>
           <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-text-list-bullets</span>
@@ -289,12 +295,14 @@ El archivo de configuración de Klear está situado en <strong>application/confi
 <li><a class="reference internal" href="#general" id="id24">General</a><ul>
 <li><a class="reference internal" href="#title" id="id25">title</a></li>
 <li><a class="reference internal" href="#description" id="id26">description</a></li>
-<li><a class="reference internal" href="#submenus" id="id27">submenus</a></li>
+<li><a class="reference internal" href="#showonlyif" id="id27">showOnlyIf</a></li>
+<li><a class="reference internal" href="#meta" id="id28">meta</a></li>
+<li><a class="reference internal" href="#submenus" id="id29">submenus</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#footermenu" id="id28">footerMenu</a></li>
+<li><a class="reference internal" href="#footermenu" id="id30">footerMenu</a></li>
 </ul>
 </div>
 <div class="section" id="main">
@@ -641,11 +649,15 @@ no se verán listadas en el <strong>klear/klear.yaml</strong> sino en <strong>kl
   <span class="l-Scalar-Plain">General</span><span class="p-Indicator">:</span>
     <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Main management&quot;)</span>
     <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Main management&quot;)</span>
+    <span class="l-Scalar-Plain">showOnlyIf</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true|false</span>
+    <span class="l-Scalar-Plain">meta</span><span class="p-Indicator">:</span> <span class="s">&quot;literal</span><span class="nv"> </span><span class="s">que</span><span class="nv"> </span><span class="s">viajará</span><span class="nv"> </span><span class="s">hasta</span><span class="nv"> </span><span class="s">el</span><span class="nv"> </span><span class="s">atributo</span><span class="nv"> </span><span class="s">data-meta</span><span class="nv"> </span><span class="s">del</span><span class="nv"> </span><span class="s">elemento</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">menú.&quot;</span>
     <span class="l-Scalar-Plain">submenus</span><span class="p-Indicator">:</span>
       <span class="l-Scalar-Plain">DevelopersList</span><span class="p-Indicator">:</span>
         <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ngettext(&#39;Developer&#39;, &#39;Developers&#39;, 0)</span>
         <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-text-list-bullets</span>
         <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;List of %s&quot;, ngettext(&#39;Developer&#39;, &#39;Developers&#39;, 0))</span>
+        <span class="l-Scalar-Plain">showOnlyIf</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true|false</span>
+        <span class="l-Scalar-Plain">meta</span><span class="p-Indicator">:</span> <span class="s">&quot;literal</span><span class="nv"> </span><span class="s">que</span><span class="nv"> </span><span class="s">viajará</span><span class="nv"> </span><span class="s">hasta</span><span class="nv"> </span><span class="s">el</span><span class="nv"> </span><span class="s">atributo</span><span class="nv"> </span><span class="s">data-meta</span><span class="nv"> </span><span class="s">del</span><span class="nv"> </span><span class="s">elemento</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">menú.&quot;</span>
 </pre></div>
 </div>
 <p>Sus opciones correspondientes son las siguientes:</p>
@@ -657,14 +669,24 @@ no se verán listadas en el <strong>klear/klear.yaml</strong> sino en <strong>kl
 <h4><a class="toc-backref" href="#id26">description</a><a class="headerlink" href="#description" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Descripción de la sección</p>
 </div>
+<div class="section" id="showonlyif">
+<h4><a class="toc-backref" href="#id27">showOnlyIf</a><a class="headerlink" href="#showonlyif" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Valor booleano que deterinará si la sección/subsección se muestra o no
+(A combinar con ${auth.*} para un disfrute máximo.</p>
+</div>
+<div class="section" id="meta">
+<h4><a class="toc-backref" href="#id28">meta</a><a class="headerlink" href="#meta" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>LLevará hasta el marcado &#8220;data-meta&#8221;, un literal concreto.
+(a combinar con un script custom)</p>
+</div>
 <div class="section" id="submenus">
-<h4><a class="toc-backref" href="#id27">submenus</a><a class="headerlink" href="#submenus" title="Enlazar permanentemente con este título">¶</a></h4>
+<h4><a class="toc-backref" href="#id29">submenus</a><a class="headerlink" href="#submenus" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Aquí listaremos todos los list que necesitamos para hacer nuestra interfaz (opciones <strong>title</strong> y <strong>description</strong>).</p>
 </div>
 </div>
 </div>
 <div class="section" id="footermenu">
-<h2><a class="toc-backref" href="#id28">footerMenu</a><a class="headerlink" href="#footermenu" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id30">footerMenu</a><a class="headerlink" href="#footermenu" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Este menu esta en la parte inferior centrada de la pantalla. Solo lista el icono y el título de la sección.
 El primer tab de configuración es el nombre del menu, el siguiente es el del &#8220;title&#8221; y el &#8220;submenus&#8221; en el cual se configura las vistas que se listaran.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">footerMenu</span><span class="p-Indicator">:</span>
