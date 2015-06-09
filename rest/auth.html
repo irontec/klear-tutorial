@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Plugin de Autenticación &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="REST" href="index.html"/>
+        <link rel="next" title="restApi.ini" href="restApi.html"/>
+        <link rel="prev" title="Bootstrap" href="bootstrap.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">REST</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="generators.html">Generadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="application.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Plugin de Autenticación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restApi.html">restApi.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htaccess.html">.htaccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html">Documentación</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fso/index.html">FSO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#fso-ini">fso.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#config-life">config.life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#config-routemap">config.routeMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-binay">Perfil Binay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-basico-de-image">Perfil Basico de Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-extendido">Perfil Extendido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfiles-avanzados-de-image">Perfiles avanzados de Image</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Plugin de Autenticación</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/rest/auth.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="plugin-de-autenticacion">
+<h1>Plugin de Autenticación<a class="headerlink" href="#plugin-de-autenticacion" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Este es el plugin por defecto de autenticación, que tiene implementado los metodos &#8220;<strong>Basic</strong>&#8221; y &#8220;<strong>Hmac</strong>&#8221;. Los cuales estan el &#8220;<strong>library/Iron</strong>&#8221;.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">Proyect\Model</span> <span class="k">as</span> <span class="nx">Models</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Proyect\Mapper\Sql</span> <span class="k">as</span> <span class="nx">Mappers</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Proyect_Controller_Plugin_Auth</span> <span class="k">extends</span> <span class="nx">Zend_Controller_Plugin_Abstract</span>
+<span class="p">{</span>
+
+   <span class="k">protected</span> <span class="nv">$_bootstrap</span><span class="p">;</span>
+
+   <span class="k">public</span> <span class="k">function</span> <span class="nf">routeShutdown</span><span class="p">(</span><span class="nx">Zend_Controller_Request_Abstract</span> <span class="nv">$request</span><span class="p">)</span>
+   <span class="p">{</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;rest&#39;</span> <span class="o">!==</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getModuleName</span><span class="p">())</span> <span class="p">{</span>
+         <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;OPTIONS&#39;</span> <span class="o">===</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getMethod</span><span class="p">())</span> <span class="p">{</span>
+         <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_checkConfigRequiredAuth</span><span class="p">(</span><span class="nv">$request</span><span class="p">))</span> <span class="p">{</span>
+         <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="nb">ini_set</span><span class="p">(</span><span class="s1">&#39;xdebug.overload_var_dump&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_initAuth</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+
+   <span class="p">}</span>
+
+   <span class="k">protected</span> <span class="k">function</span> <span class="nf">_checkConfigRequiredAuth</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span>
+   <span class="p">{</span>
+
+      <span class="nv">$methodsOptions</span> <span class="o">=</span> <span class="nx">APPLICATION_PATH</span> <span class="o">.</span> <span class="s1">&#39;/configs/restApi.ini&#39;</span><span class="p">;</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">file_exists</span><span class="p">(</span><span class="nv">$methodsOptions</span><span class="p">))</span> <span class="p">{</span>
+         <span class="k">throw</span> <span class="k">new</span> <span class="nx">Exception</span><span class="p">(</span>
+            <span class="s1">&#39;No existe el archivos de configuración restApi.ini&#39;</span>
+         <span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="nv">$methodsConfig</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Zend_Config_Ini</span><span class="p">(</span>
+         <span class="nv">$methodsOptions</span><span class="p">,</span>
+         <span class="nx">APPLICATION_ENV</span>
+      <span class="p">);</span>
+      <span class="nv">$controller</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getControllerName</span><span class="p">();</span>
+      <span class="nv">$method</span> <span class="o">=</span> <span class="nx">strtolower</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getMethod</span><span class="p">());</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$methodsConfig</span><span class="o">-&gt;</span><span class="nv">$controller</span><span class="p">))</span> <span class="p">{</span>
+         <span class="nv">$check</span> <span class="o">=</span> <span class="nv">$methodsConfig</span><span class="o">-&gt;</span><span class="na">defaultPolicy</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+         <span class="nv">$check</span> <span class="o">=</span> <span class="nv">$methodsConfig</span><span class="o">-&gt;</span><span class="nv">$controller</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$check</span><span class="o">-&gt;</span><span class="nv">$method</span><span class="p">))</span> <span class="p">{</span>
+         <span class="nv">$auth</span> <span class="o">=</span> <span class="nv">$methodsConfig</span><span class="o">-&gt;</span><span class="na">defaultPolicy</span><span class="o">-&gt;</span><span class="nv">$method</span><span class="o">-&gt;</span><span class="na">authorization</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+         <span class="nv">$auth</span> <span class="o">=</span> <span class="nv">$check</span><span class="o">-&gt;</span><span class="nv">$method</span><span class="o">-&gt;</span><span class="na">authorization</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">return</span> <span class="p">(</span><span class="nx">boolval</span><span class="p">(</span><span class="nv">$auth</span><span class="p">));</span>
+
+   <span class="p">}</span>
+
+   <span class="k">protected</span> <span class="k">function</span> <span class="nf">_initAuth</span><span class="p">(</span><span class="nx">Zend_Controller_Request_Abstract</span> <span class="nv">$request</span><span class="p">)</span>
+   <span class="p">{</span>
+
+      <span class="nv">$token</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getHeader</span><span class="p">(</span><span class="s1">&#39;Authorization&#39;</span><span class="p">);</span>
+
+      <span class="nv">$tokenParts</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nv">$token</span><span class="p">);</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nb">sizeof</span><span class="p">(</span><span class="nv">$tokenParts</span><span class="p">)</span> <span class="o">!==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_errorAuth</span><span class="p">();</span>
+      <span class="p">}</span>
+
+      <span class="nv">$authType</span> <span class="o">=</span> <span class="nv">$tokenParts</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+      <span class="nv">$mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Mappers\KlearUsers</span><span class="p">();</span>
+
+      <span class="nv">$getData</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+         <span class="s1">&#39;user&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;login&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;pass&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;pass&#39;</span>
+      <span class="p">);</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nv">$authType</span> <span class="o">===</span> <span class="s1">&#39;Basic&#39;</span><span class="p">)</span> <span class="p">{</span>
+
+         <span class="nv">$auth</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Iron_Auth_RestBasic</span><span class="p">();</span>
+         <span class="nv">$auth</span><span class="o">-&gt;</span><span class="na">authenticate</span><span class="p">(</span>
+            <span class="nv">$tokenParts</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="nv">$mapper</span><span class="p">,</span>
+            <span class="nv">$getData</span>
+         <span class="p">);</span>
+
+      <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$authType</span> <span class="o">=</span> <span class="s1">&#39;Hmac&#39;</span><span class="p">)</span> <span class="p">{</span>
+
+         <span class="nv">$reqDate</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getHeader</span><span class="p">(</span><span class="s1">&#39;Request-Date&#39;</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+
+         <span class="nv">$auth</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Iron_Auth_RestHmac</span><span class="p">();</span>
+         <span class="nv">$auth</span><span class="o">-&gt;</span><span class="na">authenticate</span><span class="p">(</span>
+            <span class="nv">$tokenParts</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="nv">$reqDate</span><span class="p">,</span>
+            <span class="nv">$mapper</span><span class="p">,</span>
+            <span class="nv">$getData</span>
+         <span class="p">);</span>
+
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_errorAuth</span><span class="p">();</span>
+      <span class="p">}</span>
+
+   <span class="p">}</span>
+
+   <span class="k">protected</span> <span class="k">function</span> <span class="nf">_errorAuth</span><span class="p">()</span>
+   <span class="p">{</span>
+
+      <span class="nv">$resutl</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+         <span class="s1">&#39;success&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+         <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Authorization incorrecta&#39;</span>
+      <span class="p">);</span>
+
+      <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getResponse</span><span class="p">();</span>
+      <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">setHttpResponseCode</span><span class="p">(</span><span class="mi">401</span><span class="p">);</span>
+      <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">setBody</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$resutl</span><span class="p">));</span>
+      <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">sendResponse</span><span class="p">();</span>
+      <span class="k">exit</span><span class="p">();</span>
+
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="restApi.html" class="btn btn-neutral float-right" title="restApi.ini"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="bootstrap.html" class="btn btn-neutral" title="Bootstrap"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

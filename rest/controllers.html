@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Controllers &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="up" title="REST" href="index.html"/>
+        <link rel="next" title="Documentación" href="docs.html"/>
+        <link rel="prev" title=".htaccess" href="htaccess.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">REST</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="generators.html">Generadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="application.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auth.html">Plugin de Autenticación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restApi.html">restApi.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htaccess.html">.htaccess</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html">Documentación</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fso/index.html">FSO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#fso-ini">fso.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#config-life">config.life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#config-routemap">config.routeMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-binay">Perfil Binay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-basico-de-image">Perfil Basico de Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-extendido">Perfil Extendido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfiles-avanzados-de-image">Perfiles avanzados de Image</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">Controllers</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/rest/controllers.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="controllers">
+<h1>Controllers<a class="headerlink" href="#controllers" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Los controladores que crea el generador, extendienden de &#8220;<strong>Iron_Controller_Rest_BaseController</strong>&#8221; que es un controlador en &#8220;<strong>library/Iron</strong>&#8221; el cual implementa una serie de acciones, que facilitan las respuestas y para hacer <strong>logs</strong>.</p>
+<p>Aparte de extender del &#8220;<strong>BaseController</strong>&#8221;, traen todos los metodos con logicas funcionales.</p>
+<ul>
+<li><dl class="first docutils">
+<dt>[<strong>index</strong>] Este es el metodo con más tareas, las cuales son:</dt>
+<dd><ul class="first last simple">
+<li>Se limitan los resultados por petición, los cuales estan defenidos en la variable &#8220;<strong>_limitPage</strong>&#8221;.</li>
+<li>Para hacer el uso de la paginación espera el parametro <strong>page</strong> con el número de paginación que se quiere. por defecto lista la página <strong>1</strong>.</li>
+<li>El order por defecto es &#8220;<strong>primaryKey DESC</strong>&#8221;, pero tambien se espera el parametro &#8220;<strong>order</strong>&#8221; para cambiarlo.</li>
+<li>Para hacer busquedas, se espera el parametro &#8220;<strong>search</strong>&#8220;</li>
+<li>Y como opción extra espera el parametro <strong>fields</strong>, el cual permite elegir que campos se enviaran en la respuesta separados por coma &#8220;<strong>,</strong>&#8220;</li>
+<li>En el resultado final, se envia en los <strong>Headers</strong> el parametro &#8220;<strong>totalItems</strong>&#8221; con el número total de elementos (sin tener en cuenta la limitación).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">[<strong>get</strong>] Envia el recurso que se a pedido. Tambien soporta el parametro <strong>fields</strong></p>
+</li>
+<li><p class="first">[<strong>post</strong>] Crea un recurso en base a los parametros que se envíen.</p>
+</li>
+<li><p class="first">[<strong>put</strong>] Actualiza un recurso, en base al <strong>primaryKey</strong>.</p>
+</li>
+<li><p class="first">[<strong>delete</strong>] Elimina un recuro, en base al <strong>primaryKey</strong>.</p>
+</li>
+</ul>
+<p>Todos estos metodos aplican los codigo de estado HTTP que correspondan. (<strong>200, 201, 204, 404,</strong> ...).</p>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="docs.html" class="btn btn-neutral float-right" title="Documentación"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="htaccess.html" class="btn btn-neutral" title=".htaccess"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

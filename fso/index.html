@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FSO &mdash; documentación de Klear Tutorial - 1.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/klear.png"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
+        <link rel="prev" title="Documentación" href="../rest/docs.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Klear Tutorial</a>
+        <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Buscar documentos" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../environment/index.html">Instalación del entorno</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environment/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/php.html">PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/zend.html">Zend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environment/klear.html">Klear</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../createProject/index.html">Creación del Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/createEclipseProject.html">Crear el proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/structure.html">Crear la estructura de directorios del proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/zendProject.html">Crear proyecto Zend Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/klear.html">Configuración Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/sqlsklear.html">SQLs Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../createProject/generadoresDB.html">Generadores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../joinProject/index.html">Unirse a un proyecto ya creado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#crear-un-proyecto-en-eclipse">Crear un proyecto en Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#obtener-el-proyecto">Obtener el proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinProject/index.html#bases-de-datos">Bases de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ini/index.html">Ficheros INI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ini/application-ini.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ini/klear-ini.html">klear.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/index.html">Gestión de las Bases de Datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../databases/phing.html">Phing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../databases/generator.html">Generador: Base de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modelsMappers/index.html">Models y Mappers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/generator.html">Generador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modelsMappers/mappers.html">Mappers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml/index.html">Yaml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/generator.html">Generador: Yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/klear-yaml.html">Klear.yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/general.html">Configuración general</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/list.html">Configuración lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/edit.html">Configuración edit/new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dashboard.html">Configuración Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/charts.html">Configuración Googlecharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/fields/index.html">Tipos de Campos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/dialogs.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yaml/iconos.html">Iconos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translate/index.html">Traducciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#definicion-de-idiomas">Definición de idiomas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#estructura-de-los-directorios">Estructura de los directórios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#traduccion">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate/index.html#poedit">Poedit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authCustom/index.html">Auth Custom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/klear.html">Zona Klear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authCustom/public.html">Zona Pública</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customScreen/index.html">Custom screen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customScreen/index.html#configuracion">Configuración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamicConfigClass/index.html">Klear Dinámico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dynamicConfigClass/index.html#ejemplo-klearintervals">Ejemplo klearIntervals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../klearGallery/index.html">Klear Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#esquema-de-base-de-datos">Esquema de base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#configuracion-de-la-galeria">Configuración de la Galería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rest/index.html">REST</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rest/generators.html">Generadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/application.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/auth.html">Plugin de Autenticación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/restApi.html">restApi.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/htaccess.html">.htaccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/docs.html">Documentación</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">FSO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fso-ini">fso.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#config-life">config.life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#config-routemap">config.routeMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#perfil-binay">Perfil Binay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#perfil-basico-de-image">Perfil Basico de Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#perfil-extendido">Perfil Extendido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#perfiles-avanzados-de-image">Perfiles avanzados de Image</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Klear Tutorial</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">FSO</a></li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="../_sources/fso/index.txt" rel="nofollow"> Ver origen</a>
+      
+    </li>
+</ul>
+<hr/>
+
+          
+  <div class="section" id="fso">
+<h1>FSO<a class="headerlink" href="#fso" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Este es un modulo, que esta en <strong>Iron</strong> (<a class="reference external" href="https://github.com/irontec/klear-library">https://github.com/irontec/klear-library</a>) y se encarga de servir toda clase de ficheros, haciendo uso de Zend_Cache para optimizar el servicio.
+Enviando las cabeceras correspondientes para esto. De la misma forma, esta integrado con los modelos para servir las url finales de forma facil con la funcion <strong>$model-&gt;get{Fso}Url(&#8216;profile&#8217;)</strong>.
+A la hora de configurar cada <strong>profile</strong> especifica como se va a servir el fichero, de una forma basica (<strong>binary</strong>) la cual es una descarga del mismo o de forma especial (<strong>image</strong>) la cual genera la imágen con la posibilidad de tratarla antes de visualizarla (resize, crop, ...).</p>
+<p>Para activar este modulo, en el application.ini se necesitan esta 2 lineas:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">resources.frontController.moduleDirectory.IronModules</span> <span class="o">=</span> <span class="s">&quot;/opt/klear/library/Iron/modules/&quot;</span>
+<span class="na">IronModule.fso</span> <span class="o">=</span> <span class="s">true</span>
+</pre></div>
+</div>
+<p>La configuración de este modulo se hace en el archivo <strong>fso.ini</strong> situado en <strong>application/config/</strong>.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#fso-ini" id="id1">fso.ini</a></li>
+<li><a class="reference internal" href="#config-life" id="id2">config.life</a></li>
+<li><a class="reference internal" href="#config-routemap" id="id3">config.routeMap</a></li>
+<li><a class="reference internal" href="#perfil-binay" id="id4">Perfil Binay</a></li>
+<li><a class="reference internal" href="#perfil-basico-de-image" id="id5">Perfil Basico de Image</a></li>
+<li><a class="reference internal" href="#perfil-extendido" id="id6">Perfil Extendido</a></li>
+<li><a class="reference internal" href="#perfiles-avanzados-de-image" id="id7">Perfiles avanzados de Image</a></li>
+</ul>
+</div>
+<div class="section" id="fso-ini">
+<h2><a class="toc-backref" href="#id1">fso.ini</a><a class="headerlink" href="#fso-ini" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En este archivo se declaran los <strong>perfiles</strong> que son los encargados de tener la configuración que tendra cada fso. Los perfiles tienen que ser unicos y con nombres claros, ya que tambien forman parte de la <strong>URL</strong> del archio.</p>
+<p>Ejemplo de un <strong>fso.ini</strong> basico.</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[production]</span>
+
+<span class="na">config.life</span> <span class="o">=</span> <span class="s">9999999999</span>
+<span class="na">config.routeMap</span> <span class="o">=</span> <span class="s">{id}-{basename}</span>
+
+<span class="na">autores.model</span> <span class="o">=</span> <span class="s">Authors</span>
+<span class="na">autores.fso</span> <span class="o">=</span> <span class="s">img</span>
+<span class="na">autores.type</span> <span class="o">=</span> <span class="s">image</span>
+
+<span class="na">autoresImg.extend</span> <span class="o">=</span> <span class="s">autores</span>
+<span class="na">autoresImg.changeSize</span> <span class="o">=</span> <span class="s">crop</span>
+<span class="na">autoresImg.width</span> <span class="o">=</span> <span class="s">64</span>
+<span class="na">autoresImg.height</span> <span class="o">=</span> <span class="s">64</span>
+
+<span class="na">autoresFile.model</span> <span class="o">=</span> <span class="s">Authors</span>
+<span class="na">autoresFile.fso</span> <span class="o">=</span> <span class="s">file</span>
+<span class="na">autoresFile.type</span> <span class="o">=</span> <span class="s">binary</span>
+
+<span class="k">[development:production]</span>
+<span class="k">[localdev:production]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-life">
+<h2><a class="toc-backref" href="#id2">config.life</a><a class="headerlink" href="#config-life" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Tiempo de vida, para el fichero en cache.</p>
+</div>
+<div class="section" id="config-routemap">
+<h2><a class="toc-backref" href="#id3">config.routeMap</a><a class="headerlink" href="#config-routemap" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Este parametro es importante, ya que con el se buscara el archivo que se va a servir.</p>
+<p>El uso normal seria:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">config.routeMap</span> <span class="o">=</span> <span class="s">{id}-{basename}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><strong>id</strong>: primaryKey del modelo</li>
+<li><strong>basename</strong>: Nombre real del fichero</li>
+</ul>
+<p>Pero tambien se puede puede forzar el uso de una extención en concreto.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last"><strong>Solo usar con imagenes</strong></p>
+</div>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">config.routeMap</span> <span class="o">=</span> <span class="s">{id}-{name}.{ext}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="perfil-binay">
+<h2><a class="toc-backref" href="#id4">Perfil Binay</a><a class="headerlink" href="#perfil-binay" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Ejemplo de un perfil <strong>Binary</strong>:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">autoresFile.model</span> <span class="o">=</span> <span class="s">Authors</span>
+<span class="na">autoresFile.fso</span> <span class="o">=</span> <span class="s">file</span>
+<span class="na">autoresFile.type</span> <span class="o">=</span> <span class="s">binary</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><strong>type</strong>: Establece como se va a tratar el archivo (<strong>binary/image</strong>).</li>
+<li><strong>model</strong>: Nombre del modelo o tabla donde se esta la información de este contenido.</li>
+<li><strong>fso</strong>: El nombre original del campo antes de pasar los generadores. Si el campo ahora se llama <strong>fileBaseName</strong> el fso sera <strong>file</strong>.</li>
+</ul>
+</div>
+<div class="section" id="perfil-basico-de-image">
+<h2><a class="toc-backref" href="#id5">Perfil Basico de Image</a><a class="headerlink" href="#perfil-basico-de-image" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Ejemplo de un perfil <strong>Image</strong> basico:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">autoresImage.model</span> <span class="o">=</span> <span class="s">Authors</span>
+<span class="na">autoresImage.fso</span> <span class="o">=</span> <span class="s">img</span>
+<span class="na">autoresImage.type</span> <span class="o">=</span> <span class="s">image</span>
+<span class="na">autoresImage.changeSize</span> <span class="o">=</span> <span class="s">crop</span>
+<span class="na">autoresImage.width</span> <span class="o">=</span> <span class="s">100</span>
+<span class="na">autoresImage.height</span> <span class="o">=</span> <span class="s">100</span>
+</pre></div>
+</div>
+<p>Los 3 primero parametros son iguales a los del perfil <strong>binary</strong> (<strong>model, fso y type</strong>) con la diferencia que <strong>type</strong> cambia a <strong>image</strong>.</p>
+<p>El 4 parametros &#8220;<strong>changeSize</strong>&#8221; es el clave y obligatorio para el tratado de las imágenes.</p>
+<p>Los demas parametros son los requeridos por cada tipo de <strong>changeSize</strong>.</p>
+<p>Tipos de <strong>changeSize</strong>:</p>
+<ul class="simple">
+<li>original</li>
+<li>scale</li>
+<li>crop</li>
+<li>resize</li>
+<li>resize-crop</li>
+<li>crop-resize</li>
+<li>circle</li>
+</ul>
+<p>Ejemplos de uso en <strong>Perfiles avanzados de Image</strong>.</p>
+</div>
+<div class="section" id="perfil-extendido">
+<h2><a class="toc-backref" href="#id6">Perfil Extendido</a><a class="headerlink" href="#perfil-extendido" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Extender pefiles es enfocado para las imagenes, ya que se puede querar una misma imagen con diferentes tamaños o formatos. Para no tener que declarar una y otra vez el <strong>model, fso</strong> y <strong>type</strong> se usa el <strong>extend</strong> y nombre del perfil, lo que hace que tome las propiedadel perfil mensionado.</p>
+<p>Ejemplo de <strong>extend</strong>:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">autores.model</span> <span class="o">=</span> <span class="s">Authors</span>
+<span class="na">autores.fso</span> <span class="o">=</span> <span class="s">img</span>
+<span class="na">autores.type</span> <span class="o">=</span> <span class="s">image</span>
+
+<span class="na">autoresCrop.extend</span> <span class="o">=</span> <span class="s">autores</span>
+<span class="na">autoresCrop.changeSize</span> <span class="o">=</span> <span class="s">crop</span>
+<span class="na">autoresCrop.width</span> <span class="o">=</span> <span class="s">100</span>
+<span class="na">autoresCrop.height</span> <span class="o">=</span> <span class="s">100</span>
+
+<span class="na">autoresResize.extend</span> <span class="o">=</span> <span class="s">autores</span>
+<span class="na">autoresResize.changeSize</span> <span class="o">=</span> <span class="s">resize</span>
+<span class="na">autoresResize.width</span> <span class="o">=</span> <span class="s">64</span>
+<span class="na">autoresResize.height</span> <span class="o">=</span> <span class="s">64</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="perfiles-avanzados-de-image">
+<h2><a class="toc-backref" href="#id7">Perfiles avanzados de Image</a><a class="headerlink" href="#perfiles-avanzados-de-image" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-ini"><div class="highlight"><pre><span class="c1">;+------+</span>
+<span class="c1">;|Image |</span>
+<span class="c1">;+------+</span>
+<span class="na">profile.model</span> <span class="o">=</span> <span class="s">Model</span>
+<span class="na">profile.fso</span> <span class="o">=</span> <span class="s">fso</span>
+<span class="na">profile.type</span> <span class="o">=</span> <span class="s">image</span>
+
+<span class="c1">;+--------------+</span>
+<span class="c1">;| Image Circle |</span>
+<span class="c1">;+--------------+</span>
+<span class="na">circle.extend</span> <span class="o">=</span> <span class="s">profile</span>
+<span class="na">circle.changeSize</span> <span class="o">=</span> <span class="s">&#39;circle&#39;</span>
+<span class="na">circle.size</span> <span class="o">=</span> <span class="s">600</span>
+
+<span class="c1">;+--------------+</span>
+<span class="c1">;| Image Resize |</span>
+<span class="c1">;+--------------+</span>
+<span class="na">resize.extend</span> <span class="o">=</span> <span class="s">profile</span>
+<span class="na">resize.changeSize</span> <span class="o">=</span> <span class="s">&#39;resize&#39;</span>
+<span class="na">resize.width</span> <span class="o">=</span> <span class="s">500</span>
+<span class="na">resize.height</span> <span class="o">=</span> <span class="s">280</span>
+
+<span class="c1">;+------------+</span>
+<span class="c1">;| Image Crop |</span>
+<span class="c1">;+------------+</span>
+<span class="na">crop.extend</span> <span class="o">=</span> <span class="s">profile</span>
+<span class="na">crop.changeSize</span> <span class="o">=</span> <span class="s">&#39;crop&#39;</span>
+<span class="na">crop.width</span> <span class="o">=</span> <span class="s">658</span>
+<span class="na">crop.height</span> <span class="o">=</span> <span class="s">472</span>
+
+<span class="c1">;+-------------------+</span>
+<span class="c1">;| Image Crop-Resize |</span>
+<span class="c1">;+-------------------+</span>
+<span class="na">cropResize.extend</span> <span class="o">=</span> <span class="s">profile</span>
+<span class="na">cropResize.changeSize</span> <span class="o">=</span> <span class="s">&#39;crop-resize&#39;</span>
+<span class="na">cropResize.width</span> <span class="o">=</span> <span class="s">280</span>
+<span class="na">cropResize.height</span> <span class="o">=</span> <span class="s">150</span>
+
+<span class="c1">;+-------------------+</span>
+<span class="c1">;| Image Resize-Crop |</span>
+<span class="c1">;+-------------------+</span>
+<span class="na">resizeCrop.extend</span> <span class="o">=</span> <span class="s">profile</span>
+<span class="na">resizeCrop.changeSize</span> <span class="o">=</span> <span class="s">&#39;resize-crop&#39;</span>
+<span class="na">resizeCrop.width</span> <span class="o">=</span> <span class="s">280</span>
+<span class="na">resizeCrop.height</span> <span class="o">=</span> <span class="s">150</span>
+
+<span class="c1">;+-------------+</span>
+<span class="c1">;| Image Scale |</span>
+<span class="c1">;+-------------+</span>
+<span class="na">scale.extend</span> <span class="o">=</span> <span class="s">profile</span>
+<span class="na">scale.changeSize</span> <span class="o">=</span> <span class="s">&#39;scale&#39;</span>
+<span class="na">scale.width</span> <span class="o">=</span> <span class="s">350</span>
+<span class="na">scale.height</span> <span class="o">=</span> <span class="s">280</span>
+
+<span class="c1">;+----------------------------------+</span>
+<span class="c1">;| Image Otras opciones adicionales |</span>
+<span class="c1">;+----------------------------------+</span>
+<span class="na">original.extend</span> <span class="o">=</span> <span class="s">profile</span>
+<span class="na">original.changeSize</span> <span class="o">=</span> <span class="s">&#39;original&#39;</span>
+
+<span class="na">original.negate</span> <span class="o">=</span> <span class="s">&#39;yes&#39;; Pasa los colores a negativos</span>
+
+<span class="na">original.flop</span> <span class="o">=</span> <span class="s">&#39;yes&#39;; Invierte la imagen de derecha a izquierda</span>
+
+<span class="na">original.vignette.blackPoint</span> <span class="o">=</span> <span class="s">10</span>
+<span class="na">original.vignette.whitePoint</span> <span class="o">=</span> <span class="s">10</span>
+<span class="na">original.vignette.x</span> <span class="o">=</span> <span class="s">10</span>
+<span class="na">original.vignette.y</span> <span class="o">=</span> <span class="s">10</span>
+
+
+<span class="na">original.border.color</span> <span class="o">=</span> <span class="s">&#39;rgba(0,0,0,.7)&#39;; //Crea un borde al rededor de la imagen con transparencia</span>
+<span class="c1">;original.border.color = &#39;#A6F918&#39;; //Crea un borde al rededor de la imagen</span>
+<span class="na">original.border.width</span> <span class="o">=</span> <span class="s">15</span>
+<span class="na">original.border.height</span> <span class="o">=</span> <span class="s">15</span>
+
+<span class="na">original.framing.color</span> <span class="o">=</span> <span class="s">&#39;rgba(0,0,0,.7)&#39;; //Crea un bonito enmarcado al rededor de la imagen con transparencia</span>
+<span class="c1">;original.framing.color = &#39;#d353d3&#39;; //Crea un bonito enmarcado al rededor de la imagen</span>
+<span class="na">original.framing.width</span> <span class="o">=</span> <span class="s">5</span>
+<span class="na">original.framing.height</span> <span class="o">=</span> <span class="s">5</span>
+<span class="na">original.framing.innerBevel</span> <span class="o">=</span> <span class="s">3</span>
+<span class="na">original.framing.outerBevel</span> <span class="o">=</span> <span class="s">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+      
+        <a href="../rest/docs.html" class="btn btn-neutral" title="Documentación"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Irontec.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>
