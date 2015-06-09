@@ -23,3 +23,5 @@ Contenido:
    customScreen/index
    dynamicConfigClass/index
    klearGallery/index
+   rest/index
+   fso/index
