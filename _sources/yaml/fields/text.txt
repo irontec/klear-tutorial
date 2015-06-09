@@ -16,6 +16,7 @@ Configuración
      type: text
      prefix: _("prefijo para el campo")
      sufix: _("sufijo para el campo")
+     maxLength: 225
 
 Como se puede apreciar, la configuración es bastante básica. Con definir
 el **type** es suficiente.

@@ -155,6 +155,27 @@
 <li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../rest/index.html">REST</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rest/generators.html">Generadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/application.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/auth.html">Plugin de Autenticación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/restApi.html">restApi.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/htaccess.html">.htaccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/docs.html">Documentación</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fso/index.html">FSO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#fso-ini">fso.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#config-life">config.life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#config-routemap">config.routeMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-binay">Perfil Binay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-basico-de-image">Perfil Basico de Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-extendido">Perfil Extendido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfiles-avanzados-de-image">Perfiles avanzados de Image</a></li>
+</ul>
+</li>
 </ul>
 
         
@@ -253,6 +274,14 @@ revisando que no haya cambiado la implementación de <strong>Klear</strong> y co
 <div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> mysql -uroot -ppass -e <span class="s2">&quot;CREATE DATABASE nuevoproyecto&quot;</span>
 </pre></div>
 </div>
+<p>Luego en /web/application/configs/application.ini añadimos los datos de la base de datos para development.
+.. code-block:: console</p>
+<blockquote>
+<div>resources.db.adapter = &#8220;MYSQLI&#8221;
+resources.db.params.dbname = &#8220;nuevoproyecto&#8221;
+resources.db.params.username = &#8220;root&#8221;
+resources.db.params.password = &#8220;farsa&#8221;
+resources.db.params.host = &#8220;localhost&#8221;</div></blockquote>
 <p>Después creamos el archivo predeploy.sql con las órdenes iniciales en el directorio phing.</p>
 <div class="highlight-mysql"><div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nf">changelog</span> <span class="p">(</span>
 <span class="n">change_number</span> <span class="kt">BIGINT</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>

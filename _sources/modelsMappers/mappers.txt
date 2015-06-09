@@ -6,7 +6,7 @@ Vamos a usar las funciones ya definidas por defecto por el Generador, aunque se 
 Buscar y Coger datos (find o fetch)
 -----------------------------------
 
-Klear cuenta cuenta con muchas opciones para coger datos, ya sea única, varias que tengan un valor en común o todas que tengamos
+Klear cuenta con muchas opciones para coger datos, ya sea única, varias que tengan un valor en común o todas que tengamos
 en una tabla. Esto depende de lo que queramos hacer, así que listaré las que Klear tiene disponible con un ejemplo (archivo MapperAbstract.php).
 
 .. code-block:: php

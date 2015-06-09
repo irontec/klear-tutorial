@@ -142,6 +142,8 @@ Parámetros de configuración
 
 * **controller**: Hay que definir el controller MassUpdate
 
+* **field**: Es el campo que se va a editar
+
 * **class**: Para definir el icono que queremos que aparezca
 
 * **title**: Se mostrará como encabezado del dialog
@@ -157,6 +159,7 @@ Parámetros de configuración
       itemMassUpdate_dialog: 
         <<: *Item
         controller: mass-update
+        field: name
         class: ui-silk-pencil-go
         title: _("Actualizar campo en %s", ngettext('Item', 'Items', 1))
         description: _("Do you want to update "X" on this %s?", ngettext('Item', 'Item', 1))

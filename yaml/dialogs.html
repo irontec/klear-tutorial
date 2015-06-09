@@ -155,6 +155,27 @@
 <li class="toctree-l2"><a class="reference internal" href="../klearGallery/index.html#integracion-con-wymeditor">Integración con wymeditor</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../rest/index.html">REST</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rest/generators.html">Generadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/application.html">application.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/auth.html">Plugin de Autenticación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/restApi.html">restApi.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/htaccess.html">.htaccess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest/docs.html">Documentación</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fso/index.html">FSO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#fso-ini">fso.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#config-life">config.life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#config-routemap">config.routeMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-binay">Perfil Binay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-basico-de-image">Perfil Basico de Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfil-extendido">Perfil Extendido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fso/index.html#perfiles-avanzados-de-image">Perfiles avanzados de Image</a></li>
+</ul>
+</li>
 </ul>
 
         
@@ -318,6 +339,7 @@ siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimi
 <h3><a class="toc-backref" href="#id10">Parámetros de configuración</a><a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
 <li><strong>controller</strong>: Hay que definir el controller MassUpdate</li>
+<li><strong>field</strong>: Es el campo que se va a editar</li>
 <li><strong>class</strong>: Para definir el icono que queremos que aparezca</li>
 <li><strong>title</strong>: Se mostrará como encabezado del dialog</li>
 <li><strong>description</strong>: Se muestra dentro del dialog en la primera pantalla</li>
@@ -327,11 +349,12 @@ siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimi
 <span class="hll">   <span class="l-Scalar-Plain">itemMassUpdate_dialog</span><span class="p-Indicator">:</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">&lt;&lt;</span><span class="p-Indicator">:</span> <span class="nv">*Item</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">controller</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mass-update</span>
+</span><span class="hll">     <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">name</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ui-silk-pencil-go</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Actualizar campo en %s&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
 </span><span class="hll">     <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Do you want to update &quot;X&quot; on this %s?&quot;, ngettext(&#39;Item&#39;, &#39;Item&#39;, 1))</span>
-</span><span class="hll">     <span class="l-Scalar-Plain">message</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;(%total%) %s successfully updated&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
-</span>     <span class="l-Scalar-Plain">labelOnList</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1"># Opcional, si se quiere que salga el label, cuando es una opción general de pantalla(con multiItem)</span>
+</span>     <span class="l-Scalar-Plain">message</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;(%total%) %s successfully updated&quot;, ngettext(&#39;Item&#39;, &#39;Items&#39;, 1))</span>
+     <span class="l-Scalar-Plain">labelOnList</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1"># Opcional, si se quiere que salga el label, cuando es una opción general de pantalla(con multiItem)</span>
      <span class="l-Scalar-Plain">multiItem</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span> <span class="c1"># Opcional, si se quiere que sea una opción multi-campo</span>
 </pre></div>
 </div>
