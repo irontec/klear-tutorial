@@ -170,6 +170,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#config-routemap">config.routeMap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#perfil-binay">Perfil Binay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#perfil-basico-de-image">Perfil Basico de Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comprimir-calidad-de-imagen">Comprimir calidad de imagen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#perfil-extendido">Perfil Extendido</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#perfiles-avanzados-de-image">Perfiles avanzados de Image</a></li>
 </ul>
@@ -208,8 +209,9 @@
   <div class="section" id="fso">
 <h1>FSO<a class="headerlink" href="#fso" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Este es un modulo, que esta en <strong>Iron</strong> (<a class="reference external" href="https://github.com/irontec/klear-library">https://github.com/irontec/klear-library</a>) y se encarga de servir toda clase de ficheros, haciendo uso de Zend_Cache para optimizar el servicio.
-Enviando las cabeceras correspondientes para esto. De la misma forma, esta integrado con los modelos para servir las url finales de forma facil con la funcion <strong>$model-&gt;get{Fso}Url(&#8216;profile&#8217;)</strong>.
-A la hora de configurar cada <strong>profile</strong> especifica como se va a servir el fichero, de una forma basica (<strong>binary</strong>) la cual es una descarga del mismo o de forma especial (<strong>image</strong>) la cual genera la imágen con la posibilidad de tratarla antes de visualizarla (resize, crop, ...).</p>
+Enviando las cabeceras correspondientes para esto. De la misma forma, está integrado con los modelos para servir las url finales de forma fácil con la función <strong>$model-&gt;get{Fso}Url(&#8216;profile&#8217;)</strong>.
+A la hora de configurar cada <strong>profile</strong> especifica como se va a servir el fichero: de una forma básica (<strong>binary</strong>), la cual es una descarga del mismo, o de forma especial (<strong>image</strong>), la cual genera la imagen con la posibilidad de tratarla antes de visualizarla (resize, crop, ...).</p>
+<p>Para que los ficheros se puedan almacenar en la base de datos, la clave primaria de la tabla en la que se almacenan no puede ser <strong>[uuid]</strong>. En su lugar, se dispone del tag <strong>[uuid:php]</strong>.</p>
 <p>Para activar este modulo, en el application.ini se necesitan esta 2 lineas:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span class="na">resources.frontController.moduleDirectory.IronModules</span> <span class="o">=</span> <span class="s">&quot;/opt/klear/library/Iron/modules/&quot;</span>
 <span class="na">IronModule.fso</span> <span class="o">=</span> <span class="s">true</span>
@@ -223,8 +225,9 @@ A la hora de configurar cada <strong>profile</strong> especifica como se va a se
 <li><a class="reference internal" href="#config-routemap" id="id3">config.routeMap</a></li>
 <li><a class="reference internal" href="#perfil-binay" id="id4">Perfil Binay</a></li>
 <li><a class="reference internal" href="#perfil-basico-de-image" id="id5">Perfil Basico de Image</a></li>
-<li><a class="reference internal" href="#perfil-extendido" id="id6">Perfil Extendido</a></li>
-<li><a class="reference internal" href="#perfiles-avanzados-de-image" id="id7">Perfiles avanzados de Image</a></li>
+<li><a class="reference internal" href="#comprimir-calidad-de-imagen" id="id6">Comprimir calidad de imagen</a></li>
+<li><a class="reference internal" href="#perfil-extendido" id="id7">Perfil Extendido</a></li>
+<li><a class="reference internal" href="#perfiles-avanzados-de-image" id="id8">Perfiles avanzados de Image</a></li>
 </ul>
 </div>
 <div class="section" id="fso-ini">
@@ -318,8 +321,21 @@ A la hora de configurar cada <strong>profile</strong> especifica como se va a se
 </ul>
 <p>Ejemplos de uso en <strong>Perfiles avanzados de Image</strong>.</p>
 </div>
+<div class="section" id="comprimir-calidad-de-imagen">
+<h2><a class="toc-backref" href="#id6">Comprimir calidad de imagen</a><a class="headerlink" href="#comprimir-calidad-de-imagen" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El parametro <strong>compressionQuality</strong> establece la calidad de compresión para la imagen que se va a mostrar.</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">autores.model</span> <span class="o">=</span> <span class="s">Authors</span>
+<span class="na">autores.fso</span> <span class="o">=</span> <span class="s">img</span>
+<span class="na">autores.type</span> <span class="o">=</span> <span class="s">image</span>
+<span class="na">autores.compressionQuality</span> <span class="o">=</span> <span class="s">80</span>
+<span class="na">autores.changeSize</span> <span class="o">=</span> <span class="s">crop</span>
+<span class="na">autores.width</span> <span class="o">=</span> <span class="s">100</span>
+<span class="na">autores.height</span> <span class="o">=</span> <span class="s">100</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="perfil-extendido">
-<h2><a class="toc-backref" href="#id6">Perfil Extendido</a><a class="headerlink" href="#perfil-extendido" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">Perfil Extendido</a><a class="headerlink" href="#perfil-extendido" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Extender pefiles es enfocado para las imagenes, ya que se puede querar una misma imagen con diferentes tamaños o formatos. Para no tener que declarar una y otra vez el <strong>model, fso</strong> y <strong>type</strong> se usa el <strong>extend</strong> y nombre del perfil, lo que hace que tome las propiedadel perfil mensionado.</p>
 <p>Ejemplo de <strong>extend</strong>:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span class="na">autores.model</span> <span class="o">=</span> <span class="s">Authors</span>
@@ -328,6 +344,7 @@ A la hora de configurar cada <strong>profile</strong> especifica como se va a se
 
 <span class="na">autoresCrop.extend</span> <span class="o">=</span> <span class="s">autores</span>
 <span class="na">autoresCrop.changeSize</span> <span class="o">=</span> <span class="s">crop</span>
+<span class="na">autoresCrop.compressionQuality</span> <span class="o">=</span> <span class="s">80</span>
 <span class="na">autoresCrop.width</span> <span class="o">=</span> <span class="s">100</span>
 <span class="na">autoresCrop.height</span> <span class="o">=</span> <span class="s">100</span>
 
@@ -339,7 +356,7 @@ A la hora de configurar cada <strong>profile</strong> especifica como se va a se
 </div>
 </div>
 <div class="section" id="perfiles-avanzados-de-image">
-<h2><a class="toc-backref" href="#id7">Perfiles avanzados de Image</a><a class="headerlink" href="#perfiles-avanzados-de-image" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">Perfiles avanzados de Image</a><a class="headerlink" href="#perfiles-avanzados-de-image" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="highlight-ini"><div class="highlight"><pre><span class="c1">;+------+</span>
 <span class="c1">;|Image |</span>
 <span class="c1">;+------+</span>

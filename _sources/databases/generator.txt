@@ -25,7 +25,7 @@ Este tag de usa en Primary Keys **'binary(36)'** con el cual se MySQL genera ide
 
 [uuid:php]
 **********
-Tiene la misma funcionalidad que el tag **[uuid]** con la diferencia que el Primary Key se genera desde la clase UUID en la libreria **'Iron\\Utils'**
+Tiene la misma funcionalidad que el tag **[uuid]** con la diferencia que el Primary Key se genera desde la clase UUID en la libreria **'Iron\\Utils'**. En las tablas en las que hay algçun archivo, se debe utilizar este tag en lugar del **[uuid]**
 
 [file]
 ******
