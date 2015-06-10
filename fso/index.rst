@@ -132,6 +132,22 @@ Tipos de **changeSize**:
 
 Ejemplos de uso en **Perfiles avanzados de Image**.
 
+Comprimir calidad de imagen
+---------------------------
+
+El parametro **compressionQuality** establece la calidad de compresión para la imagen que se va a mostrar.
+
+
+.. code-block:: ini
+
+   autores.model = Authors
+   autores.fso = img
+   autores.type = image
+   autores.compressionQuality = 80
+   autores.changeSize = crop
+   autores.width = 100
+   autores.height = 100
+
 Perfil Extendido
 ----------------
 
@@ -147,6 +163,7 @@ Ejemplo de **extend**:
    
    autoresCrop.extend = autores
    autoresCrop.changeSize = crop
+   autoresCrop.compressionQuality = 80
    autoresCrop.width = 100
    autoresCrop.height = 100
    
