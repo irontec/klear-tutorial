@@ -3,8 +3,10 @@ FSO
 ===
 
 Este es un modulo, que esta en **Iron** (https://github.com/irontec/klear-library) y se encarga de servir toda clase de ficheros, haciendo uso de Zend_Cache para optimizar el servicio.
-Enviando las cabeceras correspondientes para esto. De la misma forma, esta integrado con los modelos para servir las url finales de forma facil con la funcion **$model->get{Fso}Url('profile')**. 
-A la hora de configurar cada **profile** especifica como se va a servir el fichero, de una forma basica (**binary**) la cual es una descarga del mismo o de forma especial (**image**) la cual genera la imágen con la posibilidad de tratarla antes de visualizarla (resize, crop, ...).
+Enviando las cabeceras correspondientes para esto. De la misma forma, está integrado con los modelos para servir las url finales de forma fácil con la función **$model->get{Fso}Url('profile')**. 
+A la hora de configurar cada **profile** especifica como se va a servir el fichero: de una forma básica (**binary**), la cual es una descarga del mismo, o de forma especial (**image**), la cual genera la imagen con la posibilidad de tratarla antes de visualizarla (resize, crop, ...).
+
+Para que los ficheros se puedan almacenar en la base de datos, la clave primaria de la tabla en la que se almacenan no puede ser **[uuid]**. En su lugar, se dispone del tag **[uuid:php]**.
 
 
 Para activar este modulo, en el application.ini se necesitan esta 2 lineas:
