@@ -83,6 +83,24 @@ Pero tambien se puede puede forzar el uso de una extención en concreto.
 
    config.routeMap = {id}-{name}.{ext}
 
+Para cambiar la ruta de las imágenes, hay que cambiar el config.routeMap y, en el Model de la entidad, hay que modificar el método getFileUrl(), donde File es el nombre de la columna del fichero
+
+.. attention::
+   **Solo usar si el nombre de fichero es único**
+
+.. code-block:: php
+
+   <?php
+   $route = array(
+      'profile' => $profile,
+      'routeMap' => $this->getIconBaseName()
+   );
+
+.. code-block:: ini
+
+   config.routeMap = {basename}
+
+
 
 Perfil Binay
 ------------
