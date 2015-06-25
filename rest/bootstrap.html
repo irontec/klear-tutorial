@@ -225,6 +225,33 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>Para hacer nuevas rutas personalizadas, hay que crear un Bootstrap nuevo en APPLICATION_PATH/modules/rest. Este Bootstrap debe gestionar que, si se instancia desde consola, no debe generar las rutas personalizadas. En caso de no realizar correctamente esta gestión, la generación de la documentación dará un error.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+ <span class="k">protected</span> <span class="k">function</span> <span class="nf">_initRouting</span><span class="p">()</span>
+ <span class="p">{</span>
+     <span class="nv">$frontController</span> <span class="o">=</span> <span class="nx">Zend_Controller_Front</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+     <span class="nv">$router</span> <span class="o">=</span> <span class="nv">$frontController</span><span class="o">-&gt;</span><span class="na">getRouter</span><span class="p">();</span>
+
+     <span class="k">if</span><span class="p">(</span><span class="nv">$router</span> <span class="nx">instanceof</span> <span class="nx">\Iron_Controller_Router_Cli</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">return</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="nv">$router</span><span class="o">-&gt;</span><span class="na">addRoutes</span><span class="p">(</span>
+             <span class="k">array</span><span class="p">(</span>
+                 <span class="s1">&#39;poi&#39;</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">Zend_Controller_Router_Route</span><span class="p">(</span>
+                                 <span class="s1">&#39;rest/user/:username&#39;</span><span class="p">,</span>
+                                 <span class="k">array</span><span class="p">(</span>
+                                     <span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;user&#39;</span><span class="p">,</span>
+                                     <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;get&#39;</span><span class="p">,</span>
+                                     <span class="s1">&#39;module&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;rest&#39;</span>
+                                 <span class="p">)</span>
+                          <span class="p">),</span>
+                 <span class="p">),</span>
+     <span class="p">);</span>
+
+ <span class="p">}</span>
+</pre></div>
+</div>
 </div>
 
 

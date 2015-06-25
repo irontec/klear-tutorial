@@ -280,6 +280,21 @@ A la hora de configurar cada <strong>profile</strong> especifica como se va a se
 <div class="highlight-ini"><div class="highlight"><pre><span class="na">config.routeMap</span> <span class="o">=</span> <span class="s">{id}-{name}.{ext}</span>
 </pre></div>
 </div>
+<p>Para cambiar la ruta de las imágenes, hay que cambiar el config.routeMap y, en el Model de la entidad, hay que modificar el método getFileUrl(), donde File es el nombre de la columna del fichero</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last"><strong>Solo usar si el nombre de fichero es único</strong></p>
+</div>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$route</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+   <span class="s1">&#39;profile&#39;</span> <span class="o">=&gt;</span> <span class="nv">$profile</span><span class="p">,</span>
+   <span class="s1">&#39;routeMap&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getIconBaseName</span><span class="p">()</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">config.routeMap</span> <span class="o">=</span> <span class="s">{basename}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="perfil-binay">
 <h2><a class="toc-backref" href="#id4">Perfil Binay</a><a class="headerlink" href="#perfil-binay" title="Enlazar permanentemente con este título">¶</a></h2>

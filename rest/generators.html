@@ -220,10 +220,51 @@ la cual necesita de un par de parametros en el <strong>application.ini</strong> 
 </div>
 <ul class="simple">
 <li><strong>path</strong>: la ruta del modulo <strong>REST</strong>. <strong>(Aunque no se use el generador este parametro es obligatorio)</strong>.</li>
-<li><strong>usersAuthTable</strong>: Nombre de la table de autenticacón</li>
+<li><strong>usersAuthTable</strong>: Nombre de la table de autenticación</li>
 <li><strong>fieldUsername</strong>: Campo de identificacón del usuario</li>
 <li><strong>fieldPassword</strong>: Campo de la contraseña del usuario</li>
 </ul>
+<p>Por otro lado, en la tabla que se usa para la autenticación, hay que añadir una columna tokenKey. Esta se utilizará para autenticar las peticiones de la API. Para generar el token a partir de la password, hay que declarar la password como PlainText en el yaml.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span>
+   <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ngettext(&#39;Password&#39;, &#39;Passwords&#39;, 1)</span>
+   <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">password</span>
+   <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">PlainText</span>
+</pre></div>
+</div>
+<p>Y en el mapper hay que calcular el token cada vez que se modifica la password, y guardar esta cifrada para que no se almacene en texto plano.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">protected</span> <span class="k">function</span> <span class="nf">_save</span><span class="p">(</span><span class="nx">\Model\Raw\User</span> <span class="nv">$model</span><span class="p">,</span>
+         <span class="nv">$recursive</span> <span class="o">=</span> <span class="k">false</span><span class="p">,</span> <span class="nv">$useTransaction</span> <span class="o">=</span> <span class="k">true</span><span class="p">,</span> <span class="nv">$transactionTag</span> <span class="o">=</span> <span class="k">null</span>
+ <span class="p">)</span>
+ <span class="p">{</span>
+     <span class="nv">$pass</span> <span class="o">=</span> <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">hasChange</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">);</span>
+     <span class="k">if</span> <span class="p">(</span><span class="nv">$pass</span><span class="p">)</span> <span class="p">{</span>
+         <span class="nv">$passPlain</span> <span class="o">=</span> <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">getPassword</span><span class="p">();</span>
+         <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$passPlain</span><span class="p">))</span> <span class="p">{</span>
+             <span class="nv">$newToken</span> <span class="o">=</span> <span class="nb">md5</span><span class="p">(</span><span class="nb">md5</span><span class="p">(</span><span class="nv">$passPlain</span><span class="p">));</span>
+             <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">setTokenKey</span><span class="p">(</span><span class="nv">$newToken</span><span class="p">);</span>
+
+             <span class="nv">$salt</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_salt</span><span class="p">();</span>
+             <span class="nv">$ret</span> <span class="o">=</span> <span class="nb">crypt</span><span class="p">(</span>
+                     <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">getPassword</span><span class="p">(),</span>
+                     <span class="s1">&#39;$5$rounds=5000$&#39;</span> <span class="o">.</span> <span class="nv">$salt</span> <span class="o">.</span> <span class="s1">&#39;$&#39;</span>
+             <span class="p">);</span>
+             <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">setPassword</span><span class="p">(</span><span class="nv">$ret</span><span class="p">);</span>
+             <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_logger</span><span class="o">-&gt;</span><span class="na">log</span><span class="p">(</span><span class="s2">&quot;Password Setted&quot;</span><span class="p">,</span> <span class="nx">\Zend_Log</span><span class="o">::</span><span class="na">INFO</span><span class="p">);</span>
+         <span class="p">}</span>
+     <span class="p">}</span>
+     <span class="k">return</span> <span class="k">parent</span><span class="o">::</span><span class="na">_save</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="nv">$recursive</span><span class="p">,</span> <span class="nv">$useTransaction</span><span class="p">,</span> <span class="nv">$transactionTag</span><span class="p">);</span>
+
+ <span class="p">}</span>
+
+ <span class="k">protected</span> <span class="k">function</span> <span class="nf">_salt</span><span class="p">()</span>
+ <span class="p">{</span>
+     <span class="nv">$ret</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nb">md5</span><span class="p">(</span><span class="nx">mt_rand</span><span class="p">(),</span> <span class="k">false</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+
+     <span class="k">return</span> <span class="nv">$ret</span><span class="p">;</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
 <dl class="docutils">
 <dt>Entre las cosas que automatisa este generador, están:</dt>
 <dd><ul class="first last simple">

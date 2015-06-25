@@ -55,6 +55,10 @@ Campo creado con el **"db-generator"** por el tag :ref:`generatorDataBaseFile`. 
 * Md5Sum (opcional)
 * MimeType
 
+Este tag admite modificadores que permiten definir el comportamiento del fichero. 
+
+* **baseName(unique)** : El nombre del fichero es único. En caso de que se suban dos ficheros con el mismo nombre, se añade al final de este un número, consecutivo al mayor exitente, para hacerlo único. Por ejemlo, si existe un fichero test.png, y se sube otro con el mismo nombre, este será renombrado a test1.png, el siguiente a test2.png, etc.
+
 [ml]
 ****
 
