@@ -213,7 +213,8 @@
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#font-awesome" id="id1">Font Awesome</a></li>
-<li><a class="reference internal" href="#silk-icons-sprites" id="id2">Silk Icons Sprites</a></li>
+<li><a class="reference internal" href="#custom-icons-sprites" id="id2">Custom Icons Sprites</a></li>
+<li><a class="reference internal" href="#silk-icons-sprites" id="id3">Silk Icons Sprites</a></li>
 </ul>
 </div>
 <div class="section" id="font-awesome">
@@ -232,8 +233,40 @@
 <p class="last">Es compatible con los estilos que ofrece el Bootstrap de Font Awesome como <strong>&#8220;fa fa-camera-retro fa-2x&#8221;</strong> (siendo 2x el tamaño del icono) y <strong>&#8220;fa fa-spinner fa-spin&#8221;</strong> (darle una simple animación).</p>
 </div>
 </div>
+<div class="section" id="custom-icons-sprites">
+<h2><a class="toc-backref" href="#id2">Custom Icons Sprites</a><a class="headerlink" href="#custom-icons-sprites" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Generar estructura para albergar nuestros iconos.</p>
+<p>En /public/css/ (o styles o como queramos):</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">.</span>
+<span class="go">│</span>
+<span class="go">└── ui-klear</span>
+<span class="go">     │</span>
+<span class="go">     ├── cache</span>
+<span class="go">     └── icons</span>
+</pre></div>
+</div>
+<p><strong>cache</strong> Dar permisos 777.</p>
+<p>En este directorio se generarán los ficheros necesarios. Que en este caso son el fichero css y el png con el sprite.</p>
+<p><strong>icons</strong></p>
+<p>Introducir aquí los iconos que queramos. Los iconos deben tener 16×16.</p>
+<p><em>ojo: si tenemos un icono accept.png nos sobrescribirá ui-silk-accept si tenemos un icono accept-foo-faa.png lo llamaremos con ui-silk-accept-foo-faa</em></p>
+<p>klear.yaml:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">main</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">(...)</span>
+    <span class="l-Scalar-Plain">cssExtended</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">silkExtendedIconPath</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/css/ui-klear/icons</span>
+    <span class="l-Scalar-Plain">(...)</span>
+</pre></div>
+</div>
+<p><strong>Para generar los ficheros.</strong></p>
+<div class="highlight-url"><div class="highlight"><pre>http:// ~ /klear/css-extended/silk-extended/silk-extended-sprite.css?generate
+</pre></div>
+</div>
+<p><em>Ejemplos en KlearInterval…</em></p>
+</div>
 <div class="section" id="silk-icons-sprites">
-<h2><a class="toc-backref" href="#id2">Silk Icons Sprites</a><a class="headerlink" href="#silk-icons-sprites" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Silk Icons Sprites</a><a class="headerlink" href="#silk-icons-sprites" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Iconos disponibles en Klear de la colección <strong>SILK ICONS SPRITES</strong>:</p>
 <table border="1" class="docutils">
 <colgroup>
