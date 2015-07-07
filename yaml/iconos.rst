@@ -25,6 +25,49 @@ Solo se tiene que agregar en el campo CLASS el siguiente enunciado "fa fa-icon" 
 .. note::
    Es compatible con los estilos que ofrece el Bootstrap de Font Awesome como **"fa fa-camera-retro fa-2x"** (siendo 2x el tamaño del icono) y **"fa fa-spinner fa-spin"** (darle una simple animación).
 
+Custom Icons Sprites
+--------------------
+Generar estructura para albergar nuestros iconos.
+
+En /public/css/ (o styles o como queramos):
+
+.. code-block:: console
+
+   .
+   │
+   └── ui-klear
+	│
+	├── cache
+	└── icons
+
+**cache** Dar permisos 777.
+
+En este directorio se generarán los ficheros necesarios. Que en este caso son el fichero css y el png con el sprite.
+
+**icons**
+
+Introducir aquí los iconos que queramos. Los iconos deben tener 16×16.
+
+*ojo: si tenemos un icono accept.png nos sobrescribirá ui-silk-accept si tenemos un icono accept-foo-faa.png lo llamaremos con ui-silk-accept-foo-faa*
+
+klear.yaml:
+
+.. code-block:: yaml
+
+   production: 
+     main:
+       (...)
+       cssExtended:
+         silkExtendedIconPath: /css/ui-klear/icons
+       (...)
+
+**Para generar los ficheros.**
+
+.. code-block:: url
+
+   http:// ~ /klear/css-extended/silk-extended/silk-extended-sprite.css?generate
+
+*Ejemplos en KlearInterval…*
 
 Silk Icons Sprites
 ------------------
