@@ -67,6 +67,8 @@ Este tag admite modificadores que permiten definir el comportamiento del fichero
 Multiplica el campo según la cantidad de idiomas que se ha configurado en el klear.ini, y listos para ser identificados
 por el generador MODEL-MAPPERS.
 
+Si los idiomas de este campo no son los mismos que los idiomas en los que se muestra el klear, en klear.yaml se debe añadir un campo **modeLang** para especificarlos.
+
 [map]
 *****
 
