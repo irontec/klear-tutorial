@@ -224,13 +224,13 @@ desde los yaml para distintas funciones: <strong>Delete</strong> y <strong>Clone
 <li><a class="reference internal" href="#id4" id="id10">Parámetros de configuración</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#custom-dialog" id="id11">Custom dialog</a></li>
+<li><a class="reference internal" href="#custom-dialog-generic-dialog" id="id11">Custom dialog (Generic Dialog)</a></li>
 </ul>
 </div>
 <div class="section" id="delete">
 <h2><a class="toc-backref" href="#id6">Delete</a><a class="headerlink" href="#delete" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Este dialog con el <strong>controller DELETE</strong> <a class="footnote-reference" href="#controller" id="id1">[1]</a> sirve para borrar un dato desde la interfaz del Klear. Esta opción
-viene por defecto en los yaml <strong>LIST</strong> cuando son creadas por el <a class="reference internal" href="index.html#generatoryaml"><em>Yaml</em></a>. Por defecto, se presenta de esta manera:</p>
+viene por defecto en los yaml <strong>LIST</strong> cuando son creadas por el <a class="reference internal" href="index.html#generatoryaml"><span>Yaml</span></a>. Por defecto, se presenta de esta manera:</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
   <span class="l-Scalar-Plain">main</span><span class="p-Indicator">:</span>
     <span class="l-Scalar-Plain">module</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">klearMatrix</span>
@@ -361,8 +361,8 @@ siguiente código dentro de nuestro campo <strong>dialogs</strong>. El procedimi
 </div>
 </div>
 </div>
-<div class="section" id="custom-dialog">
-<h2><a class="toc-backref" href="#id11">Custom dialog</a><a class="headerlink" href="#custom-dialog" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="custom-dialog-generic-dialog">
+<h2><a class="toc-backref" href="#id11">Custom dialog (Generic Dialog)</a><a class="headerlink" href="#custom-dialog-generic-dialog" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Por el momento, existe un determinado de dialogs configurados en nuestro Klear para uso estándar para los proyectos, pero también podemos
 crear nuestros propios dialogs para que hagan funciones distintas a lo que está programado con solo ubicar correctamente los siguientes códigos
 en estas rutas.</p>
@@ -396,81 +396,114 @@ en estas rutas.</p>
 </div>
 <p>Después de indicar el <strong>controller</strong> <a class="footnote-reference" href="#zendframework" id="id5">[2]</a> hay que crear dicho controlador en nuestra carpeta <strong>controllers</strong> <em>(application/controllers)</em>, en
 este caso sería el archivo <strong>KlearCustomNameActionController.php</strong> con el siguiente contenido, teniendo en cuenta que lo marcado es obligatorio:</p>
-<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">KlearCustomNameActionController</span> <span class="k">extends</span> <span class="nx">Zend_Controller_Action</span>
 <span class="p">{</span>
@@ -478,60 +511,89 @@ este caso sería el archivo <strong>KlearCustomNameActionController.php</strong>
 
     <span class="k">public</span> <span class="k">function</span> <span class="nf">init</span><span class="p">()</span>
     <span class="p">{</span>
-<span class="hll">        <span class="c1">// Nos aseguramos que este controlador se ejecuta sólamente desde klear!</span>
-</span><span class="hll">        <span class="k">if</span> <span class="p">((</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getUserParam</span><span class="p">(</span><span class="s2">&quot;mainRouter&quot;</span><span class="p">))</span> <span class="o">||</span>
-</span><span class="hll">            <span class="p">(</span><span class="o">!</span><span class="nb">is_object</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="p">))</span> <span class="p">)</span> <span class="p">{</span>
-</span><span class="hll">                <span class="k">throw</span> <span class="k">New</span> <span class="nx">Zend_Exception</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nx">Zend_Controller_Plugin_ErrorHandler</span><span class="o">::</span><span class="na">EXCEPTION_NO_ACTION</span><span class="p">);</span>
-</span><span class="hll">        <span class="p">}</span>
-</span><span class="hll">
-</span><span class="hll">        <span class="c1">//Inicia el contenido en Json</span>
-</span><span class="hll">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">ContextSwitch</span><span class="p">()</span>
-</span><span class="hll">             <span class="o">-&gt;</span><span class="na">addActionContext</span><span class="p">(</span><span class="s1">&#39;NameAction&#39;</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">)</span>
-</span><span class="hll">             <span class="o">-&gt;</span><span class="na">initContext</span><span class="p">(</span><span class="s1">&#39;json&#39;</span><span class="p">);</span>
-</span><span class="hll">
-</span><span class="hll">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">layout</span><span class="o">-&gt;</span><span class="na">disableLayout</span><span class="p">();</span>
-</span>    <span class="p">}</span>
+        <span class="c1">// Nos aseguramos que este controlador se ejecuta sólamente desde klear!</span>
+        <span class="k">if</span> <span class="p">((</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getUserParam</span><span class="p">(</span><span class="s2">&quot;mainRouter&quot;</span><span class="p">))</span> <span class="o">||</span>
+            <span class="p">(</span><span class="o">!</span><span class="nb">is_object</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="p">))</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">throw</span> <span class="k">New</span> <span class="nx">Zend_Exception</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nx">Zend_Controller_Plugin_ErrorHandler</span><span class="o">::</span><span class="na">EXCEPTION_NO_ACTION</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//Inicia el contenido en Json</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">ContextSwitch</span><span class="p">()</span>
+             <span class="o">-&gt;</span><span class="na">addActionContext</span><span class="p">(</span><span class="s1">&#39;NameAction&#39;</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">)</span>
+             <span class="o">-&gt;</span><span class="na">initContext</span><span class="p">(</span><span class="s1">&#39;json&#39;</span><span class="p">);</span>
+
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">layout</span><span class="o">-&gt;</span><span class="na">disableLayout</span><span class="p">();</span>
+    <span class="p">}</span>
 
     <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
     <span class="p">{</span>
 
-        <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s2">&quot;Parametro de verificación&quot;</span><span class="p">))</span> <span class="p">{</span>
-           <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">viewRenderer</span><span class="o">-&gt;</span><span class="na">setNoRender</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
-           <span class="c1">//Las acciones que generara este Parametro</span>
-        <span class="p">}</span>
+       <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s2">&quot;Parametro de verificación&quot;</span><span class="p">))</span> <span class="p">{</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_helper</span><span class="o">-&gt;</span><span class="na">viewRenderer</span><span class="o">-&gt;</span><span class="na">setNoRender</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+         <span class="c1">//Las acciones que generara este Parametro</span>
+
+         <span class="c1">//  Si hemos incluido elementos de formularios, deberemos recogerlos:</span>
+         <span class="nv">$nombreValue</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">.&gt;</span><span class="nx">getParam</span><span class="p">(</span><span class="s1">&#39;nombre&#39;</span><span class="p">);</span>
+
+         <span class="c1">// Si hemos utilizado un input:file de data-command-upload tipo free-upload</span>
+
+         <span class="c1">// Debemos recuperar el namespace de sessión &#39;File_Controller&#39;</span>
+         <span class="nv">$tempFSystemNS</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Zend_Session_Namespace</span><span class="p">(</span><span class="s1">&#39;File_Controller&#39;</span><span class="p">);</span>
+
+         <span class="nv">$fileHash</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">.&gt;</span><span class="nx">getParam</span><span class="p">(</span><span class="s1">&#39;miFichero&#39;</span><span class="p">)</span>
+         <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$fileHash</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$tempFSystemNS</span><span class="o">-&gt;</span><span class="p">{</span><span class="nv">$fileHash</span><span class="p">}))</span> <span class="p">{</span>
+           <span class="nv">$tempFile</span> <span class="o">=</span> <span class="nv">$tempFSystemNS</span><span class="o">-&gt;</span><span class="p">{</span><span class="nv">$fileHash</span><span class="p">};</span>
+
+           <span class="c1">// A partir de aquí se podrá crear un FSO, o hacer lo que haya que hacer...</span>
+           <span class="nv">$nombreFichero</span> <span class="o">=</span> <span class="nv">$tempFile</span><span class="p">[</span><span class="s1">&#39;basename&#39;</span><span class="p">];</span>
+           <span class="nv">$rutaFichero</span> <span class="o">=</span> <span class="nv">$tempFile</span><span class="p">[</span><span class="s1">&#39;realpath&#39;</span><span class="p">];</span>
+
+           <span class="c1">// Sería buena práctica eliminar $rutaFichero después de la operación</span>
+           <span class="c1">// Aunque el recolector de basura de FileController, se encargará en algún momento de ese fichero.</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
 
 
-        <span class="c1">// Si queremos coger la Id del dato donde es llamado nuestro dialog.</span>
-        <span class="c1">// Detectamos si hemos sido invocados desde un listado</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nb">is_array</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s1">&#39;pk&#39;</span><span class="p">))</span> <span class="p">{</span>
+       <span class="c1">// Si queremos coger la Id del dato donde es llamado nuestro dialog.</span>
+       <span class="c1">// Detectamos si hemos sido invocados desde un listado</span>
+       <span class="k">if</span> <span class="p">(</span><span class="nb">is_array</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s1">&#39;pk&#39;</span><span class="p">))</span> <span class="p">{</span>
+         <span class="nv">$aIds</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s1">&#39;pk&#39;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+         <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s1">&#39;pk&#39;</span><span class="p">);</span>
+         <span class="c1">// sería buena idea (compatible con multiItems: true)</span>
+         <span class="c1">// $aIds = array($id);</span>
+       <span class="p">}</span>
 
-            <span class="nv">$aIds</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s1">&#39;pk&#39;</span><span class="p">);</span>
+       <span class="nv">$msg</span> <span class="o">=</span> <span class="nx">_</span><span class="p">(</span><span class="s2">&quot;Estas seguro de ejecutar esta ación&quot;</span><span class="p">)</span>
 
-<span class="hll">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class="hll">
-</span><span class="hll">            <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_mainRouter</span><span class="o">-&gt;</span><span class="na">getParam</span><span class="p">(</span><span class="s1">&#39;pk&#39;</span><span class="p">);</span>
-</span><span class="hll">            <span class="c1">// sería buena idea (compatible con multiItems: true)</span>
-</span><span class="hll">            <span class="c1">// $aIds = array($id);</span>
-</span><span class="hll">
-</span><span class="hll">        <span class="p">}</span>
-</span><span class="hll">
-</span><span class="hll">
-</span><span class="hll">        <span class="c1">//Por ultimo generamos las opciones del Custom Dialog</span>
-</span><span class="hll">        <span class="c1">//y las acciones de cada opción</span>
-</span><span class="hll">
-</span><span class="hll">        <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
-</span><span class="hll">          <span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="nx">_</span><span class="p">(</span><span class="s2">&quot;Mi Accion&quot;</span><span class="p">),</span>
-</span><span class="hll">                    <span class="s1">&#39;message&#39;</span><span class="o">=&gt;</span><span class="nx">_</span><span class="p">(</span><span class="s2">&quot;Estas seguro de ejecutar esta ación&quot;</span><span class="p">),</span>
-</span><span class="hll">                    <span class="s1">&#39;buttons&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
-</span>                               <span class="c1">// Este botón volverá a llamar el dialog enviando un parámetro y será reconocido por la línea 26</span>
+       <span class="nv">$msg</span> <span class="o">.=</span> <span class="s1">&#39;Nombre: &lt;intput type=&quot;text&quot; name=&quot;nombre&quot; /&gt;&lt;br &gt;&#39;</span><span class="p">;</span> <span class="c1">// Si el dialogo tiene recall = true, se enviará este valor como parámetro</span>
+
+       <span class="c1">// Subiendo Ficheros</span>
+       <span class="nv">$msg</span> <span class="o">.=</span> <span class="s1">&#39;Fichero: &lt;intput type=&quot;file&quot; name=&quot;miFichero&quot;  data-upload-command=&quot;ComandoConcreto&quot;/&gt;&lt;br &gt;&#39;</span><span class="p">;</span>
+       <span class="c1">// Si ponemos un input:file, vinculado a un data-command-upload, se sustituirá por el control de subida (qq)</span>
+       <span class="c1">// el comando (en este caso &quot;ComandoCocnreto&quot;, deberá estar definido en el fichero de definición de pantalla como free-upload</span>
+       <span class="c1">//   commands:</span>
+       <span class="c1">//     ComandoConcreto:</span>
+       <span class="c1">//       controller: File</span>
+       <span class="c1">//       action: free-upload</span>
+
+
+        <span class="c1">//Por ultimo generamos las opciones del Custom Dialog</span>
+        <span class="c1">//y las acciones de cada opción</span>
+
+        <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+          <span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="nx">_</span><span class="p">(</span><span class="s2">&quot;Mi Accion&quot;</span><span class="p">),</span>
+                    <span class="s1">&#39;message&#39;</span><span class="o">=&gt;</span><span class="nv">$msg</span><span class="p">,</span>
+                    <span class="s1">&#39;buttons&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
+                               <span class="c1">// Este botón volverá a llamar el dialog enviando un parámetro y será reconocido por la línea 26</span>
                                <span class="nx">_</span><span class="p">(</span><span class="s1">&#39;Aceptar&#39;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-<span class="hll">                                       <span class="s1">&#39;recall&#39;</span><span class="o">=&gt;</span><span class="k">true</span><span class="p">,</span>
-</span><span class="hll">                                       <span class="s1">&#39;params&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
-</span><span class="hll">                                               <span class="s2">&quot;Parametro de verificación&quot;</span> <span class="o">=&gt;</span> <span class="k">true</span>
-</span><span class="hll">                                   <span class="p">)</span>
-</span><span class="hll">                                 <span class="p">),</span>
-</span><span class="hll">                               <span class="nx">_</span><span class="p">(</span><span class="s1">&#39;Cancelar&#39;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-</span>                                             <span class="s1">&#39;recall&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+                                       <span class="s1">&#39;recall&#39;</span><span class="o">=&gt;</span><span class="k">true</span><span class="p">,</span>
+                                       <span class="s1">&#39;params&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
+                                               <span class="s2">&quot;Parametro de verificación&quot;</span> <span class="o">=&gt;</span> <span class="k">true</span>
+                                   <span class="p">)</span>
+                                 <span class="p">),</span>
+                               <span class="nx">_</span><span class="p">(</span><span class="s1">&#39;Cancelar&#39;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                                             <span class="s1">&#39;recall&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
                                              <span class="p">)</span>
                                       <span class="p">)</span>
              <span class="p">);</span>
@@ -541,6 +603,10 @@ este caso sería el archivo <strong>KlearCustomNameActionController.php</strong>
         <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">setModule</span><span class="p">(</span><span class="s1">&#39;klearMatrix&#39;</span><span class="p">);</span>
         <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">setPlugin</span><span class="p">(</span><span class="s1">&#39;klearMatrixGenericDialog&#39;</span><span class="p">);</span>
         <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">addJsFile</span><span class="p">(</span><span class="s2">&quot;/js/plugins/jquery.klearmatrix.genericdialog.js&quot;</span><span class="p">);</span>
+
+        <span class="c1">// Si queremos utilizar el usbidor de ficheros, no debemos olvidarnos de añadir el plugin!!!</span>
+        <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">addJsFile</span><span class="p">(</span><span class="s2">&quot;/js/plugins/qq-fileuploader.js&quot;</span><span class="p">);</span>
+
         <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">setData</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
         <span class="nv">$jsonResponse</span><span class="o">-&gt;</span><span class="na">attachView</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">);</span>
     <span class="p">}</span>

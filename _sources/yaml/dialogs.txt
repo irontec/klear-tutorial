@@ -8,15 +8,15 @@ desde los yaml para distintas funciones: **Delete** y **Clone**.
 .. contents::
    :local:
    :depth: 2
-   
+
 Delete
 ------
-Este dialog con el **controller DELETE** [#controller]_ sirve para borrar un dato desde la interfaz del Klear. Esta opción 
+Este dialog con el **controller DELETE** [#controller]_ sirve para borrar un dato desde la interfaz del Klear. Esta opción
 viene por defecto en los yaml **LIST** cuando son creadas por el :ref:`generatorYaml`. Por defecto, se presenta de esta manera:
 
 .. code-block:: yaml
    :emphasize-lines: 19
-   
+
    production:
      main:
        module: klearMatrix
@@ -37,11 +37,11 @@ viene por defecto en los yaml **LIST** cuando son creadas por el :ref:`generator
              dialogs:
                sectionsDel_dialog: true
              default: sectionsEdit_screen
-             
+
 
 .. code-block:: yaml
    :emphasize-lines: 2-8
-   
+
      dialogs:
        sectionsDel_dialog:
          <<: *Sections
@@ -67,14 +67,14 @@ sencillo procedimiento:
 
 .. code-block:: yaml
    :emphasize-lines: 6
-   
+
    nuestraPantalla_screen:
-     fields: 
-       options: 
+     fields:
+       options:
          title: _("Options")
-           dialogs: 
+           dialogs:
              itemClone_dialog: true
-             
+
 Parámetros de configuración
 ###########################
 
@@ -93,15 +93,15 @@ Parámetros de configuración
 *  **cloneForceValues**: Se usa para indicar parametros por defecto en el elemento clon.
 
 *  **postCloneMethods**: Se usa para indicar un método del modelo a ejecutar.
- 
+
    * **clonned**: Se ejecuta el método del modelo clonado (éste recibe el modelo original como parámetro).
    * **original**: Se ejecuta el método del modelo original (éste recibe el modelo clonado como parámetro).
-   
+
 .. code-block:: yaml
    :emphasize-lines: 2-
-   
+
    dialogs:
-      itemClone_dialog: 
+      itemClone_dialog:
         <<: *Item
         controller: clone
         class: ui-silk-clone
@@ -129,14 +129,14 @@ sencillo (a la par que entretenido) procedimiento:
 
 .. code-block:: yaml
    :emphasize-lines: 6
-   
+
    nuestraPantalla_screen:
-     fields: 
-       options: 
+     fields:
+       options:
          title: _("Options")
-           dialogs: 
+           dialogs:
              itemMassUpdate_dialog: true
-             
+
 Parámetros de configuración
 ###########################
 
@@ -151,12 +151,12 @@ Parámetros de configuración
 * **description**: Se muestra dentro del dialog en la primera pantalla
 
 * **message**: Se muestra cuando todo ha salido bien
-         
+
 .. code-block:: yaml
    :emphasize-lines: 2-8
-   
+
    dialogs:
-      itemMassUpdate_dialog: 
+      itemMassUpdate_dialog:
         <<: *Item
         controller: mass-update
         field: name
@@ -167,32 +167,32 @@ Parámetros de configuración
         labelOnList: true # Opcional, si se quiere que salga el label, cuando es una opción general de pantalla(con multiItem)
         multiItem: true # Opcional, si se quiere que sea una opción multi-campo
 
-        
-Custom dialog
--------------
+
+Custom dialog (Generic Dialog)
+------------------------------
 
 Por el momento, existe un determinado de dialogs configurados en nuestro Klear para uso estándar para los proyectos, pero también podemos
-crear nuestros propios dialogs para que hagan funciones distintas a lo que está programado con solo ubicar correctamente los siguientes códigos 
+crear nuestros propios dialogs para que hagan funciones distintas a lo que está programado con solo ubicar correctamente los siguientes códigos
 en estas rutas.
 
-.. attention:: 
+.. attention::
    Tiene que incorporarse todos estos códigos, empezar y quedarse a medio camino, solo provocará un error en el Listado donde se incorporó el código.
 
 En cualquiera de nuestros **YAML LIST**. Debemos incorporar los siguientes códigos, siendo lo marcado lo que se tiene que incorporar:
 
 .. code-block:: yaml
    :emphasize-lines: 6
-   
+
    nuestraPantalla_screen:
-     fields: 
-       options: 
+     fields:
+       options:
          title: _("Options")
-           dialogs: 
+           dialogs:
              nameaction_dialog: true
 
 .. code-block:: yaml
    :emphasize-lines: 2-8
-   
+
    dialogs:
        nameaction_dialog:
          title: _("My Dialog")
@@ -206,20 +206,19 @@ En cualquiera de nuestros **YAML LIST**. Debemos incorporar los siguientes códi
          labelOnEntityPostSave: true|false|string // La opción se dibujará con "label" cuando es una opción general de EntityPostSave
          multiItem: true // Al invocarase la opción como general option desde List, el controlador será invocado con pk como un array de Ids.
          alwaysEnabled: true //Sólo se usa cuando multiItem = true. En este caso se usa para permitir que el botón del diálogo esté habilitado aunque no se seleccione ningún registro.
-         
+
 Después de indicar el **controller** [#zendFramework]_ hay que crear dicho controlador en nuestra carpeta **controllers** *(application/controllers)*, en
 este caso sería el archivo **KlearCustomNameActionController.php** con el siguiente contenido, teniendo en cuenta que lo marcado es obligatorio:
-         
+
 .. code-block:: php
    :linenos:
-   :emphasize-lines: 9-20,38-53,56-61
 
    <?php
-    
+
    class KlearCustomNameActionController extends Zend_Controller_Action
    {
        protected $_mainRouter;
-    
+
        public function init()
        {
            // Nos aseguramos que este controlador se ejecuta sólamente desde klear!
@@ -227,75 +226,108 @@ este caso sería el archivo **KlearCustomNameActionController.php** con el sigui
                (!is_object($this->_mainRouter)) ) {
                    throw New Zend_Exception('',Zend_Controller_Plugin_ErrorHandler::EXCEPTION_NO_ACTION);
            }
-    
+
            //Inicia el contenido en Json
            $this->_helper->ContextSwitch()
                 ->addActionContext('NameAction', 'json')
                 ->initContext('json');
-    
+
            $this->_helper->layout->disableLayout();
        }
-    
+
        public function indexAction()
        {
-    
-           if ($this->getRequest()->getParam("Parametro de verificación")) {
-              $this->_helper->viewRenderer->setNoRender(true);
-              //Las acciones que generara este Parametro
-           }
-           
 
-           // Si queremos coger la Id del dato donde es llamado nuestro dialog.
-           // Detectamos si hemos sido invocados desde un listado
-           if (is_array($this->_mainRouter->getParam('pk')) {
+          if ($this->getRequest()->getParam("Parametro de verificación")) {
+            $this->_helper->viewRenderer->setNoRender(true);
+            //Las acciones que generara este Parametro
 
-               $aIds = $this->_mainRouter->getParam('pk');
+            //  Si hemos incluido elementos de formularios, deberemos recogerlos:
+            $nombreValue = $this->getRequest().>getParam('nombre');
 
+            // Si hemos utilizado un input:file de data-command-upload tipo free-upload
+
+            // Debemos recuperar el namespace de sessión 'File_Controller'
+            $tempFSystemNS = new Zend_Session_Namespace('File_Controller');
+
+            $fileHash = $this->getRequest().>getParam('miFichero')
+            if (!empty($fileHash) && isset($tempFSystemNS->{$fileHash})) {
+              $tempFile = $tempFSystemNS->{$fileHash};
+
+              // A partir de aquí se podrá crear un FSO, o hacer lo que haya que hacer...
+              $nombreFichero = $tempFile['basename'];
+              $rutaFichero = $tempFile['realpath'];
+
+              // Sería buena práctica eliminar $rutaFichero después de la operación
+              // Aunque el recolector de basura de FileController, se encargará en algún momento de ese fichero.
+            }
+          }
+
+
+          // Si queremos coger la Id del dato donde es llamado nuestro dialog.
+          // Detectamos si hemos sido invocados desde un listado
+          if (is_array($this->_mainRouter->getParam('pk')) {
+            $aIds = $this->_mainRouter->getParam('pk');
            } else {
+            $id = $this->_mainRouter->getParam('pk');
+            // sería buena idea (compatible con multiItems: true)
+            // $aIds = array($id);
+          }
 
-               $id = $this->_mainRouter->getParam('pk');
-               // sería buena idea (compatible con multiItems: true)
-               // $aIds = array($id);
+          $msg = _("Estas seguro de ejecutar esta ación")
 
-           }
-           
-    
+          $msg .= 'Nombre: <intput type="text" name="nombre" /><br >'; // Si el dialogo tiene recall = true, se enviará este valor como parámetro
+
+          // Subiendo Ficheros
+          $msg .= 'Fichero: <intput type="file" name="miFichero"  data-upload-command="ComandoConcreto"/><br >';
+          // Si ponemos un input:file, vinculado a un data-command-upload, se sustituirá por el control de subida (qq)
+          // el comando (en este caso "ComandoCocnreto", deberá estar definido en el fichero de definición de pantalla como free-upload
+          //   commands:
+          //     ComandoConcreto:
+          //       controller: File
+          //       action: free-upload
+
+
            //Por ultimo generamos las opciones del Custom Dialog
            //y las acciones de cada opción
-    
+
            $data = array(
              'title' => _("Mi Accion"),
-                       'message'=>_("Estas seguro de ejecutar esta ación"),
+                       'message'=>$msg,
                        'buttons'=>array(
                                   // Este botón volverá a llamar el dialog enviando un parámetro y será reconocido por la línea 26
                                   _('Aceptar') => array(
                                           'recall'=>true,
                                           'params'=>array(
-                                                  "Parametro de verificación" => true 
-                                      ) 
+                                                  "Parametro de verificación" => true
+                                      )
                                     ),
                                   _('Cancelar') => array(
                                                 'recall' => false,
                                                 )
                                          )
                 );
-    
+
            //Inicia los plugins de KlearMatrix
            $jsonResponse = new Klear_Model_DispatchResponse();
            $jsonResponse->setModule('klearMatrix');
            $jsonResponse->setPlugin('klearMatrixGenericDialog');
            $jsonResponse->addJsFile("/js/plugins/jquery.klearmatrix.genericdialog.js");
+
+           // Si queremos utilizar el usbidor de ficheros, no debemos olvidarnos de añadir el plugin!!!
+           $jsonResponse->addJsFile("/js/plugins/qq-fileuploader.js");
+
            $jsonResponse->setData($data);
            $jsonResponse->attachView($this->view);
        }
    }
-   
+
 El resto ya está a la imaginación del programador de lo que quiere crear o lograr con este sistema.
 
 .. [#controller] Clases ya definidas en el módulo del Klear para que cumplan una función determinada.
-.. [#zendFramework] En Zend Framework, el controller es una clase que tiene que ser llamada {Controller name}Controller. 
-   Tengan en cuenta que {Controller name} debe comenzar con la primer letra en mayúscula. 
-   Esta clase debe estar dentro de un archvo llamado {Controller name}Controller.php dentro de la carpeta application/controllers. 
-   Cada acción es una función pública dentro de la clase del controlador que debe llamarse {action name}Action. 
-   En este caso {action name} tiene que ser escrito en letra en minúscula. 
+.. [#zendFramework] En Zend Framework, el controller es una clase que tiene que ser llamada {Controller name}Controller.
+   Tengan en cuenta que {Controller name} debe comenzar con la primer letra en mayúscula.
+   Esta clase debe estar dentro de un archvo llamado {Controller name}Controller.php dentro de la carpeta application/controllers.
+   Cada acción es una función pública dentro de la clase del controlador que debe llamarse {action name}Action.
+   En este caso {action name} tiene que ser escrito en letra en minúscula.
    Los nombres con mayúsculas y minúsculas son permitidas en los controladores y las acciones, pero tiene algunas reglas especiales que tienes que comprender antes de que las utilices.

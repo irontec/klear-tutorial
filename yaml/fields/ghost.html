@@ -211,7 +211,7 @@
   <div class="section" id="ghost">
 <h1>ghost<a class="headerlink" href="#ghost" title="Enlazar permanentemente con este título">¶</a></h1>
 <ul class="simple">
-<li><a class="reference internal" href="index.html#tipos-de-campos"><em>Volver a Tipos de Campos</em></a></li>
+<li><a class="reference internal" href="index.html#tipos-de-campos"><span>Volver a Tipos de Campos</span></a></li>
 </ul>
 <p>Los campos del tipo <strong>ghost</strong> son válidos, para mostrar algo más que el simple
 dato que ofrece el campo. Se pueden concatenar diversos campos, o diréctamente
@@ -259,7 +259,7 @@ definir el <strong>HTML</strong> que se verá en el lugar del campo.</p>
 </li>
 <li><p class="first">Para ordenar por un campo de una tabla relacionada, tendremos que calcular el orden deseado
 y devolver los valores del campo de la tabla principal de la siguiente manera:</p>
-<div class="highlight-guess"><div class="highlight"><pre><span class="k">return</span> <span class="s">&quot;FIELD(campo,&quot;</span><span class="p">.</span><span class="n">implode</span><span class="p">(</span><span class="sc">&#39;,&#39;</span><span class="p">,</span><span class="n">valoresOrdenados</span><span class="p">).</span><span class="s">&quot;)&quot;</span><span class="p">;</span>
+<div class="highlight-guess"><div class="highlight"><pre>return &quot;FIELD(campo,&quot;.implode(&#39;,&#39;,valoresOrdenados).&quot;)&quot;;
 </pre></div>
 </div>
 </li>

@@ -256,7 +256,7 @@
          <span class="nx">APPLICATION_ENV</span>
       <span class="p">);</span>
       <span class="nv">$controller</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getControllerName</span><span class="p">();</span>
-      <span class="nv">$method</span> <span class="o">=</span> <span class="nx">strtolower</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getMethod</span><span class="p">());</span>
+      <span class="nv">$method</span> <span class="o">=</span> <span class="nb">strtolower</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getMethod</span><span class="p">());</span>
 
       <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$methodsConfig</span><span class="o">-&gt;</span><span class="nv">$controller</span><span class="p">))</span> <span class="p">{</span>
          <span class="nv">$check</span> <span class="o">=</span> <span class="nv">$methodsConfig</span><span class="o">-&gt;</span><span class="na">defaultPolicy</span><span class="p">;</span>
@@ -270,7 +270,7 @@
          <span class="nv">$auth</span> <span class="o">=</span> <span class="nv">$check</span><span class="o">-&gt;</span><span class="nv">$method</span><span class="o">-&gt;</span><span class="na">authorization</span><span class="p">;</span>
       <span class="p">}</span>
 
-      <span class="k">return</span> <span class="p">(</span><span class="nx">boolval</span><span class="p">(</span><span class="nv">$auth</span><span class="p">));</span>
+      <span class="k">return</span> <span class="p">(</span><span class="nb">boolval</span><span class="p">(</span><span class="nv">$auth</span><span class="p">));</span>
 
    <span class="p">}</span>
 
