@@ -52,6 +52,7 @@ El archivo de configuración de Klear está situado en **application/configs/kle
        cssExtended: 
        actionHelpers: 
        optionCollectionPlacement: both
+       rememberScroll: true
        auth: 
          adapter: Klear_Auth_Adapter_Basic
          title: _("Access denied")
@@ -346,6 +347,25 @@ La configuración puede ser definida como **string** o como **colección**.
      default: 'both'
      list: 'top'
      edit: 'bottom'
+
+rememberScroll
+##############
+
+Permite recordar la posición de las pestañas.
+
+Esto es útil en listados largos en los que al editar uno de los registros
+la página se mueve hacia arriba para facilitar la edición. En estos casos
+al cerrar la pestaña de edición o al volver a la pestaña original del listado
+el listado está al comienzo, teniendo que volver a buscar por que registro
+estábamos antes de editar.
+
+Si se activa esta opción al cerrar la pestaña de edición o al volver a la pestaña del listado,
+el listado se moverá automáticamente a la posición en la que estábamos antes de
+editar.
+
+.. code-block:: yaml
+
+    rememberScroll: true
 
 auth
 ####
