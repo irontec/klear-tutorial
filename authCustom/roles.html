@@ -449,7 +449,7 @@ adapte a su proyecto.</p>
 
     <span class="k">protected</span> <span class="k">function</span> <span class="nf">_checkPassword</span><span class="p">(</span><span class="nv">$clearPass</span><span class="p">,</span> <span class="nv">$hash</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="nv">$hashParts</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$hash</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">),</span> <span class="mi">2</span><span class="p">);</span>
+        <span class="nv">$hashParts</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="nx">trim</span><span class="p">(</span><span class="nv">$hash</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">),</span> <span class="mi">2</span><span class="p">);</span>
 
         <span class="k">switch</span> <span class="p">(</span><span class="nv">$hashParts</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
 
@@ -467,7 +467,7 @@ adapte a su proyecto.</p>
 
             <span class="k">case</span> <span class="s1">&#39;2a&#39;</span><span class="o">:</span> <span class="c1">//blowfish</span>
 
-                <span class="nv">$salt</span> <span class="o">=</span> <span class="nb">substr</span><span class="p">(</span><span class="nv">$hash</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">29</span><span class="p">);</span>
+                <span class="nv">$salt</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$hash</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">29</span><span class="p">);</span>
                 <span class="k">break</span><span class="p">;</span>
         <span class="p">}</span>
 

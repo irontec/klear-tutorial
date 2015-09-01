@@ -259,7 +259,7 @@ la cual necesita de un par de parametros en el <strong>application.ini</strong> 
 
  <span class="k">protected</span> <span class="k">function</span> <span class="nf">_salt</span><span class="p">()</span>
  <span class="p">{</span>
-     <span class="nv">$ret</span> <span class="o">=</span> <span class="nb">substr</span><span class="p">(</span><span class="nb">md5</span><span class="p">(</span><span class="nb">mt_rand</span><span class="p">(),</span> <span class="k">false</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+     <span class="nv">$ret</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nb">md5</span><span class="p">(</span><span class="nx">mt_rand</span><span class="p">(),</span> <span class="k">false</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
 
      <span class="k">return</span> <span class="nv">$ret</span><span class="p">;</span>
  <span class="p">}</span>

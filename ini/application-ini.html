@@ -218,7 +218,7 @@ instalados en el sistema.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
-<p class="last">Si queremos configurar la aplication.ini. Tenemos un ejemplo bastante útil en la sección <a class="reference internal" href="../createProject/klear.html#klear"><span>Creación del Proyecto</span></a>.</p>
+<p class="last">Si queremos configurar la aplication.ini. Tenemos un ejemplo bastante útil en la sección <a class="reference internal" href="../createProject/klear.html#klear"><em>Creación del Proyecto</em></a>.</p>
 </div>
 <div class="section" id="codigos-exclusivos-solo-para-klear">
 <h2>Códigos exclusivos solo para Klear<a class="headerlink" href="#codigos-exclusivos-solo-para-klear" title="Enlazar permanentemente con este título">¶</a></h2>
@@ -232,6 +232,11 @@ instalados en el sistema.</p>
 </li>
 <li><a class="reference internal" href="#plugin-kleardress" id="id5">Plugin Kleardress</a></li>
 <li><a class="reference internal" href="#translator-zona-publica" id="id6">Translator Zona Pública</a></li>
+<li><a class="reference internal" href="#logs" id="id7">Logs</a><ul>
+<li><a class="reference internal" href="#prioridad" id="id8">Prioridad</a></li>
+<li><a class="reference internal" href="#expresion-regular" id="id9">Expresión regular</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="klear-cache">
@@ -300,6 +305,169 @@ significaría <strong>no hacer uso de la zona pública del proyecto</strong>.</p
 
 <span class="na">defaultLanguageZendRegistryKey</span> <span class="o">=</span> <span class="s">&#39;defaultLang&#39;</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="logs">
+<h3><a class="toc-backref" href="#id7">Logs</a><a class="headerlink" href="#logs" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Con esto configuramos los logs tanto para klear como para cualquier parte del código de nuestra aplicación.</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="c1">;;;;;;;;;;</span>
+<span class="c1">;; LOGS ;;</span>
+<span class="c1">;;;;;;;;;;</span>
+<span class="c1">;;;;;;;;;;;;;;; Priorities ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="c1">;; EMERG   = 0; // Emergency: system is unusable             ;;</span>
+<span class="c1">;; ALERT   = 1; // Alert: action must be taken immediately   ;;</span>
+<span class="c1">;; CRIT   = 2; // Critical: critical conditions              ;;</span>
+<span class="c1">;; ERR    = 3; // Error: error conditions                    ;;</span>
+<span class="c1">;; WARN   = 4; // Warning: warning conditions                ;;</span>
+<span class="c1">;; NOTICE = 5; // Notice: normal but significant condition   ;;</span>
+<span class="c1">;; INFO   = 6; // Informational: informational messages      ;;</span>
+<span class="c1">;; DEBUG  = 7; // Debug: debug messages                      ;;</span>
+<span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="c1">;;;;;;;;;;;;;;; Available filters ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="c1">;;</span>
+<span class="c1">;;</span>
+<span class="c1">;; Zend_Log_Filter_Message</span>
+<span class="c1">;;</span>
+<span class="c1">;; resources.log.&lt;LOGGER&gt;.filterName = &#39;Message&#39;</span>
+<span class="c1">;;</span>
+<span class="c1">;; resources.log.&lt;LOGGER&gt;.filterParams.regexp = &lt;REGEX&gt;</span>
+<span class="c1">;;</span>
+<span class="c1">;;</span>
+<span class="c1">;;</span>
+<span class="c1">;; Zend_Log_Filter_Priority</span>
+<span class="c1">;;</span>
+<span class="c1">;; resources.log.&lt;LOGGER&gt;.filterName = &#39;Priority&#39;</span>
+<span class="c1">;;</span>
+<span class="c1">;; resources.log.&lt;LOGGER&gt;.filterParams.priority = &lt;PRIORITY&gt; ;;</span>
+<span class="c1">;; resources.log.&lt;LOGGER&gt;.filterParams.operator = &quot;&lt;=&quot;</span>
+<span class="c1">;;</span>
+<span class="c1">;;</span>
+<span class="c1">;;</span>
+<span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="na">resources.log.timestampFormat</span> <span class="o">=</span> <span class="s">&quot;Y-m-d H:s:i&quot;</span>
+<span class="c1">;;;;;;;;;;;;;;;;;;;;;; MAIL ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="na">resources.log.mail.writerName</span> <span class="o">=</span> <span class="s">&quot;Mail&quot;</span>
+<span class="na">resources.log.mail.writerParams.mail</span> <span class="o">=</span> <span class="s">&quot;Zend_Mail&quot;</span>
+<span class="na">Resources.log.mail.writerParams.charset</span> <span class="o">=</span> <span class="s">&#39;utf-8&#39;</span>
+<span class="na">resources.log.mail.writerParams.subject</span> <span class="o">=</span> <span class="s">&#39;miApp log&#39;</span>
+<span class="na">resources.log.mail.writerParams.from</span> <span class="o">=</span> <span class="s">&quot;no-reply@irontec.com&quot;</span>
+<span class="na">resources.log.mail.writerParams.to[]</span> <span class="o">=</span> <span class="s">&#39;mail-destino@irontec.com&#39;</span>
+<span class="na">resources.log.mail.filterName</span> <span class="o">=</span> <span class="s">&quot;Priority&quot;</span>
+<span class="na">resources.log.mail.filterParams.priority</span> <span class="o">=</span> <span class="s">2</span>
+<span class="na">resources.log.mail.filterParams.operator</span> <span class="o">=</span> <span class="s">&quot;&lt;=&quot;</span>
+<span class="na">resources.log.mail.formatterName</span> <span class="o">=</span> <span class="s">&quot;Simple&quot;</span>
+<span class="na">resources.log.mail.formatterParams.format</span> <span class="o">=</span> <span class="s">&#39;%timestamp% %priorityName% (%priority%) [Mail 1]: %message%&#39;</span>
+<span class="na">resources.log.mail2.writerName</span> <span class="o">=</span> <span class="s">&quot;Mail&quot;</span>
+<span class="na">resources.log.mail2.writerParams.mail</span> <span class="o">=</span> <span class="s">&quot;Zend_Mail&quot;</span>
+<span class="na">resources.log.mail2.writerParams.charset</span> <span class="o">=</span> <span class="s">&#39;utf-8&#39;</span>
+<span class="na">resources.log.mail2.writerParams.subject</span> <span class="o">=</span> <span class="s">&#39;appName log&#39;</span>
+<span class="na">resources.log.mail2.writerParams.from</span> <span class="o">=</span> <span class="s">&quot;no-reply@origen.com&quot;</span>
+<span class="na">resources.log.mail2.writerParams.to[]</span> <span class="o">=</span> <span class="s">&#39;destino@destino.com&#39;</span>
+<span class="na">resources.log.mail2.filterName</span> <span class="o">=</span> <span class="s">&#39;Message&#39;</span>
+<span class="na">resources.log.mail2.filterParams.regexp</span> <span class="o">=</span> <span class="s">&#39;#^\[Texto\]#&#39;</span>
+<span class="na">resources.log.mail2.formatterName</span> <span class="o">=</span> <span class="s">&quot;Simple&quot;</span>
+<span class="na">resources.log.mail2.formatterParams.format</span> <span class="o">=</span> <span class="s">&#39;%timestamp% %priorityName% (%priority%) [Mail 2]: %message%&#39;</span>
+<span class="c1">;;;;;;;;; SYSLOG ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="na">resources.log.syslog.writerName</span> <span class="o">=</span> <span class="s">&quot;Syslog&quot;</span>
+<span class="na">resources.log.syslog.writerParams.application</span> <span class="o">=</span> <span class="s">&quot;appName&quot;</span>
+<span class="na">resources.log.syslog.writerParams.facility</span> <span class="o">=</span> <span class="s">LOG_SYSLOG</span>
+<span class="na">resources.log.syslog.filterName</span> <span class="o">=</span> <span class="s">&quot;Priority&quot;</span>
+<span class="na">resources.log.syslog.filterParams.priority</span> <span class="o">=</span> <span class="s">6</span>
+<span class="na">resources.log.syslog.filterParams.operator</span> <span class="o">=</span> <span class="s">&quot;&lt;=&quot;</span>
+<span class="na">resources.log.syslog.formatterName</span> <span class="o">=</span> <span class="s">&quot;Simple&quot;</span>
+<span class="na">resources.log.syslog.formatterParams.format</span> <span class="o">=</span> <span class="s">&#39;%timestamp% %priorityName% (%priority%): %message%&#39;</span>
+<span class="c1">;;;;;;;;;;;;; FIREBUG ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="na">resources.log.firebug.writerName</span> <span class="o">=</span> <span class="s">&quot;Firebug&quot;</span>
+<span class="na">resources.log.firebug.filterName</span> <span class="o">=</span> <span class="s">&quot;Priority&quot;</span>
+<span class="na">resources.log.firebug.filterParams.priority</span> <span class="o">=</span> <span class="s">7</span>
+<span class="na">resources.log.firebug.filterParams.operator</span> <span class="o">=</span> <span class="s">&quot;&lt;=&quot;</span>
+<span class="na">resources.log.firebug.formatterName</span> <span class="o">=</span> <span class="s">&quot;Simple&quot;</span>
+<span class="na">resources.log.firebug.formatterParams.format</span> <span class="o">=</span> <span class="s">&#39;%timestamp% %priorityName% (%priority%): %message%&#39;</span>
+<span class="c1">;;;;;;;;;;;;; Zend_Log_Writer_Stream ;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="na">resources.log.stream.writerName</span> <span class="o">=</span> <span class="s">&quot;Stream&quot;</span>
+<span class="na">resources.log.stream.writerParams.stream</span> <span class="o">=</span> <span class="s">APPLICATION_PATH &quot;/logs/appNamelog.log&quot;</span>
+<span class="na">resources.log.stream.writerParams.mode</span> <span class="o">=</span> <span class="s">&quot;a&quot;</span>
+<span class="na">resources.log.stream.formatterName</span> <span class="o">=</span> <span class="s">&quot;Simple&quot;</span>
+<span class="na">resources.log.stream.formatterParams.format</span> <span class="o">=</span> <span class="s">&#39;%timestamp% %priorityName% (%priority%) FILE: %message%&#39; PHP_EOL</span>
+<span class="c1">;;;;;;;;;; Zend_Log_Writer_Null ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="na">resources.log.null.writerName</span> <span class="o">=</span> <span class="s">&quot;Null&quot;</span>
+</pre></div>
+</div>
+<p>De esta manera podemos añadir todos los writters que queramos, aunque sean del mismo tipo, siempre que le demos un nombre único ( <strong>resources.log.writter1</strong>... <strong>resources.log.writter2</strong>... ) Hay que tener en cuenta que cada writter tiene sus propios parámetros.
+La configuración <strong>timestampFormat = &#8220;Y-m-d H:s:i&#8221;</strong> es común a todos los writters.</p>
+<p>Klear está preparado para utilizar esta configuración por lo que si sólo queremos usar logs por defecto de Klear con esto sería suficiente.</p>
+<p>Para hacer logs en cualquier otra parte del código hay que hacer lo siguiente:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="x">$bootstrap = \Zend_Controller_Front::getInstance()-&gt;getParam(&#39;bootstrap&#39;);</span>
+<span class="x">$logger = $bootstrap-&gt;getResource(&#39;log&#39;);</span>
+<span class="x">$logger-&gt;log(&quot;Mensaje&quot;, \Zend_Log::WARN);</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p>Hay que tener en cuenta que <strong>si $logger es nulo</strong> (no se ha especificado ningún writter en el application.ini) <strong>e intentamos hacer:</strong></p>
+<div class="highlight-ini"><div class="highlight"><pre>$logger-&gt;log(&quot;Mensaje&quot;, \Zend_Log::WARN);
+</pre></div>
+</div>
+<p>se lanzará una excepción, por lo que si en algún entorno no queremos loggear hay que añadir la línea:</p>
+<div class="last highlight-php"><div class="highlight"><pre><span class="x">resources.log.null.writerName = &quot;Null&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>Con esto vamos a loggear en todos los writters que lo permitan. Para saber que writters van aloggear nos tenemos que fijar en los filtros ( <strong>resources.log.writter1.filterName</strong>, <strong>resources.log.writter1.filterParams</strong>. ).
+Básicamente hay dos tipos de filtros:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Los que filtran por prioridad.</li>
+<li>Los que filtran por expresión regular en el mensaje.</li>
+</ul>
+</div></blockquote>
+<div class="section" id="prioridad">
+<h4><a class="toc-backref" href="#id8">Prioridad</a><a class="headerlink" href="#prioridad" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">resources.log.writter1.filterName</span> <span class="o">=</span> <span class="s">&#39;Priority&#39;</span>
+<span class="na">resources.log.writter1.filterParams.priority</span> <span class="o">=</span> <span class="s">4</span>
+<span class="na">resources.log.writter1.filterParams.operator</span> <span class="o">=</span> <span class="s">&quot;&lt;=&quot;</span>
+</pre></div>
+</div>
+<p>Con el parámetro <strong>priority</strong> especificamos la prioridad, es decir, el código de error que le pasamos cuando hacemos <strong>$logger-&gt;log(&#8220;Mensaje&#8221;, Zend_Log:: WARN);</strong>. En este caso el 4 se corresponde con un warning.</p>
+<p>Con el parámetro <strong>operator</strong> le indicamos la condición. En este caso que sea menor o igual a 4. Si no se indica el operator por defecto se usa el &#8216; &lt;= &#8216;. Es decir, el writter1 solamente va a loggear los mensajes cuyo código de error sea menor o igual que 4.</p>
+<p>Por ejemplo, en el caso en el que queremos que se guarde el log en una carpeta concreta, pero queremos que cada tipo de log esté en un archivo distinto (<strong>miapp.error.log</strong>, <strong>miapp.warning.log</strong>, <strong>miapp.info.log</strong>...) se podría usar un writter tipo &#8216;Stream&#8217; distinto por cada tipo de log usando el filtro de prioridad y usando el operador &#8216;==&#8217;.</p>
+<p>Sería algo así:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">resources.log.stream.writerName</span> <span class="o">=</span> <span class="s">&quot;Stream&quot;</span>
+<span class="na">resources.log.stream.writerParams.stream</span> <span class="o">=</span> <span class="s">APPLICATION_PATH &quot;/logs/miapp.error.log&quot;</span>
+<span class="na">resources.log.stream.writerParams.mode</span> <span class="o">=</span> <span class="s">&quot;a&quot;</span>
+<span class="na">resources.log.stream.filterName</span> <span class="o">=</span> <span class="s">&quot;Priority&quot;</span>
+<span class="na">resources.log.stream.filterParams.priority</span> <span class="o">=</span> <span class="s">3</span>
+<span class="na">resources.log.stream.filterParams.operator</span> <span class="o">=</span> <span class="s">&quot;&lt;=&quot;</span>
+<span class="na">resources.log.stream.formatterName</span> <span class="o">=</span> <span class="s">&quot;Simple&quot;</span>
+<span class="na">resources.log.stream.formatterParams.format</span> <span class="o">=</span> <span class="s">&#39;%timestamp% %priorityName% (%priority%): %message%&#39; PHP_EOL</span>
+<span class="na">resources.log.stream1.writerName</span> <span class="o">=</span> <span class="s">&quot;Stream&quot;</span>
+<span class="na">resources.log.stream1.writerParams.stream</span> <span class="o">=</span> <span class="s">APPLICATION_PATH &quot;/logs/miapp.warning.log&quot;</span>
+<span class="na">resources.log.stream1.writerParams.mode</span> <span class="o">=</span> <span class="s">&quot;a&quot;</span>
+<span class="na">resources.log.stream1.filterName</span> <span class="o">=</span> <span class="s">&quot;Priority&quot;</span>
+<span class="na">resources.log.stream1.filterParams.priority</span> <span class="o">=</span> <span class="s">4</span>
+<span class="na">resources.log.stream1.filterParams.operator</span> <span class="o">=</span> <span class="s">&quot;==&quot;</span>
+<span class="na">resources.log.stream1.formatterName</span> <span class="o">=</span> <span class="s">&quot;Simple&quot;</span>
+<span class="na">resources.log.stream1.formatterParams.format</span> <span class="o">=</span> <span class="s">&#39;%timestamp% %priorityName% (%priority%): %message%&#39; PHP_EOL</span>
+<span class="na">resources.log.stream2.writerName</span> <span class="o">=</span> <span class="s">&quot;Stream&quot;</span>
+<span class="na">resources.log.stream.writerParams.stream</span> <span class="o">=</span> <span class="s">APPLICATION_PATH &quot;/logs/miapp.info.log&quot;</span>
+<span class="na">resources.log.stream2.writerParams.mode</span> <span class="o">=</span> <span class="s">&quot;a&quot;</span>
+<span class="na">resources.log.stream2.filterName</span> <span class="o">=</span> <span class="s">&quot;Priority&quot;</span>
+<span class="na">resources.log.stream2.filterParams.priority</span> <span class="o">=</span> <span class="s">5</span>
+<span class="na">resources.log.stream2.filterParams.operator</span> <span class="o">=</span> <span class="s">&quot;&gt;=&quot;</span>
+<span class="na">resources.log.stream2.formatterName</span> <span class="o">=</span> <span class="s">&quot;Simple&quot;</span>
+<span class="na">resources.log.stream2.formatterParams.format</span> <span class="o">=</span> <span class="s">&#39;%timestamp% %priorityName% (%priority%): %message%&#39; PHP_EOL</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="expresion-regular">
+<h4><a class="toc-backref" href="#id9">Expresión regular</a><a class="headerlink" href="#expresion-regular" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">resources.log.writter2.filterName</span> <span class="o">=</span> <span class="s">&#39;Message&#39;</span>
+<span class="na">resources.log.writter2.filterParams.regexp</span> <span class="o">=</span> <span class="s">&#39;#^\[Texto\]#&#39;</span>
+</pre></div>
+</div>
+<p>Este filtro solo tiene un parámetro, <strong>regexp</strong>, que es en el que le indicamos la expresión regular a matchear contra el mensaje del log. Para que el writter loggee se tiene que cumplir la expresión regular, que en este caso loggeará todos los mensajes que empiecen por “[Texto]”. De esta manera podemos tener dos writters del mismo tipo que matcheen diferentes expresiones regulares.</p>
+<p>Por ejemplo, queremos que los logs se mande por e-mail, pero en función de la parte del código en el que estemos queremos que se manden a una dirección u otra.
+Para esto hacemos dos writters con un to distinto para cada uno y con una expresión regular distinta para cada uno. Así en función del mensaje del log se usará un writter u otro y por tanto se mandará a un e-mail o a otro.</p>
 </div>
 </div>
 </div>

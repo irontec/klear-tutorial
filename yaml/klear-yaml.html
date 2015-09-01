@@ -256,6 +256,7 @@ El archivo de configuración de Klear está situado en <strong>application/confi
     <span class="l-Scalar-Plain">cssExtended</span><span class="p-Indicator">:</span>
     <span class="l-Scalar-Plain">actionHelpers</span><span class="p-Indicator">:</span>
     <span class="l-Scalar-Plain">optionCollectionPlacement</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">both</span>
+    <span class="l-Scalar-Plain">rememberScroll</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
     <span class="l-Scalar-Plain">auth</span><span class="p-Indicator">:</span>
       <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Klear_Auth_Adapter_Basic</span>
       <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Access denied&quot;)</span>
@@ -306,25 +307,26 @@ El archivo de configuración de Klear está situado en <strong>application/confi
 </li>
 <li><a class="reference internal" href="#raw" id="id16">raw</a></li>
 <li><a class="reference internal" href="#optioncollectionplacement" id="id17">optionCollectionPlacement</a></li>
-<li><a class="reference internal" href="#auth" id="id18">auth</a></li>
-<li><a class="reference internal" href="#disableminifier" id="id19">disableMinifier</a></li>
-<li><a class="reference internal" href="#disableassetscache" id="id20">disableAssetsCache</a></li>
-<li><a class="reference internal" href="#defaultcustomconfiguration" id="id21">defaultCustomConfiguration</a></li>
-<li><a class="reference internal" href="#timezone" id="id22">timezone</a></li>
+<li><a class="reference internal" href="#rememberscroll" id="id18">rememberScroll</a></li>
+<li><a class="reference internal" href="#auth" id="id19">auth</a></li>
+<li><a class="reference internal" href="#disableminifier" id="id20">disableMinifier</a></li>
+<li><a class="reference internal" href="#disableassetscache" id="id21">disableAssetsCache</a></li>
+<li><a class="reference internal" href="#defaultcustomconfiguration" id="id22">defaultCustomConfiguration</a></li>
+<li><a class="reference internal" href="#timezone" id="id23">timezone</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#menu" id="id23">menu</a><ul>
-<li><a class="reference internal" href="#general" id="id24">General</a><ul>
-<li><a class="reference internal" href="#title" id="id25">title</a></li>
-<li><a class="reference internal" href="#description" id="id26">description</a></li>
-<li><a class="reference internal" href="#showonlyif" id="id27">showOnlyIf</a></li>
-<li><a class="reference internal" href="#meta" id="id28">meta</a></li>
-<li><a class="reference internal" href="#submenus" id="id29">submenus</a></li>
+<li><a class="reference internal" href="#menu" id="id24">menu</a><ul>
+<li><a class="reference internal" href="#general" id="id25">General</a><ul>
+<li><a class="reference internal" href="#title" id="id26">title</a></li>
+<li><a class="reference internal" href="#description" id="id27">description</a></li>
+<li><a class="reference internal" href="#showonlyif" id="id28">showOnlyIf</a></li>
+<li><a class="reference internal" href="#meta" id="id29">meta</a></li>
+<li><a class="reference internal" href="#submenus" id="id30">submenus</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#footermenu" id="id30">footerMenu</a></li>
+<li><a class="reference internal" href="#footermenu" id="id31">footerMenu</a></li>
 </ul>
 </div>
 <div class="section" id="main">
@@ -564,8 +566,23 @@ ubicaremos nuestro estilo; por ejemplo, yo crearía la carpeta <strong>&#8220;cs
 </pre></div>
 </div>
 </div>
+<div class="section" id="rememberscroll">
+<h3><a class="toc-backref" href="#id18">rememberScroll</a><a class="headerlink" href="#rememberscroll" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Permite recordar la posición de las pestañas.</p>
+<p>Esto es útil en listados largos en los que al editar uno de los registros
+la página se mueve hacia arriba para facilitar la edición. En estos casos
+al cerrar la pestaña de edición o al volver a la pestaña original del listado
+el listado está al comienzo, teniendo que volver a buscar por que registro
+estábamos antes de editar.</p>
+<p>Si se activa esta opción al cerrar la pestaña de edición o al volver a la pestaña del listado,
+el listado se moverá automáticamente a la posición en la que estábamos antes de
+editar.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">rememberScroll</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="auth">
-<h3><a class="toc-backref" href="#id18">auth</a><a class="headerlink" href="#auth" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">auth</a><a class="headerlink" href="#auth" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Configuración del adaptador de autenticación.</p>
 <div class="admonition attention">
 <p class="first admonition-title">Atención</p>
@@ -620,21 +637,21 @@ el que utilicemos implemente <strong>Klear_Auth_Adapter_KlearAuthInterface</stro
 </div>
 </div>
 <div class="section" id="disableminifier">
-<h3><a class="toc-backref" href="#id19">disableMinifier</a><a class="headerlink" href="#disableminifier" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id20">disableMinifier</a><a class="headerlink" href="#disableminifier" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Para activar o desactivar los minificadores dinámicos. Útil en entornos de desarrollo.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">disableMinifier</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="disableassetscache">
-<h3><a class="toc-backref" href="#id20">disableAssetsCache</a><a class="headerlink" href="#disableassetscache" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">disableAssetsCache</a><a class="headerlink" href="#disableassetscache" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Para activar o desactivar la cache de <strong>css</strong> y <strong>js</strong>. Útil para entornos de desarrollo.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">disableAssetsCache</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="defaultcustomconfiguration">
-<h3><a class="toc-backref" href="#id21">defaultCustomConfiguration</a><a class="headerlink" href="#defaultcustomconfiguration" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">defaultCustomConfiguration</a><a class="headerlink" href="#defaultcustomconfiguration" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Posibilita la configuración de propiedades fácilmente accesibles desde cualquier parte de la aplicación.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">defaultCustomConfiguration</span><span class="p-Indicator">:</span>
      <span class="l-Scalar-Plain">optionCollectionPlacement</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">both</span>
@@ -645,15 +662,15 @@ el que utilicemos implemente <strong>Klear_Auth_Adapter_KlearAuthInterface</stro
 </pre></div>
 </div>
 <p>Después en el código:</p>
-<div class="highlight-guess"><div class="highlight"><pre><span class="o">$</span><span class="nt">bootstrap</span> <span class="o">=</span> <span class="nt">Zend_Controller_Front</span><span class="o">:</span><span class="nd">:getInstance</span><span class="o">()</span><span class="nt">-</span><span class="o">&gt;</span><span class="nt">getParam</span><span class="o">(</span><span class="s1">&#39;bootstrap&#39;</span><span class="o">);</span>
-<span class="o">$</span><span class="nt">siteConfig</span> <span class="o">=</span> <span class="o">$</span><span class="nt">bootstrap-</span><span class="o">&gt;</span><span class="nt">getResource</span><span class="o">(</span><span class="s1">&#39;modules&#39;</span><span class="o">)</span><span class="nt">-</span><span class="o">&gt;</span><span class="nt">offsetGet</span><span class="o">(</span><span class="s1">&#39;klear&#39;</span><span class="o">)</span><span class="nt">-</span><span class="o">&gt;</span><span class="nt">getOption</span><span class="o">(</span><span class="s1">&#39;siteConfig&#39;</span><span class="o">);</span>
+<div class="highlight-guess"><div class="highlight"><pre><span class="err">$</span><span class="n">bootstrap</span> <span class="o">=</span> <span class="n">Zend_Controller_Front</span><span class="o">::</span><span class="n">getInstance</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getParam</span><span class="p">(</span><span class="err">&#39;</span><span class="n">bootstrap</span><span class="err">&#39;</span><span class="p">);</span>
+<span class="err">$</span><span class="n">siteConfig</span> <span class="o">=</span> <span class="err">$</span><span class="n">bootstrap</span><span class="o">-&gt;</span><span class="n">getResource</span><span class="p">(</span><span class="err">&#39;</span><span class="n">modules</span><span class="err">&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">offsetGet</span><span class="p">(</span><span class="err">&#39;</span><span class="n">klear</span><span class="err">&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">getOption</span><span class="p">(</span><span class="err">&#39;</span><span class="n">siteConfig</span><span class="err">&#39;</span><span class="p">);</span>
 
-<span class="o">$</span><span class="nt">property</span> <span class="o">=</span> <span class="o">$</span><span class="nt">siteConfig-</span><span class="o">&gt;</span><span class="nt">getDefaultCustomConfiguration</span><span class="o">(</span><span class="s1">&#39;optionCollectionPlacement&#39;</span><span class="o">);</span>
+<span class="err">$</span><span class="n">property</span> <span class="o">=</span> <span class="err">$</span><span class="n">siteConfig</span><span class="o">-&gt;</span><span class="n">getDefaultCustomConfiguration</span><span class="p">(</span><span class="err">&#39;</span><span class="n">optionCollectionPlacement</span><span class="err">&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="timezone">
-<h3><a class="toc-backref" href="#id22">timezone</a><a class="headerlink" href="#timezone" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">timezone</a><a class="headerlink" href="#timezone" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>La base de datos, por defecto cuenta con la zona horaria UTC 0, pero para mostrar la fecha y hora, según a nuestra zona horaria, hay que
 modificar este apartado.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">timezone</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Europe/Madrid</span>
@@ -662,9 +679,9 @@ modificar este apartado.</p>
 </div>
 </div>
 <div class="section" id="menu">
-<h2><a class="toc-backref" href="#id23">menu</a><a class="headerlink" href="#menu" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id24">menu</a><a class="headerlink" href="#menu" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="general">
-<h3><a class="toc-backref" href="#id24">General</a><a class="headerlink" href="#general" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id25">General</a><a class="headerlink" href="#general" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>El klear por defecto lista todas las tablas con el tag <strong>[entity]</strong>, pero si llega a generarse por segunda vez los yaml, las nuevas tablas
 no se verán listadas en el <strong>klear/klear.yaml</strong> sino en <strong>klearRaw/klear.yaml</strong>.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">menu</span><span class="p-Indicator">:</span>
@@ -684,31 +701,31 @@ no se verán listadas en el <strong>klear/klear.yaml</strong> sino en <strong>kl
 </div>
 <p>Sus opciones correspondientes son las siguientes:</p>
 <div class="section" id="title">
-<h4><a class="toc-backref" href="#id25">title</a><a class="headerlink" href="#title" title="Enlazar permanentemente con este título">¶</a></h4>
+<h4><a class="toc-backref" href="#id26">title</a><a class="headerlink" href="#title" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Título de la sección</p>
 </div>
 <div class="section" id="description">
-<h4><a class="toc-backref" href="#id26">description</a><a class="headerlink" href="#description" title="Enlazar permanentemente con este título">¶</a></h4>
+<h4><a class="toc-backref" href="#id27">description</a><a class="headerlink" href="#description" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Descripción de la sección</p>
 </div>
 <div class="section" id="showonlyif">
-<h4><a class="toc-backref" href="#id27">showOnlyIf</a><a class="headerlink" href="#showonlyif" title="Enlazar permanentemente con este título">¶</a></h4>
+<h4><a class="toc-backref" href="#id28">showOnlyIf</a><a class="headerlink" href="#showonlyif" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Valor booleano que deterinará si la sección/subsección se muestra o no
 (A combinar con ${auth.*} para un disfrute máximo.</p>
 </div>
 <div class="section" id="meta">
-<h4><a class="toc-backref" href="#id28">meta</a><a class="headerlink" href="#meta" title="Enlazar permanentemente con este título">¶</a></h4>
+<h4><a class="toc-backref" href="#id29">meta</a><a class="headerlink" href="#meta" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>LLevará hasta el marcado &#8220;data-meta&#8221;, un literal concreto.
 (a combinar con un script custom)</p>
 </div>
 <div class="section" id="submenus">
-<h4><a class="toc-backref" href="#id29">submenus</a><a class="headerlink" href="#submenus" title="Enlazar permanentemente con este título">¶</a></h4>
+<h4><a class="toc-backref" href="#id30">submenus</a><a class="headerlink" href="#submenus" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Aquí listaremos todos los list que necesitamos para hacer nuestra interfaz (opciones <strong>title</strong> y <strong>description</strong>).</p>
 </div>
 </div>
 </div>
 <div class="section" id="footermenu">
-<h2><a class="toc-backref" href="#id30">footerMenu</a><a class="headerlink" href="#footermenu" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id31">footerMenu</a><a class="headerlink" href="#footermenu" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Este menu esta en la parte inferior centrada de la pantalla. Solo lista el icono y el título de la sección.
 El primer tab de configuración es el nombre del menu, el siguiente es el del &#8220;title&#8221; y el &#8220;submenus&#8221; en el cual se configura las vistas que se listaran.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">footerMenu</span><span class="p-Indicator">:</span>

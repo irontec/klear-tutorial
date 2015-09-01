@@ -217,6 +217,7 @@
 <li class="toctree-l3"><a class="reference internal" href="application-ini.html#klear-cache">Klear Cache</a></li>
 <li class="toctree-l3"><a class="reference internal" href="application-ini.html#plugin-kleardress">Plugin Kleardress</a></li>
 <li class="toctree-l3"><a class="reference internal" href="application-ini.html#translator-zona-publica">Translator Zona Pública</a></li>
+<li class="toctree-l3"><a class="reference internal" href="application-ini.html#logs">Logs</a></li>
 </ul>
 </li>
 </ul>
@@ -235,13 +236,13 @@
 </div>
 <div class="admonition attention">
 <p class="first admonition-title">Atención</p>
-<p>Recordar que para tener acceso o identificarse en la aplicación, hay que tener creada la <a class="reference internal" href="../createProject/sqlsklear.html#tablaklearusers"><span>Tabla KlearUsers</span></a>. Además, la carpeta <strong>cache</strong> que debe
+<p>Recordar que para tener acceso o identificarse en la aplicación, hay que tener creada la <a class="reference internal" href="../createProject/sqlsklear.html#tablaklearusers"><em>Tabla KlearUsers</em></a>. Además, la carpeta <strong>cache</strong> que debe
 estar en la carpeta <strong>application</strong> debe contar con todos los permisos; si se piensa usar la interfaz de Klear para subir archivos, debe estar creada la
-carpeta <strong>storage</strong> al mismo nivel de <strong>application</strong> con todos los permisos como se explica en <a class="reference internal" href="../databases/generator.html#generatordatabasefile"><span>[uuid]</span></a>.</p>
+carpeta <strong>storage</strong> al mismo nivel de <strong>application</strong> con todos los permisos como se explica en <a class="reference internal" href="../databases/generator.html#generatordatabasefile"><em>[uuid]</em></a>.</p>
 <div class="last highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">cd</span> /home/user/workspace/NuevoProyecto/web
 <span class="gp">$</span> mkdir application/cache storage
-<span class="gp">$</span> chmod <span class="m">777</span> application/cache
-<span class="gp">$</span> chmod <span class="m">777</span> storage
+<span class="gp">$</span> chmod 777 application/cache
+<span class="gp">$</span> chmod 777 storage
 </pre></div>
 </div>
 </div>

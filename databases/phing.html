@@ -242,21 +242,21 @@
 <p>Nos permite tener una serie de deltas de la base de datos (en ficheros numerados) que <strong>dbDeploy</strong>
 se encargará de ejecutar en orden. <strong>DbDeploy</strong> guarda la versión de la BBDD (último delta ejecutado)
 en una tabla para saber cuales son los cambios que debe ejecutar.</p>
-<p>Los cambios realizados los va guardando en un fichero dentro del directorio <strong>deploy/scripts/</strong> (definido en el <a class="reference internal" href="../createProject/phing.html#build-xml"><span>build.xml</span></a>)</p>
+<p>Los cambios realizados los va guardando en un fichero dentro del directorio <strong>deploy/scripts/</strong> (definido en el <a class="reference internal" href="../createProject/phing.html#build-xml"><em>build.xml</em></a>)</p>
 <p>Es lo que usan nuestras tareas <strong>&#8220;init&#8221;</strong> y <strong>&#8220;migrate&#8221;</strong></p>
 </div>
 <div class="section" id="estructura-del-directorio">
 <h2>Estructura del directorio<a class="headerlink" href="#estructura-del-directorio" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="highlight-bash"><div class="highlight"><pre>phing
-<span class="p">|</span>-- build.xml
-<span class="p">|</span>-- deltas                                   &lt;- Directorio con ficheros delta
-<span class="p">|</span>   <span class="p">|</span>-- 001-Initial-KlearInterval-Tables.sql
-<span class="p">|</span>   <span class="sb">`</span>-- 002-Add-Body-To-Subsections.sql
-<span class="p">|</span>-- deploy
-<span class="p">|</span>   <span class="sb">`</span>-- scripts
-<span class="p">|</span>       <span class="p">|</span>-- deploy-201303141301.sql
-<span class="p">|</span>       <span class="p">|</span>-- undo-201303121235.sql
-<span class="p">|</span>-- predeploy.sql                            &lt;- SQL con la estructura de la tabla del Changelog
+|-- build.xml
+|-- deltas                                   &lt;- Directorio con ficheros delta
+|   |-- 001-Initial-KlearInterval-Tables.sql
+|   <span class="sb">`</span>-- 002-Add-Body-To-Subsections.sql
+|-- deploy
+|   <span class="sb">`</span>-- scripts
+|       |-- deploy-201303141301.sql
+|       |-- undo-201303121235.sql
+|-- predeploy.sql                            &lt;- SQL con la estructura de la tabla del Changelog
 </pre></div>
 </div>
 </div>
