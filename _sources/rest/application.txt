@@ -5,6 +5,7 @@ En el **application.ini** se definen más parametros de los mencionados en :ref:
 
 .. code-block:: ini
 
+   restConfig.cacheResponses = true # default value
    restConfig.path = APPLICATION_PATH "/modules/rest/"
    restConfig.usersAuthTable = "KlearUsers"
    restConfig.fieldUsername = "login"
@@ -23,6 +24,7 @@ En el **application.ini** se definen más parametros de los mencionados en :ref:
    restLog.log.error.syslog.writerParams.facility = LOG_SYSLOG
 
 
+* **cacheResponses**: Servir el etag de la petición
 * **path**: la ruta del modulo **REST**. **(Aunque no se use el generador este parametro es obligatorio)**.
 * **usersAuthTable**: Nombre de la table de autenticacón
 * **fieldUsername**: Campo de identificacón del usuario
