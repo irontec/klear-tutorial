@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ghost &mdash; documentación de Klear Tutorial - 1.0</title>
+  <title>ghost image &mdash; documentación de Klear Tutorial - 1.0</title>
   
 
   
@@ -48,8 +48,8 @@
   
     <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../../index.html"/>
         <link rel="up" title="Tipos de Campos" href="index.html"/>
-        <link rel="next" title="ghost concat" href="ghostconcat.html"/>
-        <link rel="prev" title="file" href="file.html"/> 
+        <link rel="next" title="html5" href="html5.html"/>
+        <link rel="prev" title="ghost list" href="ghostlist.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -198,150 +198,46 @@
         <div class="rst-content">
           <ul class="wy-breadcrumbs">
   <li><a href="../../index.html">Docs</a> &raquo;</li>
-  <li><a href="">ghost</a></li>
+  <li><a href="">ghost image</a></li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="../../_sources/yaml/fields/ghost.txt" rel="nofollow"> Ver origen</a>
+        <a href="../../_sources/yaml/fields/ghostimage.txt" rel="nofollow"> Ver origen</a>
       
     </li>
 </ul>
 <hr/>
 
           
-  <div class="section" id="ghost">
-<h1>ghost<a class="headerlink" href="#ghost" title="Enlazar permanentemente con este título">¶</a></h1>
+  <div class="section" id="ghost-image">
+<h1>ghost image<a class="headerlink" href="#ghost-image" title="Enlazar permanentemente con este título">¶</a></h1>
 <ul class="simple">
 <li><a class="reference internal" href="index.html#tipos-de-campos"><em>Volver a Tipos de Campos</em></a></li>
 </ul>
-<p>Los campos del tipo <strong>ghost</strong> son válidos, para mostrar algo más que el simple
-dato que ofrece el campo. Se pueden concatenar diversos campos, o diréctamente
-definir el <strong>HTML</strong> que se verá en el lugar del campo.</p>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><a class="reference internal" href="#configuracion" id="id1">Configuración</a></li>
-<li><a class="reference internal" href="#clase-de-ejemplo" id="id2">Clase de ejemplo</a></li>
-</ul>
-</div>
+<p>Los campos del tipo <strong>ghost image</strong> se utilizan para mostrar una imagen desde una URL externa, construida a partir de la configuración del campo y de un campo de la base de datos.</p>
 <div class="section" id="configuracion">
-<h2><a class="toc-backref" href="#id1">Configuración</a><a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
-<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">fieldName</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ghost</span>
-  <span class="l-Scalar-Plain">dirty</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
-  <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Application_klear_Ghost_Item</span>
-    <span class="l-Scalar-Plain">method</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">getData</span>
-    <span class="l-Scalar-Plain">orderMethod</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">getOrderBy</span>
-    <span class="l-Scalar-Plain">searchMethod</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">getSearchConditionsForItem</span>
-    <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">modelId</span>
-    <span class="l-Scalar-Plain">cache</span><span class="p-Indicator">:</span>
-      <span class="l-Scalar-Plain">campo</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
-    <span class="l-Scalar-Plain">conditions</span><span class="p-Indicator">:</span>
-      <span class="l-Scalar-Plain">campo</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">valor</span>
+<h2>Configuración<a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En el model.yaml:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">\SPRI\Model\Users</span>
+  <span class="l-Scalar-Plain">fields</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">gravatar</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&#39;Gravatar&#39;)</span>
+      <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ghost</span>
+      <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">predefined</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">image</span>
+        <span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span> <span class="s">&quot;http://www.gravatar.com/avatar/&quot;</span>
+        <span class="l-Scalar-Plain">idField</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">email</span>
+        <span class="l-Scalar-Plain">md5IdField</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+        <span class="l-Scalar-Plain">params</span><span class="p-Indicator">:</span>
+          <span class="l-Scalar-Plain">s</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">200</span>
 </pre></div>
 </div>
-<ul>
-<li><p class="first"><strong>dirty</strong>: para que interprete el código <strong>HTML</strong> devuelto. Por defecto el <strong>false</strong>.</p>
-</li>
-<li><p class="first"><strong>class</strong>: clase encargada de servir los datos.</p>
-</li>
-<li><dl class="first docutils">
-<dt><strong>method</strong>: método (función) que se encarga de servir el dato que deseamos mostrar.</dt>
-<dd><ul class="first last simple">
-<li>Se recibe el <strong>$model</strong> en la función y se puede devolver tanto texto plano como <strong>html</strong>.</li>
+<ul class="simple">
+<li><strong>url</strong>: URL base a partir de la cual se construye el resto de la URL.</li>
+<li><strong>idField</strong>: Campo que se usa como id. Se pone inmediatamente despues de la URL base.</li>
+<li><strong>md5IdField</strong>: Opcional. Se usa para especificar si se quiere transformar el id mediante md5. Esto es específico para Gravatar ya que este usa el md5 del e-mail. Por defecto es false.</li>
+<li><strong>params</strong>: Opcional. Son los parámetros a pasar a la URL una vez formada. Se pueden poner los que se quiera y se transforman al formato URL (<a class="reference external" href="http://www.gravatar.com/avatar/md5deid?param1=value1&amp;param2=value2">http://www.gravatar.com/avatar/md5deid?param1=value1&amp;param2=value2</a>)</li>
 </ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>orderMethod</strong>: función que se encarga de generar el <strong>Order by</strong>.</dt>
-<dd><ul class="first last">
-<li><p class="first">Se recibe el <strong>$model</strong> en la función.</p>
-</li>
-<li><p class="first">Para ordenar por un campo de una tabla relacionada, tendremos que calcular el orden deseado
-y devolver los valores del campo de la tabla principal de la siguiente manera:</p>
-<div class="highlight-guess"><div class="highlight"><pre><span class="k">return</span> <span class="s">&quot;FIELD(campo,&quot;</span><span class="p">.</span><span class="n">implode</span><span class="p">(</span><span class="sc">&#39;,&#39;</span><span class="p">,</span><span class="n">valoresOrdenados</span><span class="p">).</span><span class="s">&quot;)&quot;</span><span class="p">;</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>searchMethod</strong>: Función que genera el <strong>WHERE</strong> para filtrar los resultados de la búsqueda.</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>Parametros recibidos:</dt>
-<dd><ul class="first last simple">
-<li><strong>$values</strong>: Palabras claves del buscador del klear dentro de un <strong>array</strong>.</li>
-<li><strong>$model</strong>: El modelo vacío del <strong>YAML</strong> que lo origina.</li>
-<li><strong>$searchOps</strong>: Opciones para buscar que se implementará más adelante en <strong>Klear</strong>.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>La función tiene que devolver un código mysql  para buscar; por ejemplo:</dt>
-<dd><ul class="first last simple">
-<li><em>return &#8220;(id = 3 AND name=&#8217;admin&#8217;)&#8221;;</em> si encuentra el registro</li>
-<li><em>return &#8220;false&#8221;;</em> si no se encuentra nada.</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="clase-de-ejemplo">
-<h2><a class="toc-backref" href="#id2">Clase de ejemplo</a><a class="headerlink" href="#clase-de-ejemplo" title="Enlazar permanentemente con este título">¶</a></h2>
-<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
-
-<span class="k">class</span> <span class="nc">Application_Klear_Ghost_Item</span> <span class="k">extends</span> <span class="nx">KlearMatrix_Model_Field_Ghost_Abstract</span>
-<span class="p">{</span>
-
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">getData</span><span class="p">(</span><span class="nv">$model</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="c1"># Tenemos el $model para trabajar</span>
-
-      <span class="c1"># Nuestro código para generar el resultado,</span>
-
-      <span class="c1"># Se puede devolver HTML si se ha definido dirty:true</span>
-      <span class="k">return</span> <span class="nv">$resultado</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">getSearchConditionsForItem</span><span class="p">(</span><span class="nv">$values</span><span class="p">,</span> <span class="nv">$searchOps</span><span class="p">,</span> <span class="nv">$model</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1"># Tenemos un array de valores de búsqueda</span>
-        <span class="c1"># También tenemos el $model</span>
-        <span class="c1"># y las $searchOps</span>
-
-        <span class="c1"># Nuestro código para generar el WHERE que se requiera</span>
-
-        <span class="c1"># Devolvemos el WHERE que hemos generado</span>
-        <span class="k">return</span> <span class="nv">$where</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">getOrderBy</span><span class="p">(</span><span class="nv">$model</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1"># En esta función también se recibe el $model</span>
-
-        <span class="c1"># Devolvemos el valor generado para el ORDER BY</span>
-        <span class="k">return</span> <span class="s2">&quot;FIELD(campo,&quot;</span><span class="o">.</span><span class="nb">implode</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="nx">valoresOrdenados</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;)&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-
-<span class="p">}</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p>Todas las clases que generemos del tipo <strong>Ghost</strong>, deberán implementar
-<strong>KlearMatrix_Model_Field_Ghost_Abstract</strong>.</p>
-<p class="last">Las funciones dentro de la clase no tienen porque llamarse igual, ya que se definen
-en el <strong>model.yaml</strong>.</p>
-</div>
 </div>
 </div>
 
@@ -350,10 +246,10 @@ en el <strong>model.yaml</strong>.</p>
   
     <div class="rst-footer-buttons">
       
-        <a href="ghostconcat.html" class="btn btn-neutral float-right" title="ghost concat"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="html5.html" class="btn btn-neutral float-right" title="html5"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="file.html" class="btn btn-neutral" title="file"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+        <a href="ghostlist.html" class="btn btn-neutral" title="ghost list"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
       
     </div>
   

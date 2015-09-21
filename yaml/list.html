@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -8,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Configuración lists &mdash; Klear Tutorial 1.0 documentation</title>
+  <title>Configuración lists &mdash; documentación de Klear Tutorial - 1.0</title>
   
 
   
@@ -47,7 +46,7 @@
   
 
   
-    <link rel="top" title="Klear Tutorial 1.0 documentation" href="../index.html"/>
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
         <link rel="up" title="Yaml" href="index.html"/>
         <link rel="next" title="Configuración edit/new" href="edit.html"/>
         <link rel="prev" title="Configuración general" href="general.html"/> 
@@ -364,17 +363,18 @@ con el listado actual.</p>
 </div>
 <p>La opción de <strong>CSV</strong> tiene la posibilidad de añadir propiedades avanzadas. En el siguiente
 ejemplo se muestran todas:</p>
-<div class="highlight-yaml"><pre>csv:
+<div class="highlight-yaml"><div class="highlight"><pre>csv:
   active: true
-  filename: "ArchivoCSV"
+  filename: &quot;ArchivoCSV&quot;
   headers: true
-  enclosure: '"'
-  separator: ";"
+  enclosure: &#39;&quot;&#39;
+  separator: &quot;;&quot;
   nameklear: true
   ignoreBlackList: true
-  newLine: "\r\n" windows | "\r" mac | "\n" unix
-  encoding: "utf-8" | "iso-8859-1"
-  executionSeconds: "n"</pre>
+  newLine: &quot;\r\n&quot; windows | &quot;\r&quot; mac | &quot;\n&quot; unix
+  encoding: &quot;utf-8&quot; | &quot;iso-8859-1&quot;
+  executionSeconds: &quot;n&quot;
+</pre></div>
 </div>
 <ul class="simple">
 <li><strong>executionSeconds</strong>: Setea dinámicamente el max_execution time cuando alquien descarga csv.</li>

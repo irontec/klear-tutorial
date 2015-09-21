@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -8,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>application.ini &mdash; Klear Tutorial 1.0 documentation</title>
+  <title>application.ini &mdash; documentación de Klear Tutorial - 1.0</title>
   
 
   
@@ -47,7 +46,7 @@
   
 
   
-    <link rel="top" title="Klear Tutorial 1.0 documentation" href="../index.html"/>
+    <link rel="top" title="documentación de Klear Tutorial - 1.0" href="../index.html"/>
         <link rel="up" title="Ficheros INI" href="index.html"/>
         <link rel="next" title="klear.ini" href="klear-ini.html"/>
         <link rel="prev" title="Ficheros INI" href="index.html"/> 
@@ -406,7 +405,8 @@ La configuración <strong>timestampFormat = &#8220;Y-m-d H:s:i&#8221;</strong> e
 <div class="admonition attention">
 <p class="first admonition-title">Atención</p>
 <p>Hay que tener en cuenta que <strong>si $logger es nulo</strong> (no se ha especificado ningún writter en el application.ini) <strong>e intentamos hacer:</strong></p>
-<div class="highlight-ini"><pre>$logger-&gt;log("Mensaje", \Zend_Log::WARN);</pre>
+<div class="highlight-ini"><div class="highlight"><pre>$logger-&gt;log(&quot;Mensaje&quot;, \Zend_Log::WARN);
+</pre></div>
 </div>
 <p>se lanzará una excepción, por lo que si en algún entorno no queremos loggear hay que añadir la línea:</p>
 <div class="last highlight-php"><div class="highlight"><pre><span class="x">resources.log.null.writerName = &quot;Null&quot;</span>
