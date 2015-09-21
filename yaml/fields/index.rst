@@ -17,6 +17,7 @@ En orden alfabético tenemos:
    ghostconcat
    ghostcount
    ghostlist
+   ghostimage
    html5
    map
    multiselect
