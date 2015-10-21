@@ -29,8 +29,8 @@ Con este campo podemos vincular o relacionar nuestro datos o otros datos que se 
 *Suponemos que añadimos este campo multiselect al YAML MODEL de la Tabla1*
 
 * **RelationEntity**: Nombre de la Relación *(relationTabla1Tabla2)*
-* **relatedMapperName**: Mapper de la tabla de Relaciones (n-m) *(relationTabla1Tabla2)*
-* **relationMapper**: Mapper de la tabla con quien se relaciona *(Tabla2)*
+* **relationMapper**: Mapper de la tabla de Relaciones (n-m) *(relationTabla1Tabla2)*
+* **relatedMapperName**: Mapper de la tabla con quien se relaciona *(Tabla2)*
 * **relatedFieldName**: Nombre de un campo de la tabla con quien se relaciona para mostrar sus valores *(Un nombre de uno de los campos de la Tabla2)*
 * **relationProperty**: Este valor lo encontramos en \MyApp\Model\Raw\RelationEntity. Copia solo el texto que viene después de **"$_"**. Indicamos su ubicación en la línea resaltada:
 
