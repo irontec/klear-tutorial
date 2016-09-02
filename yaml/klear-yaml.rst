@@ -50,8 +50,9 @@ El archivo de configuración de Klear está situado en **application/configs/kle
          css: 
            - "css/klear.css"
        cssExtended: 
-       actionHelpers: 
-       optionCollectionPlacement: both
+       actionHelpers:
+       defaultCustomConfiguration:
+         optionCollectionPlacement: both
        rememberScroll: true
        auth: 
          adapter: Klear_Auth_Adapter_Basic
