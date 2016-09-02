@@ -13,3 +13,8 @@ Una vez hechos cambios en la carpeta source hacer lo siguiente desde esa carpeta
     make html
 
 Después de esto hacer los commits y los push correspondientes en la carpeta source y en la carpeta _build/html.
+
+## Nota
+Es necesario tener instalado python-sphinx.
+
+_sudo apt-get install python-sphinx_
