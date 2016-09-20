@@ -316,6 +316,7 @@ En el **YAML LIST** que usará el campo select autocomplete, la sección **"comm
          limit: 8 
          order: name
          matchAt: start
+         ignoreWhereDefault: true
          
 Propiedades Comandos
 ^^^^^^^^^^^^^^^^^^^^
@@ -338,5 +339,7 @@ Propiedades Comandos
 
    * **start**: La búsqueda se hace como **"like 'busqueda%'"**.
    * **end**: La búsqueda se hace como **"like '%busqueda'"**.
+
+* **ignoreWhereDefault**: Ignora el WHERE por defecto del campo y solo emplea la condicional del **filterClass**.
 
 .. image:: img/select-autocomplete.png
