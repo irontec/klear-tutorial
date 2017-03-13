@@ -218,6 +218,7 @@
 <li><a class="reference internal" href="#fixedpositions" id="id4">fixedPositions</a></li>
 <li><a class="reference internal" href="#conditionalblacklist" id="id5">conditionalBlacklist</a></li>
 <li><a class="reference internal" href="#postactionoptions" id="id6">postActionOptions</a></li>
+<li><a class="reference internal" href="#actionmessages" id="id7">actionMessages</a></li>
 </ul>
 </div>
 <p>A parte de las configuraciones descritas en <a class="reference internal" href="general.html#configuracion-general"><em>Configuración general</em></a>, los
@@ -343,6 +344,39 @@ y <strong>cellPhoneShortNumber</strong> no se mostrarán.</p>
     <span class="l-Scalar-Plain">sample_command</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="actionmessages">
+<h2><a class="toc-backref" href="#id7">actionMessages</a><a class="headerlink" href="#actionmessages" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Permite introducir diálogos antes de guardar.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">actionMessages</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">before</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Guardando elemento&quot;)</span>
+    <span class="l-Scalar-Plain">message</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Va a guardar un elemento.&lt;br /&gt;¿Desea continuar?&quot;)</span>
+    <span class="l-Scalar-Plain">actions</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">ok</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;Si&quot;)</span>
+        <span class="l-Scalar-Plain">return</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+      <span class="l-Scalar-Plain">cancelar</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_(&quot;No&quot;)</span>
+        <span class="l-Scalar-Plain">return</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first"><strong>title</strong>: Título del diálodo.</p>
+</li>
+<li><p class="first"><strong>message</strong>: Texto del diálogo, soporta HTML.</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>actions</strong>: Botones del diálogo.</dt>
+<dd><ul class="first last simple">
+<li><strong>label</strong>: Texto del botón.</li>
+<li><strong>return</strong>: Si es true, se continuará con el guardado. Si es false, se aborta.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Se pueden introducir tantos diálogos como se quiera.</p>
 </div>
 </div>
 
