@@ -140,3 +140,31 @@ De esta manera podemos acceder a esas opciones desde el propio diálogo sin tene
        sampleDel_dialog: true
      commands:
        sample_command: true
+
+actionMessages
+--------------
+
+Permite introducir diálogos antes de guardar.
+
+.. code-block:: yaml
+
+   actionMessages:
+     before:
+       title: _("Guardando elemento")
+       message: _("Va a guardar un elemento.<br />¿Desea continuar?")
+       actions:
+         ok:
+           label: _("Si")
+           return: true
+         cancelar:
+           label: _("No")
+           return: false
+
+* **title**: Título del diálodo.
+* **message**: Texto del diálogo, soporta HTML.
+* **actions**: Botones del diálogo.
+   * **label**: Texto del botón.
+   * **return**: Si es true, se continuará con el guardado. Si es false, se aborta.
+
+
+Se pueden introducir tantos diálogos como se quiera.
